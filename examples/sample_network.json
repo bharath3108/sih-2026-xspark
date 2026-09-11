@@ -1,0 +1,7 @@
+{
+  "edges": [
+    {"source": "author-tech-001", "target": "author-crypto-042", "weight": 3.0},
+    {"source": "author-crypto-042", "target": "author-web3-017", "weight": 2.0},
+    {"source": "author-tech-001", "target": "author-web3-017", "weight": 1.0}
+  ]
+}
