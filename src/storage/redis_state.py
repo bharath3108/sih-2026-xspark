@@ -118,7 +118,13 @@ def connect_redis(config: PipelineConfig = DEFAULT_CONFIG) -> Any:
     try:
         import redis
 
-        client = redis.Redis(host=config.redis_host, port=config.redis_port, db=0)
+        client = redis.Redis(
+            host=config.redis_host,
+            port=config.redis_port,
+            db=0,
+            socket_connect_timeout=1,
+            socket_timeout=1,
+        )
         client.ping()
         return client
     except Exception:

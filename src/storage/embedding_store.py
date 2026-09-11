@@ -24,7 +24,9 @@ class EmbeddingStore:
             from qdrant_client.models import Distance, VectorParams
 
             self._qdrant = QdrantClient(
-                host=self.config.qdrant_host, port=self.config.qdrant_port
+                host=self.config.qdrant_host,
+                port=self.config.qdrant_port,
+                timeout=2,
             )
             collections = {c.name for c in self._qdrant.get_collections().collections}
             if self.config.embeddings_collection not in collections:

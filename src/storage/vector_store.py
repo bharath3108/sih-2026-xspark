@@ -36,7 +36,9 @@ class VectorStore:
             from qdrant_client.models import Distance, VectorParams
 
             self._qdrant = QdrantClient(
-                host=self.config.qdrant_host, port=self.config.qdrant_port
+                host=self.config.qdrant_host,
+                port=self.config.qdrant_port,
+                timeout=2,
             )
             for collection in (
                 self.config.active_centroids_collection,
