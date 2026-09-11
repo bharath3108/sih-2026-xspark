@@ -1,4 +1,5 @@
 services:
+
   postgres:
     image: postgres:16-alpine
     container_name: sih_postgres
@@ -18,3 +19,21 @@ services:
 
 volumes:
   pgdata:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  qdrant:
+    image: qdrant/qdrant:v1.7.4
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    # WIRE LATER: this local Qdrant is a stand-in.
+    # Person 2 owns the production embedding collection.
+
+volumes:
+  qdrant_data:
+

@@ -1,0 +1,35 @@
+[
+  {
+    "event_id": "e4b11f32-8a90-4c12-b21a-29831aef0102",
+    "timestamp": "2026-09-11T14:00:00Z",
+    "platform": "X",
+    "embedding_ref": "emb-zk-001",
+    "author_id": "author-tech-001",
+    "likes": 450,
+    "shares": 120,
+    "comments": 85,
+    "raw_text": "Zero-knowledge proof scaling frameworks are revolutionizing layer-2 blockchain throughput"
+  },
+  {
+    "event_id": "9c011a88-12ee-4f99-882b-92311bc40999",
+    "timestamp": "2026-09-11T15:30:00Z",
+    "platform": "Reddit",
+    "embedding_ref": "emb-zk-002",
+    "author_id": "author-crypto-042",
+    "likes": 890,
+    "shares": 340,
+    "comments": 210,
+    "raw_text": "New ZK proof scaling solutions enable 100x throughput on Ethereum rollups"
+  },
+  {
+    "event_id": "a1b22c33-44dd-55ee-66ff-77788aaabbcc",
+    "timestamp": "2026-09-11T16:00:00Z",
+    "platform": "Telegram",
+    "embedding_ref": "emb-zk-003",
+    "author_id": "author-web3-017",
+    "likes": 230,
+    "shares": 95,
+    "comments": 67,
+    "raw_text": "Zero knowledge proof frameworks scaling to production mainnet deployments"
+  }
+]

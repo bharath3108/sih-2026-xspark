@@ -1,0 +1,22 @@
+[
+  {
+    "id": "x_1001",
+    "source": "x",
+    "author_id": "user_alpha",
+    "timestamp_utc": "2026-09-11T10:00:00Z",
+    "text": "Unbelievable spike in #tech news today! Check out @sih_updates",
+    "language": "en",
+    "reply_to_id": null,
+    "engagement": { "likes": 45, "shares": 12, "comments": 3, "views": 500 }
+  },
+  {
+    "id": "tg_2001",
+    "source": "telegram",
+    "author_id": "tg_channel_99",
+    "timestamp_utc": "2026-09-11T10:05:00Z",
+    "text": "Replying to tech announcement #tech",
+    "language": "en",
+    "reply_to_id": "x_1001",
+    "engagement": { "likes": 120, "shares": 30, "comments": 15, "views": 1200 }
+  }
+]
