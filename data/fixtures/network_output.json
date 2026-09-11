@@ -1,0 +1,24 @@
+{
+  "window": {
+    "start": "2026-09-11T00:00:00Z",
+    "end": "2026-09-11T12:00:00Z"
+  },
+  "graph_metrics": {
+    "nodes": 1200,
+    "edges": 5400,
+    "density": 0.004
+  },
+  "communities": [
+    {
+      "community_id": "c1",
+      "size": 240,
+      "central_nodes": ["hash1"]
+    }
+  ],
+  "propagation": {
+    "depth": 7,
+    "cross_community_rate": 0.42,
+    "key_nodes": ["hash1", "hash2"]
+  },
+  "evidence_event_ids": ["uuid1", "uuid2"]
+}
