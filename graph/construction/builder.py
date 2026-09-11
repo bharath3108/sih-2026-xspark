@@ -1,19 +1,31 @@
 import networkx as nx
 
-def build_interaction_graph(canonical_events: list[dict]) -> nx.DiGraph:
+def build_interaction_graph(events: list[dict]) -> tuple[nx.DiGraph, list[str]]:
     """
-    Extracts directed interaction edges from Person 1's canonical events.
+    Extracts directed interaction edges (author -> target/parent) from canonical events.
     """
-    graph = nx.DiGraph()
-    for event in canonical_events:
+    G = nx.DiGraph()
+    evidence_ids = []
+
+    for event in events:
         author = event.get("author_id_hash")
+        event_id = event.get("event_id")
+        
+        if event_id:
+            evidence_ids.append(event_id)
         if not author:
             continue
-        
-        graph.add_node(author)
-        
-        parent_id = event.get("parent_event_id") or event.get("reply_to_id")
-        if parent_id:
-            graph.add_edge(author, parent_id)
-            
-    return graph
+
+        G.add_node(author)
+
+        # Connect to replied author or parent event
+        parent_author = event.get("parent_author_id_hash")
+        parent_id = event.get("reply_to_id") or event.get("parent_event_id")
+
+        if parent_author:
+            G.add_edge(author, parent_author, event_id=event_id)
+        elif parent_id:
+            G.add_node(parent_id)
+            G.add_edge(author, parent_id, event_id=event_id)
+
+    return G, evidence_ids
