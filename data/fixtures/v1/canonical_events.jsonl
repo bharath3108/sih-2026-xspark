@@ -1,0 +1,2 @@
+{"event_id": "evt_101", "source": "twitter", "author_id_hash": "a1b2c3", "timestamp_utc": "2026-09-11T10:00:00Z", "text": "Sample event line 1"}
+{"event_id": "evt_102", "source": "reddit", "author_id_hash": "d4e5f6", "timestamp_utc": "2026-09-11T10:05:00Z", "text": "Sample event line 2"}
