@@ -39,9 +39,34 @@ def ingest_nlp_output(nlp_contract) -> None:
     if pipeline is None:
         return
     try:
+        _ensure_embedding_stored(pipeline, nlp_contract)
         pipeline.ingest(nlp_contract)
     except Exception as e:
         logger.warning("Live pipeline ingest failed for event %s: %s", getattr(nlp_contract, "event_id", "?"), e)
+
+
+def _ensure_embedding_stored(pipeline, nlp_contract) -> None:
+    """SectionDPipeline.ingest() resolves nlp_contract.embedding_ref through
+    its own EmbeddingStore (src/storage/embedding_store.py), which is a
+    separate store from the Qdrant collection ml/mainml.py writes to
+    (different collection, and keyed by an `embedding_ref` payload field
+    mainml.py's points never set) -- so a ref computed by mainml.py is never
+    actually resolvable here. Recomputing the same deterministic fallback
+    vector from raw_text and storing it under that ref (EmbeddingStore.store
+    always populates its in-process dict, Qdrant or not) closes that gap
+    without changing either module's public contract."""
+    ref = getattr(nlp_contract, "embedding_ref", None)
+    text = getattr(nlp_contract, "raw_text", None)
+    if not ref or not text:
+        return
+    try:
+        pipeline.embedding_store.fetch(ref)
+        return
+    except KeyError:
+        pass
+    from ml.mainml import fallback_embedding
+
+    pipeline.embedding_store.store(ref, fallback_embedding(text))
 
 
 def get_live_topics() -> list[dict]:

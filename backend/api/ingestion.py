@@ -10,6 +10,8 @@ from backend.services import data_access
 from contracts.canonical_event import CanonicalEvent
 from ingestion.adapters.replay_adapter import ReplayAdapter
 from ingestion.adapters.live_adapter import LiveAdapter
+from ingestion.adapters.reddit_adapter import RedditAdapter
+from ingestion.adapters.bluesky_adapter import BlueskyAdapter
 from ingestion.normalization.normalizer import normalize_raw_post
 
 router = APIRouter(prefix="/api/ingestion", tags=["Ingestion"])
@@ -162,11 +164,15 @@ def _ingest_raw_posts(db: Session, raw_posts: list[dict]) -> dict:
 
 
 @router.post("/run-replay")
-def run_replay_ingestion(db: Session = Depends(get_db)):
-    adapter = ReplayAdapter()
-    raw_posts = adapter.fetch()
+def run_replay_ingestion(
+    filepath: str = "data/replay/sample_raw_posts.json",
+    limit: int = 2000,
+    db: Session = Depends(get_db),
+):
+    adapter = ReplayAdapter(filepath=filepath)
+    raw_posts = adapter.fetch(limit=limit)
     result = _ingest_raw_posts(db, raw_posts)
-    return {"status": "success", "mode": "replay", **result}
+    return {"status": "success", "mode": "replay", "filepath": filepath, **result}
 
 
 @router.post("/run-live")
@@ -179,3 +185,35 @@ def run_live_ingestion(db: Session = Depends(get_db)):
 
     result = _ingest_raw_posts(db, raw_posts)
     return {"status": "success", "mode": "live", **result}
+
+
+@router.post("/run-reddit")
+def run_reddit_ingestion(
+    subreddit: str = RedditAdapter.DEFAULT_SUBREDDIT,
+    limit: int = 25,
+    db: Session = Depends(get_db),
+):
+    adapter = RedditAdapter(subreddit=subreddit)
+    raw_posts = adapter.fetch(limit=limit)
+
+    if not raw_posts:
+        raise HTTPException(status_code=502, detail="Failed to fetch reddit feed")
+
+    result = _ingest_raw_posts(db, raw_posts)
+    return {"status": "success", "mode": "reddit", "subreddit": subreddit, **result}
+
+
+@router.post("/run-bluesky")
+def run_bluesky_ingestion(
+    query: str = BlueskyAdapter.DEFAULT_QUERY,
+    limit: int = 100,
+    db: Session = Depends(get_db),
+):
+    adapter = BlueskyAdapter(query=query)
+    raw_posts = adapter.fetch(limit=limit)
+
+    if not raw_posts:
+        raise HTTPException(status_code=502, detail="Failed to fetch bluesky feed")
+
+    result = _ingest_raw_posts(db, raw_posts)
+    return {"status": "success", "mode": "bluesky", "query": query, **result}
