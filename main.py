@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from backend.db.database import engine, Base
 from backend.api import ingestion
 from graph.router import router as graph_router
+from ml.mainml import app as ml_app
+app.include_router(ml_app.router, prefix="/api/ml")
 
 Base.metadata.create_all(bind=engine)
 
