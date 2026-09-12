@@ -1,3 +1,5 @@
+import os
+import uuid
 from contextlib import asynccontextmanager
 from datetime import datetime
 from typing import List, Optional, Dict, Any, Literal
@@ -9,10 +11,22 @@ from pydantic import BaseModel, Field, field_validator
 import torch
 from transformers import pipeline
 from sentence_transformers import SentenceTransformer
+from qdrant_client import QdrantClient
+from qdrant_client.models import Distance, VectorParams, PointStruct
+
+
+# -------------------------------------------------------------------
+# Configuration
+# -------------------------------------------------------------------
 
 STANCE_THRESHOLD = 0.60
+EMBEDDING_DIM = 384  # sentence-transformers/all-MiniLM-L6-v2 outputs 384-dim vectors
+EMBEDDINGS_COLLECTION = "nlp_embeddings"
 
+
+# -------------------------------------------------------------------
 # Pydantic Schemas
+# -------------------------------------------------------------------
 
 class Engagement(BaseModel):
     likes: int = Field(default=0, ge=0)
@@ -86,10 +100,8 @@ class SocialMediaEventRequest(BaseModel):
     @classmethod
     def validate_text(cls, value: str) -> str:
         value = value.strip()
-
         if not value:
             raise ValueError("text cannot be empty")
-
         return value
 
 
@@ -135,79 +147,124 @@ class SocialMediaEventResponse(BaseModel):
 
     model: ModelMeta
 
-# Sentiment & Emotion Mapping
 
+# -------------------------------------------------------------------
+# Sentiment & Emotion Mapping
+# -------------------------------------------------------------------
 
 POSITIVE_EMOTIONS = {
-    "admiration",
-    "amusement",
-    "approval",
-    "caring",
-    "desire",
-    "excitement",
-    "gratitude",
-    "joy",
-    "love",
-    "optimism",
-    "pride",
-    "relief"
+    "admiration", "amusement", "approval", "caring", "desire",
+    "excitement", "gratitude", "joy", "love", "optimism",
+    "pride", "relief"
 }
 
 NEGATIVE_EMOTIONS = {
-    "anger",
-    "annoyance",
-    "disappointment",
-    "disapproval",
-    "disgust",
-    "embarrassment",
-    "fear",
-    "grief",
-    "nervousness",
-    "remorse",
-    "sadness"
+    "anger", "annoyance", "disappointment", "disapproval",
+    "disgust", "embarrassment", "fear", "grief", "nervousness",
+    "remorse", "sadness"
 }
 
 
-def derive_sentiment_from_emotion(
-    emotion_label: str
-) -> str:
-    """
-    Maps GoEmotions fine-grained emotion labels
-    to broad sentiment.
-    """
-
+def derive_sentiment_from_emotion(emotion_label: str) -> str:
+    """Maps GoEmotions fine-grained emotion labels to broad sentiment."""
     if emotion_label in POSITIVE_EMOTIONS:
         return "positive"
-
     if emotion_label in NEGATIVE_EMOTIONS:
         return "negative"
-
     return "neutral"
 
 
-# Global ML Model Container
-
+# -------------------------------------------------------------------
+# Global ML Model & Database Containers
+# -------------------------------------------------------------------
 
 models: Dict[str, Any] = {}
+qdrant_client: Optional[QdrantClient] = None
 
 
+# -------------------------------------------------------------------
+# Qdrant Database Helpers
+# -------------------------------------------------------------------
+
+def initialize_qdrant_collection():
+    """Initialize Qdrant collection for embeddings if it doesn't exist."""
+    global qdrant_client
+    
+    try:
+        collections = qdrant_client.get_collections()
+        collection_names = [collection.name for collection in collections.collections]
+        
+        if EMBEDDINGS_COLLECTION not in collection_names:
+            qdrant_client.create_collection(
+                collection_name=EMBEDDINGS_COLLECTION,
+                vectors_config=VectorParams(
+                    size=EMBEDDING_DIM,
+                    distance=Distance.COSINE
+                )
+            )
+            print(f"Created Qdrant collection: {EMBEDDINGS_COLLECTION}")
+    except Exception as e:
+        print(f"Warning: Could not initialize Qdrant collection: {e}")
+
+
+def store_embedding_in_qdrant(
+    event_id: str,
+    embedding_vector: List[float],
+    metadata: Dict[str, Any]
+) -> Optional[str]:
+    """
+    Stores embedding vector in Qdrant indexed natively by event_id.
+    Returns string event_id upon successful insertion.
+    """
+    global qdrant_client
+    
+    try:
+        point = PointStruct(
+            id=event_id,  # Accepts standard UUID string directly
+            vector=embedding_vector,
+            payload={
+                "event_id": event_id,
+                "timestamp": metadata.get("timestamp_utc"),
+                "source": metadata.get("source"),
+                "author_id_hash": metadata.get("author_id_hash"),
+                "language": metadata.get("language"),
+                "sentiment": metadata.get("sentiment"),
+                "emotion": metadata.get("emotion"),
+                "stance": metadata.get("stance")
+            }
+        )
+        
+        qdrant_client.upsert(
+            collection_name=EMBEDDINGS_COLLECTION,
+            points=[point]
+        )
+        
+        return str(event_id)
+        
+    except Exception as e:
+        print(f"Error storing embedding in Qdrant: {e}")
+        return None
+
+
+# -------------------------------------------------------------------
 # Lifespan Context Manager
+# -------------------------------------------------------------------
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """
-    Loads all transformer models once at application startup.
-    """
+    """Loads transformer models and connects to Qdrant at application startup."""
+    global qdrant_client
 
     device = 0 if torch.cuda.is_available() else -1
 
+    # 1. Language Detection
     models["lang_detector"] = pipeline(
         "text-classification",
         model="papluca/xlm-roberta-base-language-detection",
         device=device
     )
 
-
+    # 2. Emotion Classification
     models["emotion_classifier"] = pipeline(
         "text-classification",
         model="SamLowe/roberta-base-go_emotions",
@@ -215,24 +272,41 @@ async def lifespan(app: FastAPI):
         device=device
     )
 
-
+    # 3. Zero-Shot Stance Classification
     models["stance_classifier"] = pipeline(
         "zero-shot-classification",
         model="MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
         device=device
     )
 
-
+    # 4. Sentence Embeddings
     models["embedding_model"] = SentenceTransformer(
         "sentence-transformers/all-MiniLM-L6-v2"
     )
 
+    # 5. Initialize Qdrant Client
+    qdrant_host = os.getenv("QDRANT_HOST", "localhost")
+    qdrant_port = int(os.getenv("QDRANT_PORT", 6333))
+    
+    try:
+        qdrant_client = QdrantClient(host=qdrant_host, port=qdrant_port)
+        initialize_qdrant_collection()
+        print(f"Connected to Qdrant at {qdrant_host}:{qdrant_port}")
+    except Exception as e:
+        print(f"Warning: Could not connect to Qdrant: {e}")
+        qdrant_client = None
+
     yield
 
-
+    # Cleanup resources during shutdown
     models.clear()
+    if qdrant_client:
+        qdrant_client.close()
 
 
+# -------------------------------------------------------------------
+# FastAPI Application
+# -------------------------------------------------------------------
 
 app = FastAPI(
     title="SIH26152 Social Media Analytics Backend",
@@ -241,14 +315,22 @@ app = FastAPI(
 )
 
 
+# -------------------------------------------------------------------
+# Health Check Endpoint
+# -------------------------------------------------------------------
+
 @app.get("/health")
 def health_check():
     return {
         "status": "healthy",
-        "models_loaded": list(models.keys())
+        "models_loaded": list(models.keys()),
+        "qdrant_connected": qdrant_client is not None
     }
 
 
+# -------------------------------------------------------------------
+# Main Analysis Endpoint
+# -------------------------------------------------------------------
 
 @app.post(
     "/analyze",
@@ -258,10 +340,9 @@ def process_social_event(
     payload: SocialMediaEventRequest
 ):
     """
-    Synchronous endpoint so FastAPI can run the heavy
-    transformer inference in its worker threadpool.
+    Synchronous 'def' forces FastAPI to handle inference in worker threads,
+    preventing heavy PyTorch execution from blocking the main event loop.
     """
-
     try:
         text = payload.text.strip()
 
@@ -274,7 +355,6 @@ def process_social_event(
         # -----------------------------------------------------------
         # 1. Language Detection
         # -----------------------------------------------------------
-
         lang_output = models["lang_detector"](
             text,
             truncation=True,
@@ -282,16 +362,11 @@ def process_social_event(
         )[0]
 
         detected_lang = lang_output["label"]
-
-        lang_conf = round(
-            float(lang_output["score"]),
-            2
-        )
+        lang_conf = round(float(lang_output["score"]), 2)
 
         # -----------------------------------------------------------
-        # 2. Emotion Classification
+        # 2. Emotion Classification & Derived Sentiment
         # -----------------------------------------------------------
-
         emotion_output = models["emotion_classifier"](
             text,
             truncation=True,
@@ -299,36 +374,22 @@ def process_social_event(
         )[0][0]
 
         top_emotion = emotion_output["label"]
+        emotion_conf = round(float(emotion_output["score"]), 2)
 
-        emotion_conf = round(
-            float(emotion_output["score"]),
-            2
-        )
-
-
-        derived_sentiment = derive_sentiment_from_emotion(
-            top_emotion
-        )
-
+        derived_sentiment = derive_sentiment_from_emotion(top_emotion)
         sentiment_conf = emotion_conf
 
+        # -----------------------------------------------------------
+        # 3. Dynamic Zero-Shot Stance Detection
+        # -----------------------------------------------------------
         target = payload.target_topic
 
         if target:
-            hypothesis = (
-                f"This post expresses a stance towards "
-                f"{target}: {{}}."
-            )
+            hypothesis = f"This post expresses a stance towards {target}: {{}}."
         else:
-            hypothesis = (
-                "The overall stance expressed in this post is {}."
-            )
+            hypothesis = "The overall stance expressed in this post is {}."
 
-        stance_candidate_labels = [
-            "support",
-            "oppose",
-            "neutral"
-        ]
+        stance_candidate_labels = ["support", "oppose", "neutral"]
 
         stance_output = models["stance_classifier"](
             text,
@@ -339,71 +400,74 @@ def process_social_event(
         )
 
         top_stance = stance_output["labels"][0]
-
-        top_stance_score = float(
-            stance_output["scores"][0]
-        )
+        top_stance_score = float(stance_output["scores"][0])
 
         if top_stance_score >= STANCE_THRESHOLD:
             final_stance = top_stance
         else:
             final_stance = "unknown"
 
-        stance_conf = round(
-            top_stance_score,
-            2
-        )
+        stance_conf = round(top_stance_score, 2)
 
-        #  Embedding Reference
-       
+        # -----------------------------------------------------------
+        # 4. Generate and Store Vector Embeddings
+        # -----------------------------------------------------------
+        embedding_vector_list = models["embedding_model"].encode(
+            text
+        ).tolist()
 
-        # No vector database is connected yet.
-        #
-        # Once Qdrant/Milvus/etc. is integrated, generate the
-        # embedding here, store it, and return the resulting ID.
+        metadata = {
+            "timestamp_utc": str(payload.timestamp_utc),
+            "source": payload.source,
+            "author_id_hash": payload.author_id_hash,
+            "language": detected_lang,
+            "sentiment": derived_sentiment,
+            "emotion": top_emotion,
+            "stance": final_stance
+        }
+
         embedding_ref = None
+        if qdrant_client:
+            embedding_ref = store_embedding_in_qdrant(
+                event_id=str(payload.event_id),
+                embedding_vector=embedding_vector_list,
+                metadata=metadata
+            )
 
-
+        # -----------------------------------------------------------
+        # 5. Construct Final Response Payload
+        # -----------------------------------------------------------
         return SocialMediaEventResponse(
-
             event_id=payload.event_id,
-
             language=ClassificationResult(
                 label=detected_lang,
                 confidence=lang_conf
             ),
-
             sentiment=ClassificationResult(
                 label=derived_sentiment,
                 confidence=sentiment_conf
             ),
-
             emotion=ClassificationResult(
                 label=top_emotion,
                 confidence=emotion_conf
             ),
-
             stance=StanceResult(
                 target=payload.target_topic,
                 label=final_stance,
                 confidence=stance_conf
             ),
-
             embedding_ref=embedding_ref,
-
             evidence=[
                 EvidenceItem(
                     type="source_event",
                     event_id=payload.event_id
                 )
             ],
-
             model=ModelMeta(
                 name="sih26152-ensemble-transformer",
                 version="1.0.0"
             )
         )
-
 
     except HTTPException:
         raise
