@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -55,6 +56,17 @@ class TimeSeriesStore:
         self._conn.execute("""
             CREATE INDEX IF NOT EXISTS idx_events_author
             ON events (author_id)
+        """)
+        self._conn.execute("""
+            CREATE TABLE IF NOT EXISTS audience_snapshots (
+                topic_id VARCHAR,
+                timestamp TIMESTAMP,
+                payload VARCHAR
+            )
+        """)
+        self._conn.execute("""
+            CREATE INDEX IF NOT EXISTS idx_audience_snapshots_topic_ts
+            ON audience_snapshots (topic_id, timestamp)
         """)
 
     def insert_event(self, event: IngestedEvent, topic_id: str | None = None) -> None:
@@ -153,6 +165,32 @@ class TimeSeriesStore:
             [topic_id],
         ).fetchall()
         return [_aware(r[0]) for r in rows]
+
+    def insert_audience_snapshot(self, topic_id: str, timestamp: datetime, payload: dict) -> None:
+        self._conn.execute(
+            "INSERT INTO audience_snapshots (topic_id, timestamp, payload) VALUES (?, ?, ?)",
+            [topic_id, _utc_naive(timestamp), json.dumps(payload, default=str)],
+        )
+
+    def get_audience_snapshots(
+        self, topic_id: str, start: datetime | None = None, end: datetime | None = None
+    ) -> list[dict]:
+        query = "SELECT timestamp, payload FROM audience_snapshots WHERE topic_id = ?"
+        params: list = [topic_id]
+        if start is not None:
+            query += " AND timestamp >= ?"
+            params.append(_utc_naive(start))
+        if end is not None:
+            query += " AND timestamp <= ?"
+            params.append(_utc_naive(end))
+        query += " ORDER BY timestamp"
+        rows = self._conn.execute(query, params).fetchall()
+        records = []
+        for ts, payload_json in rows:
+            payload = json.loads(payload_json)
+            payload["as_of"] = _aware(ts).isoformat()
+            records.append(payload)
+        return records
 
     def close(self) -> None:
         self._conn.close()

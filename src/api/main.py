@@ -6,6 +6,7 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException
 
+from src.api.audience import router as audience_router
 from src.contracts.nlp_input import NLPOutputContract
 from src.pipeline.orchestrator import SectionDPipeline
 from src.pipeline.scheduler import BufferFlushScheduler
@@ -27,6 +28,8 @@ def create_app(pipeline: SectionDPipeline | None = None, start_scheduler: bool =
     if pipeline is not None:
         global _pipeline
         _pipeline = pipeline
+
+    app.include_router(audience_router)
 
     if start_scheduler:
 

@@ -1,24 +1,34 @@
 {
   "window": {
     "start": "2026-09-11T00:00:00Z",
-    "end": "2026-09-11T12:00:00Z"
+    "end": "2026-09-11T23:59:59Z"
   },
   "graph_metrics": {
-    "nodes": 1200,
-    "edges": 5400,
-    "density": 0.004
+    "nodes": 7,
+    "edges": 9,
+    "density": 0.214
   },
   "communities": [
     {
       "community_id": "c1",
-      "size": 240,
-      "central_nodes": ["hash1"]
+      "size": 4,
+      "central_nodes": ["hash1", "hash2"]
+    },
+    {
+      "community_id": "c2",
+      "size": 3,
+      "central_nodes": ["hash5", "hash6"]
     }
   ],
   "propagation": {
-    "depth": 7,
+    "depth": 4,
     "cross_community_rate": 0.42,
-    "key_nodes": ["hash1", "hash2"]
+    "key_nodes": ["hash1", "hash5", "hash6"]
   },
-  "evidence_event_ids": ["uuid1", "uuid2"]
+  "evidence_event_ids": [
+    "e4b11f32-8a90-4c12-b21a-29831aef0101",
+    "9c011a88-12ee-4f99-882b-92311bc40102",
+    "f5a66b77-88cc-99dd-aaee-bbb122ee0201",
+    "a6b77c88-99dd-aaee-bbff-ccc233ff0202"
+  ]
 }

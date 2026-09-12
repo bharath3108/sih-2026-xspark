@@ -9,7 +9,10 @@ __pycache__/
 .pytest_cache/
 .venv/
 venv/
-data/
+# NOTE: data/fixtures and data/replay hold small, checked-in sample data
+# required by the team's "Contract Rule" (every module works against a
+# versioned fixture in git) — don't blanket-ignore data/. Ignore specific
+# generated/local artifacts instead (*.duckdb, output/, etc. below).
 output/
 *.duckdb
 *.duckdb.wal
