@@ -140,6 +140,7 @@ class SocialMediaEventResponse(BaseModel):
     sentiment: ClassificationResult
     emotion: ClassificationResult
     stance: StanceResult
+    is_sarcastic: bool = False
 
     embedding_ref: Optional[str] = None
 
@@ -212,15 +213,12 @@ def store_embedding_in_qdrant(
     embedding_vector: List[float],
     metadata: Dict[str, Any]
 ) -> Optional[str]:
-    """
-    Stores embedding vector in Qdrant indexed natively by event_id.
-    Returns string event_id upon successful insertion.
-    """
+    """Stores embedding vector in Qdrant indexed natively by event_id."""
     global qdrant_client
     
     try:
         point = PointStruct(
-            id=event_id,  # Accepts standard UUID string directly
+            id=event_id,
             vector=embedding_vector,
             payload={
                 "event_id": event_id,
@@ -230,7 +228,8 @@ def store_embedding_in_qdrant(
                 "language": metadata.get("language"),
                 "sentiment": metadata.get("sentiment"),
                 "emotion": metadata.get("emotion"),
-                "stance": metadata.get("stance")
+                "stance": metadata.get("stance"),
+                "is_sarcastic": metadata.get("is_sarcastic")
             }
         )
         
@@ -272,19 +271,26 @@ async def lifespan(app: FastAPI):
         device=device
     )
 
-    # 3. Zero-Shot Stance Classification
+    # 3. Sarcasm Detection
+    models["sarcasm_detector"] = pipeline(
+        "text-classification",
+        model="he271311/roberta-base-sarcasm",
+        device=device
+    )
+
+    # 4. Zero-Shot Stance Classification
     models["stance_classifier"] = pipeline(
         "zero-shot-classification",
         model="MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
         device=device
     )
 
-    # 4. Sentence Embeddings
+    # 5. Sentence Embeddings
     models["embedding_model"] = SentenceTransformer(
         "sentence-transformers/all-MiniLM-L6-v2"
     )
 
-    # 5. Initialize Qdrant Client
+    # 6. Initialize Qdrant Client
     qdrant_host = os.getenv("QDRANT_HOST", "localhost")
     qdrant_port = int(os.getenv("QDRANT_PORT", 6333))
     
@@ -298,7 +304,6 @@ async def lifespan(app: FastAPI):
 
     yield
 
-    # Cleanup resources during shutdown
     models.clear()
     if qdrant_client:
         qdrant_client.close()
@@ -310,7 +315,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="SIH26152 Social Media Analytics Backend",
-    version="1.0.0",
+    version="1.1.0",
     lifespan=lifespan
 )
 
@@ -339,10 +344,6 @@ def health_check():
 def process_social_event(
     payload: SocialMediaEventRequest
 ):
-    """
-    Synchronous 'def' forces FastAPI to handle inference in worker threads,
-    preventing heavy PyTorch execution from blocking the main event loop.
-    """
     try:
         text = payload.text.strip()
 
@@ -356,23 +357,17 @@ def process_social_event(
         # 1. Language Detection
         # -----------------------------------------------------------
         lang_output = models["lang_detector"](
-            text,
-            truncation=True,
-            max_length=512
+            text, truncation=True, max_length=512
         )[0]
-
         detected_lang = lang_output["label"]
         lang_conf = round(float(lang_output["score"]), 2)
 
         # -----------------------------------------------------------
-        # 2. Emotion Classification & Derived Sentiment
+        # 2. Emotion Classification & Surface Sentiment
         # -----------------------------------------------------------
         emotion_output = models["emotion_classifier"](
-            text,
-            truncation=True,
-            max_length=512
+            text, truncation=True, max_length=512
         )[0][0]
-
         top_emotion = emotion_output["label"]
         emotion_conf = round(float(emotion_output["score"]), 2)
 
@@ -380,7 +375,24 @@ def process_social_event(
         sentiment_conf = emotion_conf
 
         # -----------------------------------------------------------
-        # 3. Dynamic Zero-Shot Stance Detection
+        # 3. Sarcasm Detection & Sentiment Adjustment
+        # -----------------------------------------------------------
+        sarcasm_output = models["sarcasm_detector"](
+            text, truncation=True, max_length=512
+        )[0]
+        
+        is_sarcastic = (sarcasm_output["label"].upper() == "LABEL_1") and (sarcasm_output["score"] > 0.65)
+
+        # Sarcasm flips literal sentiment (e.g., positive literal wording -> intended negative sentiment)
+        if is_sarcastic:
+            if derived_sentiment == "positive":
+                derived_sentiment = "negative"
+            elif derived_sentiment == "negative":
+                derived_sentiment = "positive"
+            sentiment_conf = round(float(sarcasm_output["score"]), 2)
+
+        # -----------------------------------------------------------
+        # 4. Zero-Shot Stance Detection
         # -----------------------------------------------------------
         target = payload.target_topic
 
@@ -402,6 +414,7 @@ def process_social_event(
         top_stance = stance_output["labels"][0]
         top_stance_score = float(stance_output["scores"][0])
 
+        # Stance is NOT manually flipped; DeBERTa zero-shot evaluates actual NLI stance directly
         if top_stance_score >= STANCE_THRESHOLD:
             final_stance = top_stance
         else:
@@ -410,11 +423,9 @@ def process_social_event(
         stance_conf = round(top_stance_score, 2)
 
         # -----------------------------------------------------------
-        # 4. Generate and Store Vector Embeddings
+        # 5. Generate and Store Vector Embeddings
         # -----------------------------------------------------------
-        embedding_vector_list = models["embedding_model"].encode(
-            text
-        ).tolist()
+        embedding_vector_list = models["embedding_model"].encode(text).tolist()
 
         metadata = {
             "timestamp_utc": str(payload.timestamp_utc),
@@ -423,7 +434,8 @@ def process_social_event(
             "language": detected_lang,
             "sentiment": derived_sentiment,
             "emotion": top_emotion,
-            "stance": final_stance
+            "stance": final_stance,
+            "is_sarcastic": is_sarcastic
         }
 
         embedding_ref = None
@@ -435,7 +447,7 @@ def process_social_event(
             )
 
         # -----------------------------------------------------------
-        # 5. Construct Final Response Payload
+        # 6. Construct Final Response Payload
         # -----------------------------------------------------------
         return SocialMediaEventResponse(
             event_id=payload.event_id,
@@ -456,6 +468,7 @@ def process_social_event(
                 label=final_stance,
                 confidence=stance_conf
             ),
+            is_sarcastic=is_sarcastic,
             embedding_ref=embedding_ref,
             evidence=[
                 EvidenceItem(
@@ -465,7 +478,7 @@ def process_social_event(
             ],
             model=ModelMeta(
                 name="sih26152-ensemble-transformer",
-                version="1.0.0"
+                version="1.1.0"
             )
         )
 
