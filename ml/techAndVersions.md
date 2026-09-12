@@ -1,6 +1,7 @@
-- fastapi>=0.100.0
-- uvicorn>=0.22.0
-- pydantic>=2.0.0
-- torch
-- transformers
-- sentence-transformers
+- fastapi>=0.109.0
+- uvicorn[standard]>=0.27.0
+- pydantic>=2.6.0
+- torch>=2.2.0
+- transformers>=4.37.0
+- sentence-transformers>=2.3.1
+- qdrant-client>=1.7.3
