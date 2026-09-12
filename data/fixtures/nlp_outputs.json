@@ -1,0 +1,102 @@
+[
+  {
+    "event_id": "e4b11f32-8a90-4c12-b21a-29831aef0101",
+    "language": {"label": "en", "confidence": 0.99},
+    "sentiment": {"label": "positive", "confidence": 0.83},
+    "emotion": {"label": "optimism", "confidence": 0.71},
+    "stance": {"target": "topic-001", "label": "support", "confidence": 0.76},
+    "embedding_ref": "emb-zk-001",
+    "evidence": [{"type": "source_event", "event_id": "e4b11f32-8a90-4c12-b21a-29831aef0101"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  },
+  {
+    "event_id": "9c011a88-12ee-4f99-882b-92311bc40102",
+    "language": {"label": "en", "confidence": 0.98},
+    "sentiment": {"label": "positive", "confidence": 0.88},
+    "emotion": {"label": "excitement", "confidence": 0.74},
+    "stance": {"target": "topic-001", "label": "support", "confidence": 0.81},
+    "embedding_ref": "emb-zk-002",
+    "evidence": [{"type": "source_event", "event_id": "9c011a88-12ee-4f99-882b-92311bc40102"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  },
+  {
+    "event_id": "a1b22c33-44dd-55ee-66ff-77788aaa0103",
+    "language": {"label": "en", "confidence": 0.97},
+    "sentiment": {"label": "positive", "confidence": 0.79},
+    "emotion": {"label": "optimism", "confidence": 0.68},
+    "stance": {"target": "topic-001", "label": "support", "confidence": 0.73},
+    "embedding_ref": "emb-zk-003",
+    "evidence": [{"type": "source_event", "event_id": "a1b22c33-44dd-55ee-66ff-77788aaa0103"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  },
+  {
+    "event_id": "b2c33d44-55ee-66ff-77aa-88899bbb0104",
+    "language": {"label": "en", "confidence": 0.99},
+    "sentiment": {"label": "positive", "confidence": 0.91},
+    "emotion": {"label": "excitement", "confidence": 0.85},
+    "stance": {"target": "topic-001", "label": "support", "confidence": 0.88},
+    "embedding_ref": "emb-zk-004",
+    "evidence": [{"type": "source_event", "event_id": "b2c33d44-55ee-66ff-77aa-88899bbb0104"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  },
+  {
+    "event_id": "c3d44e55-66ff-77aa-88bb-99900ccc0105",
+    "language": {"label": "en", "confidence": 0.96},
+    "sentiment": {"label": "negative", "confidence": 0.69},
+    "emotion": {"label": "distrust", "confidence": 0.62},
+    "stance": {"target": "topic-001", "label": "oppose", "confidence": 0.64},
+    "embedding_ref": "emb-zk-005",
+    "evidence": [{"type": "source_event", "event_id": "c3d44e55-66ff-77aa-88bb-99900ccc0105"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  },
+  {
+    "event_id": "d4e55f66-77aa-88bb-99cc-aaa011dd0106",
+    "language": {"label": "en", "confidence": 0.98},
+    "sentiment": {"label": "positive", "confidence": 0.86},
+    "emotion": {"label": "confidence", "confidence": 0.7},
+    "stance": {"target": "topic-001", "label": "support", "confidence": 0.8},
+    "embedding_ref": "emb-zk-006",
+    "evidence": [{"type": "source_event", "event_id": "d4e55f66-77aa-88bb-99cc-aaa011dd0106"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  },
+  {
+    "event_id": "f5a66b77-88cc-99dd-aaee-bbb122ee0201",
+    "language": {"label": "en", "confidence": 0.99},
+    "sentiment": {"label": "negative", "confidence": 0.87},
+    "emotion": {"label": "fear", "confidence": 0.82},
+    "stance": {"target": "topic-002", "label": "oppose", "confidence": 0.7},
+    "embedding_ref": "emb-bridge-001",
+    "evidence": [{"type": "source_event", "event_id": "f5a66b77-88cc-99dd-aaee-bbb122ee0201"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  },
+  {
+    "event_id": "a6b77c88-99dd-aaee-bbff-ccc233ff0202",
+    "language": {"label": "en", "confidence": 0.99},
+    "sentiment": {"label": "negative", "confidence": 0.95},
+    "emotion": {"label": "anger", "confidence": 0.91},
+    "stance": {"target": "topic-002", "label": "oppose", "confidence": 0.9},
+    "embedding_ref": "emb-bridge-002",
+    "evidence": [{"type": "source_event", "event_id": "a6b77c88-99dd-aaee-bbff-ccc233ff0202"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  },
+  {
+    "event_id": "b7c88d99-aaee-bbff-ccaa-ddd344aa0203",
+    "language": {"label": "en", "confidence": 0.98},
+    "sentiment": {"label": "negative", "confidence": 0.89},
+    "emotion": {"label": "anger", "confidence": 0.84},
+    "stance": {"target": "topic-002", "label": "oppose", "confidence": 0.85},
+    "embedding_ref": "emb-bridge-003",
+    "evidence": [{"type": "source_event", "event_id": "b7c88d99-aaee-bbff-ccaa-ddd344aa0203"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  },
+  {
+    "event_id": "c8d99eaa-bbff-ccaa-ddbb-eee455bb0204",
+    "language": {"label": "en", "confidence": 0.97},
+    "sentiment": {"label": "neutral", "confidence": 0.6},
+    "emotion": {"label": "concern", "confidence": 0.58},
+    "stance": {"target": "topic-002", "label": "neutral", "confidence": 0.55},
+    "embedding_ref": "emb-bridge-004",
+    "evidence": [{"type": "source_event", "event_id": "c8d99eaa-bbff-ccaa-ddbb-eee455bb0204"}],
+    "model": {"name": "cardiffnlp/twitter-roberta-base-sentiment", "version": "1.0"}
+  }
+]

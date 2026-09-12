@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    {"id": "hash1", "community_id": "c1", "centrality": 0.82, "role": "bridge"},
+    {"id": "hash2", "community_id": "c1", "centrality": 0.74, "role": "hub"},
+    {"id": "hash3", "community_id": "c1", "centrality": 0.31, "role": "peripheral"},
+    {"id": "hash4", "community_id": "c1", "centrality": 0.22, "role": "peripheral"},
+    {"id": "hash5", "community_id": "c2", "centrality": 0.9, "role": "hub"},
+    {"id": "hash6", "community_id": "c2", "centrality": 0.68, "role": "bridge"},
+    {"id": "hash7", "community_id": "c2", "centrality": 0.35, "role": "peripheral"}
+  ],
+  "edges": [
+    {"source": "hash1", "target": "hash2", "weight": 1, "type": "reply"},
+    {"source": "hash2", "target": "hash3", "weight": 1, "type": "reply"},
+    {"source": "hash1", "target": "hash4", "weight": 1, "type": "reply"},
+    {"source": "hash5", "target": "hash6", "weight": 1, "type": "reply"},
+    {"source": "hash6", "target": "hash5", "weight": 1, "type": "reply"},
+    {"source": "hash5", "target": "hash7", "weight": 1, "type": "reply"}
+  ]
+}

@@ -80,5 +80,15 @@ class PipelineConfig:
     component_e_graph_path: str | None = None
     component_e_api_url: str | None = None
 
+    # Author metadata (Section D demographics) — "static" | "live"
+    author_metadata_source: str = "static"
+    author_metadata_static_path: str = "data/fixtures/author_metadata.json"
+    # WIRE LATER: Person 1 / infra live author-metadata endpoint
+    author_metadata_live_url: str | None = None
+
+    # Demographics worker
+    demographics_interval_minutes: int = 10
+    demographics_min_sample_size: int = 20
+    demographics_target_sample_size: int = 50
 
 DEFAULT_CONFIG = PipelineConfig()

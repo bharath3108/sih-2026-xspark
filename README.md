@@ -38,11 +38,14 @@ python -m pytest tests/ -v
 - `POST /api/v1/workers/hdbscan` — run buffer clustering now
 - `GET /api/v1/topics` — all active topics
 - `GET /api/v1/topics/{topic_id}` — Section D payload
+- `GET /api/v1/audience` — current audience (language/profession/geography) snapshot for all active topics
+- `GET /api/v1/audience/{topic_id}` — current snapshot for one topic; add `?from=&to=` for DuckDB time-series history
 
 **Workers**
 
 - `python -m src.workers.stream_consumer` — Redis Stream `person2:nlp_events`
 - `python -m src.workers.hdbscan_worker` — HDBSCAN every 10 minutes
+- `python -m src.workers.demographics_worker` — audience aggregation every `demographics_interval_minutes` (default 10)
 
 ## What is implemented now
 
@@ -56,6 +59,9 @@ python -m pytest tests/ -v
 - DuckDB time-series events
 - FastAPI delivery service
 - In-memory Redis fallback when Redis is down
+- Audience demographics: periodic aggregation of language/profession/geography per topic
+  (`src/workers/demographics_worker.py`), minimum-sample-size gating, Redis `audience_current:{topic_id}`
+  snapshot + DuckDB `audience_snapshots` history, standalone `/api/v1/audience` API
 
 ## Wire later (Person 2 / E / infra)
 
@@ -69,7 +75,22 @@ These interfaces exist as stubs. Do not pretend they are live.
 | **Component E graph** | `src/component_e/network.py` | Author interaction API/file for Louvain `H_network` (`config.component_e_api_url`) |
 | **Local LLM names** | `src/clustering/naming.py` | Llama-3-8B (or compatible) HTTP endpoint; until then c-TF-IDF keywords are the headline |
 | **TimescaleDB** | `src/storage/timeseries_store.py` | Swap DuckDB for Timescale if the team standardizes on Postgres |
-| **Audience metadata** | `SectionDPipeline(author_metadata=...)` | Profession / geography per `author_id`; else `unknown_share = 1.0` |
+| **Audience metadata (live)** | `src/services/author_metadata.py` `LiveAuthorMetadataSource` | Person 1 / infra live author-metadata endpoint or DB, keyed by `author_id`, returning `{language?, profession?, geography?}` |
 | **Auth / rate limits** | `src/api/main.py` | Gateway auth in front of `/api/v1/topics` |
 
 Set `person2_qdrant_url` in `src/config.py` (or env later) to switch vector fetch from the local store to Person 2's DB.
+
+Set `author_metadata_source: "static" | "live"` in `src/config.py` to switch the demographics
+worker's author-metadata lookup between `StaticAuthorMetadataSource` (reads the local fixture at
+`author_metadata_static_path`, default `data/fixtures/author_metadata.json`) and
+`LiveAuthorMetadataSource` (calls `author_metadata_live_url`, currently unset/unimplemented — it
+returns empty metadata until a URL is configured, then raises `NotImplementedError` until the
+live call is wired). No call-site changes are needed when the live source becomes real; the
+original `SectionDPipeline(author_metadata=...)` stub referenced here previously is superseded by
+this dual-mode source, used by `src/workers/demographics_worker.py` and the `/api/v1/audience`
+API. Missing authors/fields degrade to `unknown_share = 1.0` for that category only — never
+fabricated, never blocking the other two signals. Below `demographics_min_sample_size` (default
+20) distinct known authors, a category reports `unknown_share = 1.0` instead of a real
+distribution; `demographics_target_sample_size` (default 50) controls how quickly `confidence`
+climbs to 1.0 with sample size. No author_id-to-category mapping is ever returned or logged —
+only aggregate counts/shares.

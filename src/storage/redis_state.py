@@ -17,6 +17,7 @@ EVENT_TOPIC_MAP = "event_topic_map"
 UNCLUSTERED_BUFFER = "unclustered_buffer"
 TOPIC_ID_SEQ = "topic_id_seq"
 EVENT_CACHE_PREFIX = "event:cache:"
+AUDIENCE_SNAPSHOT_PREFIX = "audience_current:"
 
 
 class InMemoryRedis:
@@ -188,6 +189,17 @@ class RedisStateStore:
 
     def get_cached_event(self, event_id: str) -> dict | None:
         raw = self.redis.get(f"{EVENT_CACHE_PREFIX}{event_id}")
+        if raw is None:
+            return None
+        text = raw.decode() if isinstance(raw, bytes) else str(raw)
+        return json.loads(text)
+
+    def set_audience_snapshot(self, topic_id: str, snapshot: dict) -> None:
+        """Mirrors active_centroids: cheap 'now' read for the audience API."""
+        self.redis.set(f"{AUDIENCE_SNAPSHOT_PREFIX}{topic_id}", json.dumps(snapshot, default=str))
+
+    def get_audience_snapshot(self, topic_id: str) -> dict | None:
+        raw = self.redis.get(f"{AUDIENCE_SNAPSHOT_PREFIX}{topic_id}")
         if raw is None:
             return None
         text = raw.decode() if isinstance(raw, bytes) else str(raw)

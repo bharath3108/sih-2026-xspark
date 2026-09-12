@@ -1,0 +1,75 @@
+[
+  {
+    "topic_id": "topic-001",
+    "name": "Zero-knowledge proof scaling breakthrough",
+    "window": {"start": "2026-09-11T00:00:00Z", "end": "2026-09-11T23:59:59Z"},
+    "metrics": {
+      "volume": 6,
+      "unique_authors": 4,
+      "engagement": 2350,
+      "trend_score": 0.74,
+      "novelty": 0.58,
+      "cross_community_spread": 0.46
+    },
+    "timeline": [
+      {"bucket_start": "2026-09-11T06:00:00Z", "volume": 1, "unique_authors": 1, "engagement": 172, "avg_sentiment": 0.83},
+      {"bucket_start": "2026-09-11T07:00:00Z", "volume": 1, "unique_authors": 1, "engagement": 493, "avg_sentiment": 0.88},
+      {"bucket_start": "2026-09-11T08:00:00Z", "volume": 1, "unique_authors": 1, "engagement": 308, "avg_sentiment": 0.79},
+      {"bucket_start": "2026-09-11T10:00:00Z", "volume": 1, "unique_authors": 1, "engagement": 1445, "avg_sentiment": 0.91},
+      {"bucket_start": "2026-09-11T11:00:00Z", "volume": 1, "unique_authors": 1, "engagement": 128, "avg_sentiment": -0.69},
+      {"bucket_start": "2026-09-11T12:00:00Z", "volume": 1, "unique_authors": 1, "engagement": 776, "avg_sentiment": 0.86}
+    ],
+    "audience": {
+      "categories": {
+        "developer": 0.42,
+        "investor": 0.31,
+        "general_public": 0.14
+      },
+      "unknown_share": 0.13,
+      "sample_size": 4,
+      "confidence": 0.52
+    },
+    "evidence_event_ids": [
+      "e4b11f32-8a90-4c12-b21a-29831aef0101",
+      "9c011a88-12ee-4f99-882b-92311bc40102",
+      "a1b22c33-44dd-55ee-66ff-77788aaa0103",
+      "b2c33d44-55ee-66ff-77aa-88899bbb0104",
+      "c3d44e55-66ff-77aa-88bb-99900ccc0105",
+      "d4e55f66-77aa-88bb-99cc-aaa011dd0106"
+    ]
+  },
+  {
+    "topic_id": "topic-002",
+    "name": "Cross-chain bridge X exploit",
+    "window": {"start": "2026-09-11T00:00:00Z", "end": "2026-09-11T23:59:59Z"},
+    "metrics": {
+      "volume": 4,
+      "unique_authors": 3,
+      "engagement": 5520,
+      "trend_score": 0.93,
+      "novelty": 0.81,
+      "cross_community_spread": 0.72
+    },
+    "timeline": [
+      {"bucket_start": "2026-09-11T09:00:00Z", "volume": 2, "unique_authors": 2, "engagement": 3040, "avg_sentiment": -0.91},
+      {"bucket_start": "2026-09-11T10:00:00Z", "volume": 1, "unique_authors": 1, "engagement": 980, "avg_sentiment": -0.89},
+      {"bucket_start": "2026-09-11T11:00:00Z", "volume": 1, "unique_authors": 1, "engagement": 1500, "avg_sentiment": -0.1}
+    ],
+    "audience": {
+      "categories": {
+        "developer": 0.28,
+        "investor": 0.46,
+        "general_public": 0.11
+      },
+      "unknown_share": 0.15,
+      "sample_size": 3,
+      "confidence": 0.41
+    },
+    "evidence_event_ids": [
+      "f5a66b77-88cc-99dd-aaee-bbb122ee0201",
+      "a6b77c88-99dd-aaee-bbff-ccc233ff0202",
+      "b7c88d99-aaee-bbff-ccaa-ddd344aa0203",
+      "c8d99eaa-bbff-ccaa-ddbb-eee455bb0204"
+    ]
+  }
+]
