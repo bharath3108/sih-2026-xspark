@@ -256,14 +256,7 @@ async def lifespan(app: FastAPI):
 
     device = 0 if torch.cuda.is_available() else -1
 
-    # 1. Language Detection
-    models["lang_detector"] = pipeline(
-        "text-classification",
-        model="papluca/xlm-roberta-base-language-detection",
-        device=device
-    )
-
-    # 2. Emotion Classification
+    # 1. Emotion Classification
     models["emotion_classifier"] = pipeline(
         "text-classification",
         model="SamLowe/roberta-base-go_emotions",
@@ -271,26 +264,26 @@ async def lifespan(app: FastAPI):
         device=device
     )
 
-    # 3. Sarcasm Detection
+    # 2. Sarcasm Detection
     models["sarcasm_detector"] = pipeline(
         "text-classification",
         model="he271311/roberta-base-sarcasm",
         device=device
     )
 
-    # 4. Zero-Shot Stance Classification
+    # 3. Zero-Shot Stance Classification
     models["stance_classifier"] = pipeline(
         "zero-shot-classification",
         model="MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
         device=device
     )
 
-    # 5. Sentence Embeddings
+    # 4. Sentence Embeddings
     models["embedding_model"] = SentenceTransformer(
         "sentence-transformers/all-MiniLM-L6-v2"
     )
 
-    # 6. Initialize Qdrant Client
+    # 5. Initialize Qdrant Client
     qdrant_host = os.getenv("QDRANT_HOST", "localhost")
     qdrant_port = int(os.getenv("QDRANT_PORT", 6333))
     
@@ -354,13 +347,10 @@ def process_social_event(
             )
 
         # -----------------------------------------------------------
-        # 1. Language Detection
+        # 1. Passthrough Input Language Metadata
         # -----------------------------------------------------------
-        lang_output = models["lang_detector"](
-            text, truncation=True, max_length=512
-        )[0]
-        detected_lang = lang_output["label"]
-        lang_conf = round(float(lang_output["score"]), 2)
+        detected_lang = payload.language or "en"
+        lang_conf = 1.0
 
         # -----------------------------------------------------------
         # 2. Emotion Classification & Surface Sentiment
@@ -383,7 +373,7 @@ def process_social_event(
         
         is_sarcastic = (sarcasm_output["label"].upper() == "LABEL_1") and (sarcasm_output["score"] > 0.65)
 
-        # Sarcasm flips literal sentiment (e.g., positive literal wording -> intended negative sentiment)
+        # Sarcasm flips literal sentiment
         if is_sarcastic:
             if derived_sentiment == "positive":
                 derived_sentiment = "negative"
@@ -414,7 +404,6 @@ def process_social_event(
         top_stance = stance_output["labels"][0]
         top_stance_score = float(stance_output["scores"][0])
 
-        # Stance is NOT manually flipped; DeBERTa zero-shot evaluates actual NLI stance directly
         if top_stance_score >= STANCE_THRESHOLD:
             final_stance = top_stance
         else:
