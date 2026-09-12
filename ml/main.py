@@ -10,19 +10,9 @@ import torch
 from transformers import pipeline
 from sentence_transformers import SentenceTransformer
 
-
-# -------------------------------------------------------------------
-# Configuration
-# -------------------------------------------------------------------
-
-# MVP threshold.
-# Tune this using a labeled validation dataset before deployment.
 STANCE_THRESHOLD = 0.60
 
-
-# -------------------------------------------------------------------
 # Pydantic Schemas
-# -------------------------------------------------------------------
 
 class Engagement(BaseModel):
     likes: int = Field(default=0, ge=0)
@@ -145,10 +135,8 @@ class SocialMediaEventResponse(BaseModel):
 
     model: ModelMeta
 
-
-# -------------------------------------------------------------------
 # Sentiment & Emotion Mapping
-# -------------------------------------------------------------------
+
 
 POSITIVE_EMOTIONS = {
     "admiration",
@@ -197,16 +185,13 @@ def derive_sentiment_from_emotion(
     return "neutral"
 
 
-# -------------------------------------------------------------------
 # Global ML Model Container
-# -------------------------------------------------------------------
+
 
 models: Dict[str, Any] = {}
 
 
-# -------------------------------------------------------------------
 # Lifespan Context Manager
-# -------------------------------------------------------------------
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -216,19 +201,12 @@ async def lifespan(app: FastAPI):
 
     device = 0 if torch.cuda.is_available() else -1
 
-    # ---------------------------------------------------------------
-    # 1. Language Detection
-    # ---------------------------------------------------------------
-
     models["lang_detector"] = pipeline(
         "text-classification",
         model="papluca/xlm-roberta-base-language-detection",
         device=device
     )
 
-    # ---------------------------------------------------------------
-    # 2. Emotion Classification
-    # ---------------------------------------------------------------
 
     models["emotion_classifier"] = pipeline(
         "text-classification",
@@ -237,9 +215,6 @@ async def lifespan(app: FastAPI):
         device=device
     )
 
-    # ---------------------------------------------------------------
-    # 3. Zero-Shot Stance Classification
-    # ---------------------------------------------------------------
 
     models["stance_classifier"] = pipeline(
         "zero-shot-classification",
@@ -247,9 +222,6 @@ async def lifespan(app: FastAPI):
         device=device
     )
 
-    # ---------------------------------------------------------------
-    # 4. Sentence Embedding Model
-    # ---------------------------------------------------------------
 
     models["embedding_model"] = SentenceTransformer(
         "sentence-transformers/all-MiniLM-L6-v2"
@@ -257,16 +229,10 @@ async def lifespan(app: FastAPI):
 
     yield
 
-    # ---------------------------------------------------------------
-    # Shutdown
-    # ---------------------------------------------------------------
 
     models.clear()
 
 
-# -------------------------------------------------------------------
-# FastAPI Application
-# -------------------------------------------------------------------
 
 app = FastAPI(
     title="SIH26152 Social Media Analytics Backend",
@@ -274,10 +240,6 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-
-# -------------------------------------------------------------------
-# Health Check
-# -------------------------------------------------------------------
 
 @app.get("/health")
 def health_check():
@@ -287,9 +249,6 @@ def health_check():
     }
 
 
-# -------------------------------------------------------------------
-# Main Analysis Endpoint
-# -------------------------------------------------------------------
 
 @app.post(
     "/analyze",
@@ -346,21 +305,12 @@ def process_social_event(
             2
         )
 
-        # -----------------------------------------------------------
-        # 3. Sentiment Derived from Emotion
-        # -----------------------------------------------------------
 
         derived_sentiment = derive_sentiment_from_emotion(
             top_emotion
         )
 
-        # Sentiment is derived from emotion, so its confidence
-        # is inherited from the emotion prediction.
         sentiment_conf = emotion_conf
-
-        # -----------------------------------------------------------
-        # 4. Zero-Shot Stance Detection
-        # -----------------------------------------------------------
 
         target = payload.target_topic
 
@@ -388,16 +338,11 @@ def process_social_event(
             max_length=512
         )
 
-        # Hugging Face returns labels ordered by score.
         top_stance = stance_output["labels"][0]
 
         top_stance_score = float(
             stance_output["scores"][0]
         )
-
-        # -----------------------------------------------------------
-        # 5. Threshold-Based Unknown Classification
-        # -----------------------------------------------------------
 
         if top_stance_score >= STANCE_THRESHOLD:
             final_stance = top_stance
@@ -409,20 +354,15 @@ def process_social_event(
             2
         )
 
-        # -----------------------------------------------------------
-        # 6. Embedding Reference
-        # -----------------------------------------------------------
+        #  Embedding Reference
+       
 
         # No vector database is connected yet.
         #
-        # Do NOT generate an embedding just to throw it away.
         # Once Qdrant/Milvus/etc. is integrated, generate the
         # embedding here, store it, and return the resulting ID.
         embedding_ref = None
 
-        # -----------------------------------------------------------
-        # 7. Response
-        # -----------------------------------------------------------
 
         return SocialMediaEventResponse(
 
@@ -464,16 +404,9 @@ def process_social_event(
             )
         )
 
-    # ---------------------------------------------------------------
-    # Preserve intentional HTTP errors
-    # ---------------------------------------------------------------
 
     except HTTPException:
         raise
-
-    # ---------------------------------------------------------------
-    # Unexpected inference/server errors
-    # ---------------------------------------------------------------
 
     except Exception as e:
         raise HTTPException(
