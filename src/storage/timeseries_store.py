@@ -46,7 +46,8 @@ class TimeSeriesStore:
                 likes INTEGER,
                 shares INTEGER,
                 comments INTEGER,
-                raw_text VARCHAR
+                raw_text VARCHAR,
+                sentiment_score DOUBLE
             )
         """)
         self._conn.execute("""
@@ -74,8 +75,8 @@ class TimeSeriesStore:
         self._conn.execute(
             """
             INSERT OR REPLACE INTO events
-            (event_id, topic_id, timestamp, platform, author_id, likes, shares, comments, raw_text)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            (event_id, topic_id, timestamp, platform, author_id, likes, shares, comments, raw_text, sentiment_score)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             [
                 event.event_id,
@@ -87,6 +88,7 @@ class TimeSeriesStore:
                 event.shares,
                 event.comments,
                 event.raw_text,
+                event.sentiment_score,
             ],
         )
 
@@ -141,7 +143,8 @@ class TimeSeriesStore:
             SELECT
                 COUNT(*) as volume,
                 COUNT(DISTINCT author_id) as authors,
-                COALESCE(SUM(likes + shares + comments), 0) as engagement
+                COALESCE(SUM(likes + shares + comments), 0) as engagement,
+                AVG(sentiment_score) as avg_sentiment
             FROM events
             WHERE topic_id = ?
               AND timestamp >= ?
@@ -153,6 +156,10 @@ class TimeSeriesStore:
             "volume": row[0],
             "authors": row[1],
             "engagement": row[2],
+            # AVG() skips NULLs; an all-NULL bucket (no sentiment yet) comes
+            # back NULL, not 0 -- surface that as None rather than a
+            # misleadingly neutral 0.0.
+            "avg_sentiment": row[3],
         }
 
     def get_all_bucket_starts(self, topic_id: str) -> list[datetime]:

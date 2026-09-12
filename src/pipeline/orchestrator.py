@@ -72,7 +72,7 @@ class SectionDPipeline:
         self.lifecycle_engine = LifecycleEngine(self.timeseries_store, config)
         self.trend_engine = TrendScoreEngine(config)
         self.evidence_engine = EvidenceEngine(self.timeseries_store)
-        self.audience_engine = AudienceEngine()
+        self.audience_engine = AudienceEngine(config)
 
         self._event_vectors: dict[str, list[float]] = {}
         self._topic_events: dict[str, list[IngestedEvent]] = {}

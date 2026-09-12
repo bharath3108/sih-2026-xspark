@@ -19,7 +19,14 @@ def detect_communities(G: nx.DiGraph) -> list[dict]:
         result.append({
             "community_id": f"c{i+1}",
             "size": len(comm_nodes),
-            "central_nodes": comm_nodes_sorted[:3]
+            # "central_nodes" is a short representative sample for the
+            # published Network Contract; "members" is the full membership
+            # and is what cross-community-edge math (bridge.py, engine.py)
+            # must use — treating the truncated sample as full membership
+            # was the bug that made cross_community_rate/bridge detection
+            # blind to most of the graph.
+            "central_nodes": comm_nodes_sorted[:3],
+            "members": comm_nodes_sorted
         })
 
     return result

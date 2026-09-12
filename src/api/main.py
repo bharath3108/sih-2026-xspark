@@ -68,7 +68,9 @@ def create_app(pipeline: SectionDPipeline | None = None, start_scheduler: bool =
                 "bucket": item["bucket_start"],
                 "bucket_start": item["bucket_start"],
                 "volume": item["volume"],
-                "authors": item["authors"],
+                "unique_authors": item["unique_authors"],
+                "engagement": item["engagement"],
+                "avg_sentiment": item["avg_sentiment"],
                 "status": item["status"],
             }
             for item in data.get("timeline", [])

@@ -76,7 +76,8 @@ class StreamIngestionWorker:
             "timestamp": event.get("timestamp"),
             "author_id": event.get("author_id"),
             "platform": event.get("platform"),
-            "sentiment": sentiment.get("label") if isinstance(sentiment, dict) else sentiment,
+            "sentiment_label": sentiment.get("label") if isinstance(sentiment, dict) else sentiment,
+            "sentiment_score": sentiment.get("score") if isinstance(sentiment, dict) else None,
             "vector": vector,
             "engagement": engagement,
             "likes": event.get("likes", metrics.get("likes", 0)),
@@ -108,6 +109,8 @@ class StreamIngestionWorker:
             comments=int(payload.get("comments") or 0),
             raw_text=payload.get("raw_text"),
             vector=list(vector),
+            sentiment_label=payload.get("sentiment_label"),
+            sentiment_score=payload.get("sentiment_score"),
         )
 
 

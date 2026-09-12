@@ -1,10 +1,14 @@
+import hashlib
+import math
 import os
+import re
 import uuid
 from contextlib import asynccontextmanager
 from datetime import datetime
 from typing import List, Optional, Dict, Any, Literal
 from uuid import UUID
 
+import transformers
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, field_validator
 
@@ -22,6 +26,14 @@ from qdrant_client.models import Distance, VectorParams, PointStruct
 STANCE_THRESHOLD = 0.60
 EMBEDDING_DIM = 384  # sentence-transformers/all-MiniLM-L6-v2 outputs 384-dim vectors
 EMBEDDINGS_COLLECTION = "nlp_embeddings"
+
+LANG_MODEL_ID = "papluca/xlm-roberta-base-language-detection"
+EMOTION_MODEL_ID = "SamLowe/roberta-base-go_emotions"
+STANCE_MODEL_ID = "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"
+EMBEDDING_MODEL_ID = "sentence-transformers/all-MiniLM-L6-v2"
+
+FALLBACK_MODEL_NAME = "local-lexicon-fallback"
+FALLBACK_MODEL_VERSION = "1.0"
 
 
 # -------------------------------------------------------------------
@@ -126,6 +138,7 @@ class StanceResult(BaseModel):
 class EvidenceItem(BaseModel):
     type: str
     event_id: UUID
+    source_post_id: Optional[str] = None
 
 
 class ModelMeta(BaseModel):
@@ -175,11 +188,101 @@ def derive_sentiment_from_emotion(emotion_label: str) -> str:
 
 
 # -------------------------------------------------------------------
+# Deterministic Local Fallbacks
+#
+# Required so the service degrades gracefully (never crashes, never blocks
+# the demo) if a transformer model fails to load/run at runtime — e.g. no
+# network access to the HF hub. These are intentionally simple, offline,
+# reproducible heuristics, not a second ML stack.
+# -------------------------------------------------------------------
+
+_WORD_RE = re.compile(r"[a-zA-Z']+")
+
+_COMMON_EN_WORDS = {
+    "the", "a", "an", "is", "are", "was", "were", "to", "of", "in", "it",
+    "this", "that", "for", "on", "with", "and", "but", "not", "you", "we",
+}
+
+_POSITIVE_WORDS = {
+    "good", "great", "love", "happy", "excellent", "amazing", "support",
+    "win", "best", "glad", "thanks", "thank", "awesome", "proud", "hope",
+}
+
+_NEGATIVE_WORDS = {
+    "bad", "hate", "terrible", "angry", "worst", "fail", "failed", "sad",
+    "awful", "disgusting", "scam", "fraud", "afraid", "fear", "wrong",
+}
+
+_NEGATION_WORDS = {"not", "no", "never", "against", "oppose", "opposed", "anti", "reject"}
+
+
+def fallback_detect_language(text: str) -> tuple[str, float]:
+    tokens = _WORD_RE.findall(text.lower())
+    ascii_ratio = sum(1 for c in text if ord(c) < 128) / max(len(text), 1)
+    if ascii_ratio < 0.9:
+        return "und", 0.3
+    hits = sum(1 for t in tokens if t in _COMMON_EN_WORDS)
+    return "en", (0.5 if hits > 0 else 0.35)
+
+
+def fallback_sentiment_emotion(text: str) -> tuple[str, str, float]:
+    tokens = _WORD_RE.findall(text.lower())
+    pos = sum(1 for t in tokens if t in _POSITIVE_WORDS)
+    neg = sum(1 for t in tokens if t in _NEGATIVE_WORDS)
+    total = pos + neg
+    if total == 0:
+        return "neutral", "neutral", 0.34
+    if pos > neg:
+        return "positive", "optimism", round(min(0.5 + 0.5 * (pos - neg) / total, 0.9), 2)
+    if neg > pos:
+        return "negative", "anger", round(min(0.5 + 0.5 * (neg - pos) / total, 0.9), 2)
+    return "neutral", "neutral", 0.4
+
+
+def fallback_stance(text: str, target: str) -> tuple[str, float]:
+    target_tokens = set(_WORD_RE.findall(target.lower()))
+    tokens = _WORD_RE.findall(text.lower())
+    if not target_tokens or not (target_tokens & set(tokens)):
+        return "unknown", 0.0
+    neg_hits = sum(1 for t in tokens if t in _NEGATION_WORDS)
+    pos_hits = sum(1 for t in tokens if t in _POSITIVE_WORDS)
+    if neg_hits > pos_hits:
+        return "oppose", 0.4
+    if pos_hits > neg_hits:
+        return "support", 0.4
+    return "neutral", 0.3
+
+
+def fallback_embedding(text: str, dim: int = EMBEDDING_DIM) -> List[float]:
+    """Deterministic hashing-trick pseudo-embedding — keeps embedding_ref /
+    downstream clustering functional (right dimensionality) without a model."""
+    vec = [0.0] * dim
+    tokens = _WORD_RE.findall(text.lower()) or [text]
+    for token in tokens:
+        digest = hashlib.sha256(token.encode("utf-8")).digest()
+        idx = int.from_bytes(digest[:4], "big") % dim
+        sign = 1.0 if digest[4] % 2 == 0 else -1.0
+        vec[idx] += sign
+    norm = math.sqrt(sum(v * v for v in vec)) or 1.0
+    return [v / norm for v in vec]
+
+
+# -------------------------------------------------------------------
 # Global ML Model & Database Containers
 # -------------------------------------------------------------------
 
 models: Dict[str, Any] = {}
 qdrant_client: Optional[QdrantClient] = None
+
+# Tracks whether each transformer model loaded successfully at startup, so a
+# failed download/OOM degrades a single signal to its deterministic fallback
+# instead of taking down the whole /analyze endpoint.
+MODEL_STATUS: Dict[str, bool] = {
+    "lang_detector": False,
+    "emotion_classifier": False,
+    "stance_classifier": False,
+    "embedding_model": False,
+}
 
 
 # -------------------------------------------------------------------
@@ -257,32 +360,50 @@ async def lifespan(app: FastAPI):
 
     device = 0 if torch.cuda.is_available() else -1
 
+    # Each model load is isolated: if the HF hub is unreachable or a single
+    # model OOMs, that one signal falls back to a deterministic local
+    # heuristic at request time instead of the whole service failing to boot.
+
     # 1. Language Detection
-    models["lang_detector"] = pipeline(
-        "text-classification",
-        model="papluca/xlm-roberta-base-language-detection",
-        device=device
-    )
+    try:
+        models["lang_detector"] = pipeline(
+            "text-classification",
+            model=LANG_MODEL_ID,
+            device=device
+        )
+        MODEL_STATUS["lang_detector"] = True
+    except Exception as e:
+        print(f"Warning: Could not load language detector ({LANG_MODEL_ID}): {e}")
 
     # 2. Emotion Classification
-    models["emotion_classifier"] = pipeline(
-        "text-classification",
-        model="SamLowe/roberta-base-go_emotions",
-        top_k=1,
-        device=device
-    )
+    try:
+        models["emotion_classifier"] = pipeline(
+            "text-classification",
+            model=EMOTION_MODEL_ID,
+            top_k=1,
+            device=device
+        )
+        MODEL_STATUS["emotion_classifier"] = True
+    except Exception as e:
+        print(f"Warning: Could not load emotion classifier ({EMOTION_MODEL_ID}): {e}")
 
     # 3. Zero-Shot Stance Classification
-    models["stance_classifier"] = pipeline(
-        "zero-shot-classification",
-        model="MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
-        device=device
-    )
+    try:
+        models["stance_classifier"] = pipeline(
+            "zero-shot-classification",
+            model=STANCE_MODEL_ID,
+            device=device
+        )
+        MODEL_STATUS["stance_classifier"] = True
+    except Exception as e:
+        print(f"Warning: Could not load stance classifier ({STANCE_MODEL_ID}): {e}")
 
     # 4. Sentence Embeddings
-    models["embedding_model"] = SentenceTransformer(
-        "sentence-transformers/all-MiniLM-L6-v2"
-    )
+    try:
+        models["embedding_model"] = SentenceTransformer(EMBEDDING_MODEL_ID)
+        MODEL_STATUS["embedding_model"] = True
+    except Exception as e:
+        print(f"Warning: Could not load embedding model ({EMBEDDING_MODEL_ID}): {e}")
 
     # 5. Initialize Qdrant Client
     qdrant_host = os.getenv("QDRANT_HOST", "localhost")
@@ -323,7 +444,8 @@ app = FastAPI(
 def health_check():
     return {
         "status": "healthy",
-        "models_loaded": list(models.keys()),
+        "models_loaded": [name for name, ok in MODEL_STATUS.items() if ok],
+        "models_on_fallback": [name for name, ok in MODEL_STATUS.items() if not ok],
         "qdrant_connected": qdrant_client is not None
     }
 
@@ -352,69 +474,81 @@ def process_social_event(
                 detail="Text payload cannot be empty."
             )
 
+        used_fallback = False
+
         # -----------------------------------------------------------
         # 1. Language Detection
         # -----------------------------------------------------------
-        lang_output = models["lang_detector"](
-            text,
-            truncation=True,
-            max_length=512
-        )[0]
-
-        detected_lang = lang_output["label"]
-        lang_conf = round(float(lang_output["score"]), 2)
+        if MODEL_STATUS["lang_detector"]:
+            lang_output = models["lang_detector"](
+                text,
+                truncation=True,
+                max_length=512
+            )[0]
+            detected_lang = lang_output["label"]
+            lang_conf = round(float(lang_output["score"]), 2)
+        else:
+            detected_lang, lang_conf = fallback_detect_language(text)
 
         # -----------------------------------------------------------
         # 2. Emotion Classification & Derived Sentiment
         # -----------------------------------------------------------
-        emotion_output = models["emotion_classifier"](
-            text,
-            truncation=True,
-            max_length=512
-        )[0][0]
+        if MODEL_STATUS["emotion_classifier"]:
+            emotion_output = models["emotion_classifier"](
+                text,
+                truncation=True,
+                max_length=512
+            )[0][0]
 
-        top_emotion = emotion_output["label"]
-        emotion_conf = round(float(emotion_output["score"]), 2)
-
-        derived_sentiment = derive_sentiment_from_emotion(top_emotion)
-        sentiment_conf = emotion_conf
+            top_emotion = emotion_output["label"]
+            emotion_conf = round(float(emotion_output["score"]), 2)
+            derived_sentiment = derive_sentiment_from_emotion(top_emotion)
+            sentiment_conf = emotion_conf
+        else:
+            used_fallback = True
+            derived_sentiment, top_emotion, emotion_conf = fallback_sentiment_emotion(text)
+            sentiment_conf = emotion_conf
 
         # -----------------------------------------------------------
-        # 3. Dynamic Zero-Shot Stance Detection
+        # 3. Zero-Shot Stance Detection Toward an Explicit Target
+        #
+        # Stance is only meaningful relative to a target; without one there
+        # is nothing to be "for" or "against" so we report unknown rather
+        # than scoring a made-up generic hypothesis.
         # -----------------------------------------------------------
         target = payload.target_topic
 
-        if target:
-            hypothesis = f"This post expresses a stance towards {target}: {{}}."
-        else:
-            hypothesis = "The overall stance expressed in this post is {}."
-
-        stance_candidate_labels = ["support", "oppose", "neutral"]
-
-        stance_output = models["stance_classifier"](
-            text,
-            candidate_labels=stance_candidate_labels,
-            hypothesis_template=hypothesis,
-            truncation=True,
-            max_length=512
-        )
-
-        top_stance = stance_output["labels"][0]
-        top_stance_score = float(stance_output["scores"][0])
-
-        if top_stance_score >= STANCE_THRESHOLD:
-            final_stance = top_stance
-        else:
+        if not target:
             final_stance = "unknown"
+            stance_conf = 0.0
+        elif MODEL_STATUS["stance_classifier"]:
+            hypothesis = f"This post expresses a stance towards {target}: {{}}."
+            stance_candidate_labels = ["support", "oppose", "neutral"]
 
-        stance_conf = round(top_stance_score, 2)
+            stance_output = models["stance_classifier"](
+                text,
+                candidate_labels=stance_candidate_labels,
+                hypothesis_template=hypothesis,
+                truncation=True,
+                max_length=512
+            )
+
+            top_stance = stance_output["labels"][0]
+            top_stance_score = float(stance_output["scores"][0])
+
+            final_stance = top_stance if top_stance_score >= STANCE_THRESHOLD else "unknown"
+            stance_conf = round(top_stance_score, 2)
+        else:
+            used_fallback = True
+            final_stance, stance_conf = fallback_stance(text, target)
 
         # -----------------------------------------------------------
         # 4. Generate and Store Vector Embeddings
         # -----------------------------------------------------------
-        embedding_vector_list = models["embedding_model"].encode(
-            text
-        ).tolist()
+        if MODEL_STATUS["embedding_model"]:
+            embedding_vector_list = models["embedding_model"].encode(text).tolist()
+        else:
+            embedding_vector_list = fallback_embedding(text)
 
         metadata = {
             "timestamp_utc": str(payload.timestamp_utc),
@@ -460,12 +594,14 @@ def process_social_event(
             evidence=[
                 EvidenceItem(
                     type="source_event",
-                    event_id=payload.event_id
+                    event_id=payload.event_id,
+                    source_post_id=payload.source_post_id
                 )
             ],
-            model=ModelMeta(
-                name="sih26152-ensemble-transformer",
-                version="1.0.0"
+            model=(
+                ModelMeta(name=FALLBACK_MODEL_NAME, version=FALLBACK_MODEL_VERSION)
+                if used_fallback
+                else ModelMeta(name=EMOTION_MODEL_ID, version=transformers.__version__)
             )
         )
 

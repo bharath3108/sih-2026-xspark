@@ -1,6 +1,6 @@
 import networkx as nx
 from graph.construction.builder import build_interaction_graph
-from graph.metrics.centrality import compute_centrality_scores
+from graph.metrics.centrality import compute_centrality_scores, compute_centrality_with_roles
 from graph.communities.detector import detect_communities
 from graph.propagation.tracker import calculate_cascade_metrics
 from graph.metrics.bridge import detect_bridge_nodes
@@ -32,7 +32,7 @@ def analyze_network(events: list[dict], start_time: str, end_time: str) -> dict:
     if communities and num_edges > 0:
         node_comm_map = {}
         for comm in communities:
-            for node in comm.get("central_nodes", []):
+            for node in comm.get("members", comm.get("central_nodes", [])):
                 node_comm_map[node] = comm["community_id"]
         
         cross_edges = sum(1 for u, v in G.edges() if node_comm_map.get(u) != node_comm_map.get(v))
@@ -55,3 +55,40 @@ def analyze_network(events: list[dict], start_time: str, end_time: str) -> dict:
         },
         "evidence_event_ids": evidence_ids[:10]
     }
+
+
+def build_network_topology(events: list[dict]) -> dict:
+    """Node/edge list for the visual graph -- not part of the published
+    Network Contract (which only carries summary metrics + community
+    membership), but real computed data instead of backend/services/
+    data_access.py's network_edges.json stand-in, once real events exist."""
+    G, _ = build_interaction_graph(events)
+
+    if G.number_of_nodes() > MAX_NODES_LIMIT:
+        top_nodes = sorted(G.degree, key=lambda x: x[1], reverse=True)[:MAX_NODES_LIMIT]
+        G = G.subgraph([n for n, _ in top_nodes]).copy()
+
+    communities = detect_communities(G)
+    node_comm_map: dict[str, str] = {}
+    for comm in communities:
+        for node in comm.get("members", comm.get("central_nodes", [])):
+            node_comm_map[node] = comm["community_id"]
+
+    bridge_nodes = detect_bridge_nodes(G, communities)
+    bridge_hashes = [b["node_hash"] for b in bridge_nodes]
+    classified = compute_centrality_with_roles(G, bridge_nodes=bridge_hashes)
+
+    nodes = [
+        {
+            "id": n["node_id"],
+            "community_id": node_comm_map.get(n["node_id"], "unknown"),
+            "centrality": n["betweenness_centrality"],
+            "role": n["structural_role"],
+        }
+        for n in classified
+    ]
+    edges = [
+        {"source": u, "target": v, "weight": 1, "type": "reply"}
+        for u, v in G.edges()
+    ]
+    return {"nodes": nodes, "edges": edges}

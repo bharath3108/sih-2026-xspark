@@ -5,12 +5,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+# Falls back to a local SQLite file when DATABASE_URL isn't configured (no
+# Postgres available yet) so the app can still start for local dev/demo use;
+# set DATABASE_URL in .env to use real Postgres instead.
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./sih_local.db")
+
+connect_args = {"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {}
 
 engine = create_engine(
     DATABASE_URL,
     pool_pre_ping=True,
-    pool_recycle=300
+    pool_recycle=300,
+    connect_args=connect_args
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

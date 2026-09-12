@@ -30,14 +30,16 @@ class NLPAdapter:
     Handles platform mapping, sentiment/emotion conversion, and engagement aggregation.
     """
 
-    # Platform mapping: mainml source -> downstream Platform enum
-    # Dynamically fall back to Platform.X if a specific platform key isn't in Platform enum
+    # Platform mapping: mainml source -> downstream Platform enum.
+    # Every value in SocialMediaEventRequest.source must map to a real,
+    # distinct Platform member — silently collapsing an unmapped source onto
+    # Platform.X would mislabel its origin in every downstream aggregate.
     PLATFORM_MAP = {
-        "x": getattr(Platform, "X", Platform.X),
-        "telegram": getattr(Platform, "TELEGRAM", Platform.X),
-        "reddit": getattr(Platform, "REDDIT", Platform.X),
-        "instagram": getattr(Platform, "INSTAGRAM", Platform.X),
-        "other": getattr(Platform, "OTHER", Platform.X),
+        "x": Platform.X,
+        "telegram": Platform.TELEGRAM,
+        "reddit": Platform.REDDIT,
+        "instagram": Platform.INSTAGRAM,
+        "other": Platform.OTHER,
     }
 
     @staticmethod
@@ -51,7 +53,7 @@ class NLPAdapter:
         """
         platform = NLPAdapter.PLATFORM_MAP.get(
             request.source.lower(),
-            Platform.X
+            Platform.OTHER
         )
 
         return NLPOutputContract(
@@ -89,17 +91,12 @@ class NLPAdapter:
         Reverse path: downstream -> mainml (if needed for re-processing).
         """
         platform_reverse_map = {
-            Platform.X: "x",
-            getattr(Platform, "TELEGRAM", None): "telegram",
-            getattr(Platform, "REDDIT", None): "reddit",
-            getattr(Platform, "INSTAGRAM", None): "instagram",
+            v: k for k, v in NLPAdapter.PLATFORM_MAP.items()
         }
 
+        # YOUTUBE has no matching source literal in SocialMediaEventRequest;
+        # everything else in Platform is guaranteed present in PLATFORM_MAP.
         source_str = platform_reverse_map.get(payload.platform, "other")
-
-        # Guarantee source_str is one of the allowed literals
-        if source_str not in {"x", "telegram", "reddit", "instagram", "other"}:
-            source_str = "other"
 
         return SocialMediaEventRequest(
             event_id=UUID(payload.event_id) if isinstance(payload.event_id, str) else payload.event_id,

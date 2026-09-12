@@ -18,3 +18,22 @@ class CanonicalEventModel(Base):
     entities = Column(JSON, default=[])
     event_metadata = Column(JSON, default={})
     created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class NLPOutputModel(Base):
+    """Person 2's NLP Output Contract, persisted per ingested event so the
+    dashboard can read real sentiment/emotion/stance instead of only the
+    static nlp_outputs.json fixture. Mirrors backend/schemas/contracts.py's
+    NLPOutput shape."""
+
+    __tablename__ = "nlp_outputs"
+
+    event_id = Column(String, primary_key=True, index=True)
+    language = Column(JSON, default={})
+    sentiment = Column(JSON, default={})
+    emotion = Column(JSON, nullable=True)
+    stance = Column(JSON, default={})
+    embedding_ref = Column(String, nullable=True)
+    evidence = Column(JSON, default=[])
+    model = Column(JSON, default={})
+    created_at = Column(DateTime, default=datetime.utcnow)

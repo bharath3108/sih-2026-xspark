@@ -2,59 +2,56 @@
 
 from __future__ import annotations
 
-from src.contracts.section_d import Audience, AudienceCategories
+from src.config import PipelineConfig, DEFAULT_CONFIG
+from src.contracts.section_d import Audience
 
 
 class AudienceEngine:
     """
-    Computes audience distribution categories.
-    Expects optional author metadata from upstream enrichment.
+    Computes an aggregate, probabilistic audience distribution (profession
+    breakdown) for the authors mapped to a topic. Applies the same
+    minimum-sample-size gate as src/engines/demographics.py's
+    DemographicsEngine (the spec requires "apply minimum-sample thresholds
+    and avoid individual-level demographic output" -- this engine used to
+    have no such gate at all, reporting confidence=1.0 off a single author).
     """
+
+    def __init__(self, config: PipelineConfig = DEFAULT_CONFIG):
+        self.config = config
 
     def compute(
         self,
         author_ids: list[str],
         author_metadata: dict[str, dict] | None = None,
     ) -> Audience:
-        if not author_ids or not author_metadata:
-            return Audience(
-                categories=AudienceCategories(),
-                unknown_share=1.0,
-                sample_size=len(author_ids),
-                confidence=0.0,
-            )
+        total = len(author_ids)
+        author_metadata = author_metadata or {}
 
-        profession_counts: dict[str, int] = {}
-        geography_counts: dict[str, int] = {}
+        counts: dict[str, int] = {}
         known = 0
-
         for aid in author_ids:
-            meta = author_metadata.get(aid, {})
-            if not meta:
+            meta = author_metadata.get(aid) or {}
+            prof = meta.get("profession")
+            if not prof:
                 continue
             known += 1
-            prof = meta.get("profession", "Other")
-            geo = meta.get("geography", "Unknown")
-            profession_counts[prof] = profession_counts.get(prof, 0) + 1
-            geography_counts[geo] = geography_counts.get(geo, 0) + 1
+            counts[prof] = counts.get(prof, 0) + 1
 
-        total = len(author_ids)
-        unknown_share = 1.0 - (known / total) if total > 0 else 1.0
+        confidence = round(min(1.0, known / self.config.demographics_target_sample_size), 4) if total else 0.0
 
-        def normalize(counts: dict[str, int]) -> dict[str, float]:
-            s = sum(counts.values())
-            if s == 0:
-                return {}
-            return {k: round(v / s, 2) for k, v in counts.items()}
+        if total == 0 or known < self.config.demographics_min_sample_size:
+            return Audience(
+                categories={},
+                unknown_share=1.0,
+                sample_size=known,
+                confidence=confidence,
+            )
 
-        confidence = round(known / total, 2) if total > 0 else 0.0
+        categories = {k: round(v / known, 2) for k, v in counts.items()}
 
         return Audience(
-            categories=AudienceCategories(
-                profession=normalize(profession_counts),
-                geography=normalize(geography_counts),
-            ),
-            unknown_share=round(unknown_share, 2),
-            sample_size=total,
+            categories=categories,
+            unknown_share=round(1.0 - (known / total), 2),
+            sample_size=known,
             confidence=confidence,
         )

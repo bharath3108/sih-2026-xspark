@@ -1,5 +1,30 @@
 import networkx as nx
 
+
+def compute_centrality_scores(G: nx.DiGraph, top_n: int = 10) -> dict:
+    """Dict-shaped centrality summary used by graph/engine.py and
+    graph/temporal/comparator.py for window/trend comparisons. See
+    compute_centrality_with_roles below for the richer per-node role
+    classification used by the API layer."""
+    if G.number_of_nodes() == 0:
+        return {"in_degree": {}, "out_degree": {}, "betweenness": {}, "top_betweenness": []}
+
+    in_degrees = dict(G.in_degree())
+    out_degrees = dict(G.out_degree())
+    betweenness = nx.betweenness_centrality(G, k=min(G.number_of_nodes(), 100))
+
+    top_betweenness = [
+        node for node, _ in sorted(betweenness.items(), key=lambda kv: kv[1], reverse=True)[:top_n]
+    ]
+
+    return {
+        "in_degree": in_degrees,
+        "out_degree": out_degrees,
+        "betweenness": betweenness,
+        "top_betweenness": top_betweenness,
+    }
+
+
 def classify_node_role(
     node: str,
     in_deg: int,

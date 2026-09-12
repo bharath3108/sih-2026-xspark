@@ -11,6 +11,8 @@ class Platform(str, Enum):
     TELEGRAM = "Telegram"
     REDDIT = "Reddit"
     YOUTUBE = "YouTube"
+    INSTAGRAM = "Instagram"
+    OTHER = "Other"
 
 
 class InteractionCounts(BaseModel):
@@ -80,6 +82,8 @@ class IngestedEvent(BaseModel):
     raw_text: str | None = None
     vector: list[float]
     topic_id: str | None = None
+    sentiment_label: str | None = None
+    sentiment_score: float | None = None
 
     @classmethod
     def from_nlp(cls, payload: NLPOutputContract, vector: list[float]) -> "IngestedEvent":
@@ -93,6 +97,8 @@ class IngestedEvent(BaseModel):
             comments=payload.comments,
             raw_text=payload.raw_text,
             vector=vector,
+            sentiment_label=payload.sentiment.label if payload.sentiment else None,
+            sentiment_score=payload.sentiment.score if payload.sentiment else None,
         )
 
     @property

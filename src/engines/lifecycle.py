@@ -105,6 +105,7 @@ class LifecycleEngine:
                     "volume": stats["volume"],
                     "authors": stats["authors"],
                     "engagement": stats["engagement"],
+                    "avg_sentiment": stats["avg_sentiment"] if stats["avg_sentiment"] is not None else 0.0,
                 }
             )
         return buckets
@@ -156,7 +157,9 @@ class LifecycleEngine:
                 TimelineBucket(
                     bucket_start=bs,
                     volume=b["volume"],
-                    authors=b["authors"],
+                    unique_authors=b["authors"],
+                    engagement=b["engagement"],
+                    avg_sentiment=b["avg_sentiment"],
                     status=phase.value,
                 )
             )
@@ -172,6 +175,7 @@ class LifecycleEngine:
                 "acceleration": 0.0,
                 "author_growth": 0.0,
                 "volume_std": 1.0,
+                "engagement_per_author": 0.0,
             }
 
         total_volume = sum(b["volume"] for b in buckets)

@@ -8,12 +8,12 @@ def detect_bridge_nodes(G: nx.DiGraph, communities: list[dict]) -> list[dict]:
     if not communities or G.number_of_edges() == 0:
         return []
 
-    # Map each node to its assigned community ID
+    # Map each node to its assigned community ID (full membership, not just
+    # the top-3 "central_nodes" sample -- see detector.py's "members" field).
     node_comm_map = {}
     for comm in communities:
         comm_id = comm.get("community_id")
-        # Map all central nodes in community
-        for node in comm.get("central_nodes", []):
+        for node in comm.get("members", comm.get("central_nodes", [])):
             node_comm_map[node] = comm_id
 
     bridge_scores = {}

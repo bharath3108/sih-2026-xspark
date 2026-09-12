@@ -10,7 +10,7 @@ from ml.mainml import (
     SocialMediaEventRequest,
     SocialMediaEventResponse,
 )
-from ml.adapters import NLPAdapter
+from ml.adapterml import NLPAdapter
 
 __all__ = [
     "app",
