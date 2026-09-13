@@ -112,7 +112,7 @@ def _run_nlp_analysis(db: Session, event: CanonicalEvent) -> None:
         nlp_contract = NLPAdapter.social_media_event_to_nlp_contract(request, response)
         from backend.services import live_pipeline
 
-        live_pipeline.ingest_nlp_output(nlp_contract)
+        live_pipeline.ingest_nlp_output(nlp_contract, embedding_vector=response.embedding_vector)
     except Exception as e:
         print(f"[WARN] NLP analysis failed for event {event.event_id}: {e}")
 
@@ -121,7 +121,16 @@ def _ingest_raw_posts(db: Session, raw_posts: list[dict]) -> dict:
     """Normalizes + inserts raw posts, skipping (not crashing on) malformed
     records and deduping by (source, source_post_id) since each normalize()
     call mints a fresh random event_id, so merge()-by-primary-key alone
-    would not catch a post ingested twice across separate runs."""
+    would not catch a post ingested twice across separate runs.
+
+    Commits after each record (rather than once at the end) so a batch of
+    hundreds/thousands of posts -- each involving real NLP model inference
+    plus round-trips to a remote DB -- doesn't sit inside one long-lived
+    open transaction: that shape risks a managed Postgres provider's
+    idle-in-transaction timeout killing the whole connection, and even
+    without a timeout, a single bad record's db.rollback() would otherwise
+    wipe out every prior success in the same request instead of just that
+    record."""
     ingested = 0
     skipped_duplicates = 0
     failed: list[dict] = []
@@ -130,30 +139,33 @@ def _ingest_raw_posts(db: Session, raw_posts: list[dict]) -> dict:
         try:
             normalized = normalize_raw_post(post)
             _resolve_parent_event_id(db, normalized)
-        except Exception as e:
-            failed.append({"post": post, "error": str(e)})
-            continue
 
-        existing = (
-            db.query(CanonicalEventModel)
-            .filter_by(source=normalized.source, source_post_id=normalized.source_post_id)
-            .first()
-        )
-        if existing is not None:
-            skipped_duplicates += 1
-            continue
+            existing = (
+                db.query(CanonicalEventModel)
+                .filter_by(source=normalized.source, source_post_id=normalized.source_post_id)
+                .first()
+            )
+            if existing is not None:
+                skipped_duplicates += 1
+                continue
 
-        try:
             db_event = CanonicalEventModel(**_event_to_db_row(normalized))
             db.merge(db_event)
             db.flush()
             _run_nlp_analysis(db, normalized)
+            db.commit()
             ingested += 1
+            if ingested % 25 == 0:
+                # Clear the dashboard's cached reads periodically rather
+                # than only once this whole (possibly long-running, e.g.
+                # thousands of records) request finishes, so a live view
+                # of the dashboard shows real progress instead of stale
+                # data until the very end.
+                data_access.clear_cache()
         except Exception as e:
             db.rollback()
             failed.append({"post": post, "error": str(e)})
 
-    db.commit()
     if ingested:
         data_access.clear_cache()
     return {

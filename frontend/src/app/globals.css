@@ -1,10 +1,211 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ---------------------------------------------------------------------------
+   Design tokens — dark-first analytics surface.
+   Every colour/radius/shadow used in the app resolves to one of these.
+--------------------------------------------------------------------------- */
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+
+  /* Canvas & elevation */
+  --color-canvas: #08080f;
+  --color-base: #0c0c16;
+  --color-surface: #13131f;
+  --color-surface-2: #1a1a28;
+  --color-surface-3: #232333;
+
+  /* Hairlines */
+  --color-line: #ffffff12;
+  --color-line-strong: #ffffff1f;
+
+  /* Ink */
+  --color-ink: #f3f4f8;
+  --color-ink-2: #aaadc0;
+  --color-ink-3: #71748a;
+  --color-ink-4: #4c4f63;
+
+  /* Brand */
+  --color-brand: #7c5cff;
+  --color-brand-hi: #9178ff;
+  --color-brand-lo: #6842f5;
+  --color-brand-soft: #7c5cff1f;
+
+  --color-accent: #ff6b2c;
+  --color-accent-hi: #ff8451;
+  --color-accent-soft: #ff6b2c1f;
+
+  /* Semantic */
+  --color-ok: #2fd98a;
+  --color-ok-soft: #2fd98a1f;
+  --color-warn: #f5a524;
+  --color-warn-soft: #f5a5241f;
+  --color-bad: #ff4d5e;
+  --color-bad-soft: #ff4d5e1f;
+  --color-info: #38bdf8;
+  --color-info-soft: #38bdf81f;
+
+  /* Categorical series — used by charts and the network graph */
+  --color-series-1: #7c5cff;
+  --color-series-2: #ff6b2c;
+  --color-series-3: #38bdf8;
+  --color-series-4: #2fd98a;
+  --color-series-5: #f5a524;
+  --color-series-6: #f472b6;
+
+  --radius-card: 16px;
+
+  --shadow-card: 0 1px 2px #00000040, 0 8px 24px -12px #00000080;
+  --shadow-pop: 0 8px 32px -8px #000000cc, 0 2px 8px #00000066;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-body {
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04";
+  }
+
+  /* Metrics and any numeric column stay column-aligned while animating. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-brand-soft);
+    color: var(--color-ink);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-surface-3);
+    border: 3px solid transparent;
+    background-clip: content-box;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3a4f;
+    background-clip: content-box;
+  }
+}
+
+@layer components {
+  /* Ambient wash behind the app shell — keeps large dark areas from reading
+     flat without adding a decorative element to every page. */
+  .app-ambient::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(70rem 40rem at 12% -10%, #7c5cff14, transparent 60%),
+      radial-gradient(50rem 30rem at 95% 0%, #ff6b2c0f, transparent 55%);
+  }
+
+  /* Card face: a barely-there top-edge sheen, as in the reference. */
+  .surface-card {
+    background-image: linear-gradient(to bottom, #ffffff08, transparent 120px);
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 0.35s var(--ease-out) both;
+}
+
+.animate-pop-in {
+  animation: pop-in 0.16s var(--ease-out) both;
+}
+
+/* Skeleton sweep */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface-2);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, #ffffff0d, transparent);
+  animation: shimmer 1.6s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Plotly draws its own chrome; neutralise the bits that fight the dark theme. */
+.js-plotly-plot .plotly .modebar {
+  display: none !important;
+}
+.js-plotly-plot .plotly .hoverlayer .hovertext {
+  filter: drop-shadow(0 4px 12px #00000080);
 }
