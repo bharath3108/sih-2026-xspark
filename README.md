@@ -1,7 +1,14 @@
-# Person 3 — Section D Processing Engine
+# XSpark — Section D Processing Engine
 
-Stream ingest from Person 2 → Redis centroid matching → HDBSCAN recovery →
-trend/lifecycle state machine → FastAPI JSON delivery.
+Lightweight processing engine for Section D (Person 3) of the SIH investigator pipeline. Ingests Person 2 NLP events, matches/upserts centroids in Redis, reclusters with HDBSCAN, computes trend/lifecycle signals, stores time-series snapshots in DuckDB and exposes a small FastAPI delivery surface for dashboards and investigation.
+
+Tech stack
+
+- Python (core processing, workers, API) — 68.3%
+- TypeScript (dashboard) — 30.4%
+- CSS / JS (frontend styles & small runtime pieces)
+
+Architecture
 
 ```
 Person 2 NLP + Vector DB
@@ -22,75 +29,72 @@ Trend + lifecycle (DuckDB time series)
 GET /api/v1/topics/{topic_id}
 ```
 
-## Run locally
+Quick start — run locally
+
+Prereqs: Python 3.10+, pip, optional Docker for Redis/Qdrant
 
 ```bash
 pip install -r requirements.txt
-docker compose up -d          # Redis + Qdrant (optional)
+# Optional: start Redis (+ Qdrant if you use Person 2 vector fetch)
+docker compose up -d
+# demo ingestion + api
 python scripts/run_demo.py
 python scripts/run_api.py     # http://127.0.0.1:8000/docs
+# tests
 python -m pytest tests/ -v
 ```
 
-**API**
+APIs (use for the dashboard and integration)
 
-- `POST /api/v1/events` — ingest one NLP contract (dev stand-in for the broker)
-- `POST /api/v1/workers/hdbscan` — run buffer clustering now
-- `GET /api/v1/topics` — all active topics
-- `GET /api/v1/topics/{topic_id}` — Section D payload
-- `GET /api/v1/audience` — current audience (language/profession/geography) snapshot for all active topics
-- `GET /api/v1/audience/{topic_id}` — current snapshot for one topic; add `?from=&to=` for DuckDB time-series history
+- POST /api/v1/events — ingest one NLP contract (development stand-in for the broker)
+- POST /api/v1/workers/hdbscan — run buffer clustering immediately
+- GET /api/v1/topics — list active topics
+- GET /api/v1/topics/{topic_id} — topic payload for Section D
+- GET /api/v1/audience — audience snapshot for all active topics
+- GET /api/v1/audience/{topic_id} — audience snapshot for one topic; add `?from=&to=` for DuckDB history
 
-**Workers**
+Workers (run these for continuous processing)
 
-- `python -m src.workers.stream_consumer` — Redis Stream `person2:nlp_events`
-- `python -m src.workers.hdbscan_worker` — HDBSCAN every 10 minutes
-- `python -m src.workers.demographics_worker` — audience aggregation every `demographics_interval_minutes` (default 10)
+- python -m src.workers.stream_consumer — Redis Stream consumer `person2:nlp_events`
+- python -m src.workers.hdbscan_worker — HDBSCAN loop (default every 10 minutes)
+- python -m src.workers.demographics_worker — periodic audience aggregation (default 10m)
 
-## What is implemented now
+What is implemented now
 
-- Redis hashes: `active_centroids`, `topic_counts`, `event_topic_map`
-- Redis list: `unclustered_buffer`
-- Cosine threshold 0.80 + moving-average centroid update
-- HDBSCAN (`min_cluster_size=10`, `cluster_selection_epsilon=0.2`, min batch 15)
-- Novelty, Shannon entropy spread, sigmoid trend score
-- Lifecycle: first_appearance / acceleration / peak / decline
-- Evidence: closest-to-centroid + highest engagement
-- DuckDB time-series events
-- FastAPI delivery service
-- In-memory Redis fallback when Redis is down
-- Audience demographics: periodic aggregation of language/profession/geography per topic
-  (`src/workers/demographics_worker.py`), minimum-sample-size gating, Redis `audience_current:{topic_id}`
-  snapshot + DuckDB `audience_snapshots` history, standalone `/api/v1/audience` API
+- Redis-based online centroid store (`active_centroids`), topic counts and event-to-topic mapping
+- Unclustered buffer (Redis list) + cosine similarity online matching (threshold 0.80) and moving-average centroid update
+- HDBSCAN reclustering (min_cluster_size=10, cluster_selection_epsilon=0.2, min batch 15)
+- Novelty, Shannon entropy spread, sigmoid trend scoring
+- Lifecycle detection (first_appearance → acceleration → peak → decline)
+- Evidence selection (closest-to-centroid + highest engagement)
+- DuckDB time-series events + audience snapshots
+- FastAPI delivery service with in-memory Redis fallback when Redis is unavailable
+- Audience demographics aggregation with gating (language/profession/geography), snapshotting in Redis and history in DuckDB
 
-## Wire later (Person 2 / E / infra)
+Wire later (external/system integration)
 
-These interfaces exist as stubs. Do not pretend they are live.
+These interfaces are currently stubs. They must be provided by Person 2 / infra when wiring into the larger system:
 
-| Dependency | Where | What Person 2 / infra must provide |
-|---|---|---|
-| **Person 2 Qdrant / Pgvector** | `src/person2/vector_client.py` `QdrantPerson2VectorClient` | Collection URL, API key, payload field `embedding_ref`, 384-dim vectors (`all-MiniLM-L6-v2`) |
-| **Person 2 event stream** | `src/workers/stream_consumer.py` | Redis Stream `person2:nlp_events` **or** Kafka `person2.nlp.output` (`config.kafka_bootstrap_servers`) |
-| **NLP contract** | `src/contracts/nlp_input.py` | Confirm nested `sentiment.label` and `metrics.engagement` vs flat likes/shares/comments |
-| **Component E graph** | `src/component_e/network.py` | Author interaction API/file for Louvain `H_network` (`config.component_e_api_url`) |
-| **Local LLM names** | `src/clustering/naming.py` | Llama-3-8B (or compatible) HTTP endpoint; until then c-TF-IDF keywords are the headline |
-| **TimescaleDB** | `src/storage/timeseries_store.py` | Swap DuckDB for Timescale if the team standardizes on Postgres |
-| **Audience metadata (live)** | `src/services/author_metadata.py` `LiveAuthorMetadataSource` | Person 1 / infra live author-metadata endpoint or DB, keyed by `author_id`, returning `{language?, profession?, geography?}` |
-| **Auth / rate limits** | `src/api/main.py` | Gateway auth in front of `/api/v1/topics` |
+- Person 2 vector DB (Qdrant / PgVector) — configure `person2_qdrant_url` in `src/config.py` and ensure `embedding_ref` and 384-dim vectors (`all-MiniLM-L6-v2`)
+- Person 2 event stream — Redis Stream `person2:nlp_events` or Kafka `person2.nlp.output` (see `src/workers/stream_consumer.py` and config)
+- Author metadata service (live) — configure `author_metadata_source` in `src/config.py` to `live` and set the `author_metadata_live_url` for Person 1 / infra
+- Component E graph (author interactions) for Louvain (`src/component_e/network.py`)
+- Optional: Swap DuckDB for TimescaleDB/Postgres via `src/storage/timeseries_store.py` if the infra standardizes on Postgres
+- Auth / rate limiting — recommend putting a gateway in front of `/api/v1/*` (see `src/api/main.py`)
 
-Set `person2_qdrant_url` in `src/config.py` (or env later) to switch vector fetch from the local store to Person 2's DB.
+Configuration notes
 
-Set `author_metadata_source: "static" | "live"` in `src/config.py` to switch the demographics
-worker's author-metadata lookup between `StaticAuthorMetadataSource` (reads the local fixture at
-`author_metadata_static_path`, default `data/fixtures/author_metadata.json`) and
-`LiveAuthorMetadataSource` (calls `author_metadata_live_url`, currently unset/unimplemented — it
-returns empty metadata until a URL is configured, then raises `NotImplementedError` until the
-live call is wired). No call-site changes are needed when the live source becomes real; the
-original `SectionDPipeline(author_metadata=...)` stub referenced here previously is superseded by
-this dual-mode source, used by `src/workers/demographics_worker.py` and the `/api/v1/audience`
-API. Missing authors/fields degrade to `unknown_share = 1.0` for that category only — never
-fabricated, never blocking the other two signals. Below `demographics_min_sample_size` (default
-20) distinct known authors, a category reports `unknown_share = 1.0` instead of a real
-distribution; `demographics_target_sample_size` (default 50) controls how quickly `confidence`
-climbs to 1.0 with sample size. No author_id-to-category mapping is ever returned or logged —
-only aggregate counts/shares.
+- `author_metadata_source: "static" | "live"` in `src/config.py` toggles between the local static fixture (`data/fixtures/author_metadata.json`) and a live lookup. When live is unset or returns missing fields, the system uses a conservative `unknown_share = 1.0` fallback for that category. Below `demographics_min_sample_size` (default 20) a category reports `unknown_share = 1.0` instead of an unreliable distribution.
+- `person2_qdrant_url` in `src/config.py` switches vector fetch between the local store and Person 2's vector DB.
+
+Frontend / Dashboard (Person 5)
+
+See `frontend/README.md` for the Next.js + TypeScript dashboard. The dashboard talks to the lightweight composition API in `backend/dashboard.py` and expects the JSON contracts published by this repository's API — it does not import internal Python modules.
+
+Contributing
+
+If you're wiring Person 2 or Person 1 systems, please update the corresponding config keys and add integration tests under `tests/integration/`.
+
+License
+
+MIT (see LICENSE)
