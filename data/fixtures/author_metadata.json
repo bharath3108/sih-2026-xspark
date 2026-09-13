@@ -1,26 +1,3794 @@
 {
-  "author-0": {"language": "en", "profession": "Software/Tech", "geography": "US"},
-  "author-1": {"language": "en", "profession": "Crypto/Web3", "geography": "EU"},
-  "author-2": {"language": "es", "profession": "Software/Tech", "geography": "APAC"},
-  "author-3": {"language": "en", "profession": "Finance", "geography": "US"},
-  "author-4": {"language": "en", "profession": "Software/Tech", "geography": "EU"},
-  "author-5": {"language": "fr", "profession": "Crypto/Web3", "geography": "EU"},
-  "author-6": {"language": "en", "profession": "Other", "geography": "APAC"},
-  "author-7": {"language": "en", "profession": "Software/Tech", "geography": "US"},
-  "author-8": {"language": "hi", "profession": "Finance", "geography": "APAC"},
-  "author-9": {"language": "en", "profession": "Crypto/Web3", "geography": "US"},
-  "author-10": {"language": "en", "profession": "Software/Tech", "geography": "EU"},
-  "author-11": {"language": "pt", "profession": "Other", "geography": "LATAM"},
-  "author-12": {"language": "en", "profession": "Software/Tech", "geography": "US"},
-  "author-13": {"language": "en", "profession": "Finance", "geography": "EU"},
-  "author-14": {"language": "de", "profession": "Crypto/Web3", "geography": "EU"},
-  "author-15": {"language": "en", "profession": "Software/Tech", "geography": "APAC"},
-  "author-16": {"language": "en", "profession": "Other", "geography": "US"},
-  "author-17": {"language": "en", "profession": "Software/Tech", "geography": "US"},
-  "author-18": {"language": "ja", "profession": "Finance", "geography": "APAC"},
-  "author-19": {"language": "en", "profession": "Crypto/Web3", "geography": "EU"},
-  "author-20": {"language": "en", "profession": "Software/Tech", "geography": "US"},
-  "author-21": {"language": "en", "profession": "Other", "geography": "LATAM"},
-  "author-22": {"language": "en", "profession": "Software/Tech", "geography": "EU"},
-  "author-23": {"language": "en", "profession": "Crypto/Web3", "geography": "US"}
+  "author-0": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "US"
+  },
+  "author-1": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU"
+  },
+  "author-2": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "APAC"
+  },
+  "author-3": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "US"
+  },
+  "author-4": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU"
+  },
+  "author-5": {
+    "language": "fr",
+    "profession": "Crypto/Web3",
+    "geography": "EU"
+  },
+  "author-6": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "APAC"
+  },
+  "author-7": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "US"
+  },
+  "author-8": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "APAC"
+  },
+  "author-9": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US"
+  },
+  "author-10": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU"
+  },
+  "author-11": {
+    "language": "pt",
+    "profession": "Other",
+    "geography": "LATAM"
+  },
+  "author-12": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "US"
+  },
+  "author-13": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "EU"
+  },
+  "author-14": {
+    "language": "de",
+    "profession": "Crypto/Web3",
+    "geography": "EU"
+  },
+  "author-15": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "APAC"
+  },
+  "author-16": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "US"
+  },
+  "author-17": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "US"
+  },
+  "author-18": {
+    "language": "ja",
+    "profession": "Finance",
+    "geography": "APAC"
+  },
+  "author-19": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU"
+  },
+  "author-20": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "US"
+  },
+  "author-21": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM"
+  },
+  "author-22": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU"
+  },
+  "author-23": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US"
+  },
+  "bridge_00": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "bridge_01": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "bridge_02": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "bridge_03": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "elections_hub": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "elections_user_000": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "elections_user_001": {
+    "language": "hi",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "elections_user_002": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "elections_user_003": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "elections_user_004": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "elections_user_005": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_user_006": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "elections_user_007": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "elections_user_008": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "elections_user_009": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "elections_user_010": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "elections_user_011": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "elections_user_012": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_user_013": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_user_014": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "elections_user_015": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "elections_user_016": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_user_017": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "elections_user_018": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "elections_user_019": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "elections_user_020": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_user_021": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "elections_user_022": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "elections_user_023": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "elections_user_024": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "elections_user_025": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "elections_user_026": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "elections_user_027": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "elections_user_028": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "elections_user_029": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_user_030": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "elections_user_031": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_user_032": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "elections_user_033": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "elections_user_034": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "elections_user_035": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "elections_user_036": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "elections_user_037": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "elections_user_038": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "elections_user_039": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "elections_user_040": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_user_041": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "elections_user_042": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "elections_user_043": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "elections_user_044": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "elections_user_045": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "elections_user_046": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "elections_user_047": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "elections_user_048": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_user_049": {
+    "language": "hi",
+    "profession": "Healthcare",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "elections_bot_00": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "elections_bot_01": {
+    "language": "hi",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "elections_bot_02": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "elections_bot_03": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "elections_bot_04": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_bot_05": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "elections_bot_06": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "elections_bot_07": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "elections_bot_08": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "elections_bot_09": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "elections_burst_000": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_burst_001": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "elections_burst_002": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_burst_003": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "elections_burst_004": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "elections_burst_005": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "elections_burst_006": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "elections_burst_007": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "elections_burst_008": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "elections_burst_009": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "elections_burst_010": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "elections_burst_011": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "elections_burst_012": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_burst_013": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "elections_burst_014": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "elections_burst_015": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "elections_burst_016": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "elections_burst_017": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "elections_burst_018": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_burst_019": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "elections_burst_020": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "elections_burst_021": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "elections_burst_022": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "elections_burst_023": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "elections_burst_024": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "elections_burst_025": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "elections_burst_026": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "elections_burst_027": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "elections_burst_028": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "elections_burst_029": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "elections_burst_030": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "elections_burst_031": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_burst_032": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_burst_033": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_burst_034": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "elections_burst_035": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "elections_burst_036": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "elections_burst_037": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "elections_burst_038": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "elections_burst_039": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "elections_burst_040": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "elections_burst_041": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "elections_burst_042": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_burst_043": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "elections_burst_044": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "elections_burst_045": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "elections_burst_046": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "elections_burst_047": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "elections_burst_048": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "elections_burst_049": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_burst_050": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_burst_051": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "elections_burst_052": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "elections_burst_053": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_burst_054": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "elections_burst_055": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "elections_burst_056": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "elections_burst_057": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "elections_burst_058": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "elections_burst_059": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_burst_060": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "elections_burst_061": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "elections_burst_062": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "elections_burst_063": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "elections_burst_064": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "elections_burst_065": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_burst_066": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_burst_067": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "elections_burst_068": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_burst_069": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "elections_burst_070": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "elections_burst_071": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "elections_burst_072": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "elections_burst_073": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "elections_burst_074": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "elections_burst_075": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "elections_burst_076": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "elections_burst_077": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "elections_burst_078": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "elections_burst_079": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "elections_burst_080": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "elections_burst_081": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_burst_082": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "elections_burst_083": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "elections_burst_084": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "elections_burst_085": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "elections_burst_086": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "elections_burst_087": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "elections_burst_088": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "elections_burst_089": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_burst_090": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "elections_burst_091": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_burst_092": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "elections_burst_093": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "elections_burst_094": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "elections_burst_095": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "elections_burst_096": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "elections_burst_097": {
+    "language": "hi",
+    "profession": "Healthcare",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_burst_098": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "elections_burst_099": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "elections_burst_100": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "elections_burst_101": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "elections_burst_102": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "elections_burst_103": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "elections_burst_104": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_burst_105": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "elections_burst_106": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_burst_107": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "elections_burst_108": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "elections_burst_109": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "elections_burst_110": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "elections_burst_111": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "elections_burst_112": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "elections_burst_113": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "elections_burst_114": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "elections_burst_115": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "elections_burst_116": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "elections_burst_117": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "elections_burst_118": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "elections_burst_119": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "climate_hub": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_000": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_001": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_002": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_003": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "climate_policy_user_004": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "climate_policy_user_005": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_006": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_007": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_008": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "climate_policy_user_009": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_010": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "climate_policy_user_011": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "climate_policy_user_012": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "climate_policy_user_013": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_014": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_015": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "climate_policy_user_016": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "climate_policy_user_017": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "climate_policy_user_018": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_019": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "climate_policy_user_020": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "climate_policy_user_021": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "climate_policy_user_022": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_023": {
+    "language": "hi",
+    "profession": "Healthcare",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_024": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "climate_policy_user_025": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "climate_policy_user_026": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "climate_policy_user_027": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "climate_policy_user_028": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "climate_policy_user_029": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_030": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_031": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "climate_policy_user_032": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "climate_policy_user_033": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "climate_policy_user_034": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_035": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_036": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_037": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_038": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "climate_policy_user_039": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "climate_policy_user_040": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "climate_policy_user_041": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_042": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_043": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_044": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "climate_policy_user_045": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "climate_policy_user_046": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "climate_policy_user_047": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "climate_policy_user_048": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "climate_policy_user_049": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "climate_policy_bot_00": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "climate_policy_bot_01": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "climate_policy_bot_02": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "climate_policy_bot_03": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "climate_policy_bot_04": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "climate_policy_bot_05": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "climate_policy_bot_06": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "climate_policy_bot_07": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "climate_policy_bot_08": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "climate_policy_bot_09": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "tech_hub": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_000": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_user_001": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_002": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_user_003": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_004": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_user_005": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_user_006": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_007": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_user_008": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_009": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_user_010": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_user_011": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_012": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_013": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_user_014": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_user_015": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_016": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_user_017": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_018": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_user_019": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_020": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_user_021": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_user_022": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_023": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_user_024": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_user_025": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_user_026": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_user_027": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_user_028": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_user_029": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_030": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_user_031": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_032": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_user_033": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_034": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_035": {
+    "language": "hi",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_036": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_user_037": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_user_038": {
+    "language": "hi",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_039": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_040": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_user_041": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_042": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_043": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_044": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_user_045": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_user_046": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_user_047": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "tech_layoffs_user_048": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_user_049": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_bot_00": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_bot_01": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "tech_layoffs_bot_02": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "tech_layoffs_bot_03": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_bot_04": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_bot_05": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "tech_layoffs_bot_06": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "tech_layoffs_bot_07": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "tech_layoffs_bot_08": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "tech_layoffs_bot_09": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "cricket_hub": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_000": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_001": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "cricket_worldcup_user_002": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_003": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_004": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_005": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_user_006": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_007": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_008": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_009": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_010": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_user_011": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_user_012": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_user_013": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_014": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_015": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_016": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_017": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_user_018": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "cricket_worldcup_user_019": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "cricket_worldcup_user_020": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_021": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_022": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_023": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "cricket_worldcup_user_024": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "cricket_worldcup_user_025": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_026": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_027": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_028": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_029": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_030": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_031": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_032": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "cricket_worldcup_user_033": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_034": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_035": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_036": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_037": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_038": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_039": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_040": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_user_041": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_042": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_043": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_user_044": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_user_045": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_046": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_user_047": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_user_048": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_user_049": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_bot_00": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_bot_01": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_bot_02": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_bot_03": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "cricket_worldcup_bot_04": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_bot_05": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "cricket_worldcup_bot_06": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "cricket_worldcup_bot_07": {
+    "language": "hi",
+    "profession": "Healthcare",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "cricket_worldcup_bot_08": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "cricket_worldcup_bot_09": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "health_hub": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "public_health_user_000": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "public_health_user_001": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "public_health_user_002": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "public_health_user_003": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "public_health_user_004": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "public_health_user_005": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "public_health_user_006": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "public_health_user_007": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "public_health_user_008": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "public_health_user_009": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "public_health_user_010": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "public_health_user_011": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "public_health_user_012": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "public_health_user_013": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "public_health_user_014": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "public_health_user_015": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "public_health_user_016": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "public_health_user_017": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "public_health_user_018": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "public_health_user_019": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "public_health_user_020": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "public_health_user_021": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "public_health_user_022": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "public_health_user_023": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "public_health_user_024": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "public_health_user_025": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "public_health_user_026": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "public_health_user_027": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "public_health_user_028": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "public_health_user_029": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "public_health_user_030": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "public_health_user_031": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "public_health_user_032": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "public_health_user_033": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "public_health_user_034": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "public_health_user_035": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "public_health_user_036": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "public_health_user_037": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "public_health_user_038": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "public_health_user_039": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "public_health_user_040": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "public_health_user_041": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "public_health_user_042": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "public_health_user_043": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "public_health_user_044": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "public_health_user_045": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "public_health_user_046": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "public_health_user_047": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "public_health_user_048": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "public_health_user_049": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "public_health_bot_00": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "public_health_bot_01": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "public_health_bot_02": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "public_health_bot_03": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "public_health_bot_04": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "public_health_bot_05": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "public_health_bot_06": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "public_health_bot_07": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "public_health_bot_08": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "public_health_bot_09": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "market_hub": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "stock_market_user_000": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "stock_market_user_001": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "stock_market_user_002": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "stock_market_user_003": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "stock_market_user_004": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "stock_market_user_005": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "stock_market_user_006": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "stock_market_user_007": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "stock_market_user_008": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "stock_market_user_009": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "stock_market_user_010": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "stock_market_user_011": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "stock_market_user_012": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "stock_market_user_013": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "stock_market_user_014": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "stock_market_user_015": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "stock_market_user_016": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "stock_market_user_017": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "stock_market_user_018": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "stock_market_user_019": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "stock_market_user_020": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "stock_market_user_021": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "stock_market_user_022": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "stock_market_user_023": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "stock_market_user_024": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "stock_market_user_025": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "stock_market_user_026": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "stock_market_user_027": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "stock_market_user_028": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "stock_market_user_029": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "stock_market_user_030": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "stock_market_user_031": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "stock_market_user_032": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "stock_market_user_033": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "stock_market_user_034": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "stock_market_user_035": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "stock_market_user_036": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "stock_market_user_037": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "stock_market_user_038": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "stock_market_user_039": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "stock_market_user_040": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "stock_market_user_041": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "stock_market_user_042": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "stock_market_user_043": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "stock_market_user_044": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "stock_market_user_045": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "stock_market_user_046": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "stock_market_user_047": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "stock_market_user_048": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "stock_market_user_049": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "stock_market_bot_00": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "stock_market_bot_01": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "stock_market_bot_02": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "stock_market_bot_03": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "stock_market_bot_04": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "stock_market_bot_05": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "stock_market_bot_06": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "stock_market_bot_07": {
+    "language": "hi",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "stock_market_bot_08": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "stock_market_bot_09": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "ai_hub": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_000": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "ai_regulation_user_001": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_002": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "ai_regulation_user_003": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_004": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "ai_regulation_user_005": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_006": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_007": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_008": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "ai_regulation_user_009": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_010": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_011": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "ai_regulation_user_012": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_013": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_014": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_015": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_016": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_017": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_018": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_019": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_020": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_021": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "ai_regulation_user_022": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_023": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "ai_regulation_user_024": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "ai_regulation_user_025": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "ai_regulation_user_026": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_027": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "ai_regulation_user_028": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_029": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_030": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_031": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_032": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "ai_regulation_user_033": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_034": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_035": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_036": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "ai_regulation_user_037": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_038": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "ai_regulation_user_039": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "ai_regulation_user_040": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_041": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "ai_regulation_user_042": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_043": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "ai_regulation_user_044": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "ai_regulation_user_045": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "ai_regulation_user_046": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "ai_regulation_user_047": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "ai_regulation_user_048": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "ai_regulation_user_049": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "ai_regulation_bot_00": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "ai_regulation_bot_01": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "ai_regulation_bot_02": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "ai_regulation_bot_03": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "45-54"
+  },
+  "ai_regulation_bot_04": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "ai_regulation_bot_05": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "ai_regulation_bot_06": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "ai_regulation_bot_07": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "ai_regulation_bot_08": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "ai_regulation_bot_09": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "farmer_hub": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_000": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "IN",
+    "age_group": "25-34"
+  },
+  "farmer_protests_user_001": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_002": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_003": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "farmer_protests_user_004": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "farmer_protests_user_005": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "farmer_protests_user_006": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_007": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "18-24"
+  },
+  "farmer_protests_user_008": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "farmer_protests_user_009": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_010": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "farmer_protests_user_011": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_012": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "35-44"
+  },
+  "farmer_protests_user_013": {
+    "language": "en",
+    "profession": "Student",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_014": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_015": {
+    "language": "hi",
+    "profession": "Crypto/Web3",
+    "geography": "APAC",
+    "age_group": "18-24"
+  },
+  "farmer_protests_user_016": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_017": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "farmer_protests_user_018": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "LATAM",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_019": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_020": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_021": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "APAC",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_022": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "IN",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_023": {
+    "language": "hi",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_024": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "farmer_protests_user_025": {
+    "language": "en",
+    "profession": "Media/Journalism",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_026": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_027": {
+    "language": "en",
+    "profession": "Government",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_028": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "farmer_protests_user_029": {
+    "language": "en",
+    "profession": "Software/Tech",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_030": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "farmer_protests_user_031": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "farmer_protests_user_032": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "farmer_protests_user_033": {
+    "language": "es",
+    "profession": "Media/Journalism",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_034": {
+    "language": "en",
+    "profession": "Education",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "farmer_protests_user_035": {
+    "language": "hi",
+    "profession": "Education",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_036": {
+    "language": "es",
+    "profession": "Education",
+    "geography": "MEA",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_037": {
+    "language": "hi",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "25-34"
+  },
+  "farmer_protests_user_038": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "LATAM",
+    "age_group": "35-44"
+  },
+  "farmer_protests_user_039": {
+    "language": "es",
+    "profession": "Government",
+    "geography": "MEA",
+    "age_group": "25-34"
+  },
+  "farmer_protests_user_040": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "MEA",
+    "age_group": "18-24"
+  },
+  "farmer_protests_user_041": {
+    "language": "en",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "farmer_protests_user_042": {
+    "language": "es",
+    "profession": "Student",
+    "geography": "IN",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_043": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "EU",
+    "age_group": "35-44"
+  },
+  "farmer_protests_user_044": {
+    "language": "es",
+    "profession": "Other",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_045": {
+    "language": "hi",
+    "profession": "Finance",
+    "geography": "LATAM",
+    "age_group": "18-24"
+  },
+  "farmer_protests_user_046": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "farmer_protests_user_047": {
+    "language": "en",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "25-34"
+  },
+  "farmer_protests_user_048": {
+    "language": "hi",
+    "profession": "Student",
+    "geography": "EU",
+    "age_group": "55+"
+  },
+  "farmer_protests_user_049": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "farmer_protests_bot_00": {
+    "language": "en",
+    "profession": "Healthcare",
+    "geography": "IN",
+    "age_group": "18-24"
+  },
+  "farmer_protests_bot_01": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "MEA",
+    "age_group": "35-44"
+  },
+  "farmer_protests_bot_02": {
+    "language": "hi",
+    "profession": "Other",
+    "geography": "US",
+    "age_group": "18-24"
+  },
+  "farmer_protests_bot_03": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "MEA",
+    "age_group": "45-54"
+  },
+  "farmer_protests_bot_04": {
+    "language": "es",
+    "profession": "Finance",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "farmer_protests_bot_05": {
+    "language": "es",
+    "profession": "Software/Tech",
+    "geography": "US",
+    "age_group": "55+"
+  },
+  "farmer_protests_bot_06": {
+    "language": "es",
+    "profession": "Crypto/Web3",
+    "geography": "US",
+    "age_group": "45-54"
+  },
+  "farmer_protests_bot_07": {
+    "language": "hi",
+    "profession": "Software/Tech",
+    "geography": "APAC",
+    "age_group": "35-44"
+  },
+  "farmer_protests_bot_08": {
+    "language": "en",
+    "profession": "Other",
+    "geography": "LATAM",
+    "age_group": "45-54"
+  },
+  "farmer_protests_bot_09": {
+    "language": "es",
+    "profession": "Healthcare",
+    "geography": "EU",
+    "age_group": "35-44"
+  }
 }

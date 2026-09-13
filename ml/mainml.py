@@ -155,6 +155,7 @@ class SocialMediaEventResponse(BaseModel):
     stance: StanceResult
 
     embedding_ref: Optional[str] = None
+    embedding_vector: Optional[List[float]] = None
 
     evidence: List[EvidenceItem]
 
@@ -591,6 +592,7 @@ def process_social_event(
                 confidence=stance_conf
             ),
             embedding_ref=embedding_ref,
+            embedding_vector=embedding_vector_list,
             evidence=[
                 EvidenceItem(
                     type="source_event",
