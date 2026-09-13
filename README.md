@@ -1,4 +1,4 @@
-# XSpark — Section D Processing Engine
+# XSpark — Processing Engine
 
 Lightweight processing engine for Section D (Person 3) of the SIH investigator pipeline. Ingests Person 2 NLP events, matches/upserts centroids in Redis, reclusters with HDBSCAN, computes trend/lifecycle signals, stores time-series snapshots in DuckDB and exposes a small FastAPI delivery surface for dashboards and investigation.
 
