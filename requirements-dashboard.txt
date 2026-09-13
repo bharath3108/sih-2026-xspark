@@ -1,0 +1,15 @@
+# Minimal dependency set for the dashboard composition API
+# (backend.dashboard_dev_server), which serves the Next.js frontend.
+#
+# The composition layer never imports the team's analysis code directly — it
+# reads published JSON contracts. Postgres, Redis, Qdrant, the graph engine and
+# the NLP models are all imported lazily inside functions and degrade to the
+# checked-in fixtures when unavailable, so none of them are needed to serve the
+# dashboard endpoints.
+#
+# Use requirements.txt instead when deploying the full live pipeline (main.py).
+
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+httpx>=0.27.0

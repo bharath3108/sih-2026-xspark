@@ -1,0 +1,20 @@
+# Render blueprint for the dashboard composition API that backs the Next.js
+# frontend on Vercel.
+#
+# This deploys backend.dashboard_dev_server, which serves the published JSON
+# contracts from data/fixtures. It deliberately does NOT deploy main.py: that
+# wires up Postgres at import time and loads the NLP models (torch,
+# transformers, sentence-transformers ~3GB), which needs a provisioned
+# database, Redis and Qdrant alongside it.
+
+services:
+  - type: web
+    name: sih-dashboard-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-dashboard.txt
+    startCommand: uvicorn backend.dashboard_dev_server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
