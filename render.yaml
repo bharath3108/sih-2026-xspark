@@ -18,3 +18,8 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: "3.11"
+      # Serve the larger replay-derived fixture set rather than the small
+      # curated contract fixtures the test suite is pinned to.
+      # Regenerate with: python -m scripts.build_demo_fixtures
+      - key: FIXTURES_DIR
+        value: data/fixtures_demo

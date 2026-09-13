@@ -1,0 +1,4506 @@
+{
+  "nodes": [
+    {
+      "id": "hash1",
+      "community_id": "c1",
+      "centrality": 0.82,
+      "role": "bridge"
+    },
+    {
+      "id": "hash2",
+      "community_id": "c1",
+      "centrality": 0.74,
+      "role": "hub"
+    },
+    {
+      "id": "hash3",
+      "community_id": "c1",
+      "centrality": 0.31,
+      "role": "peripheral"
+    },
+    {
+      "id": "hash4",
+      "community_id": "c1",
+      "centrality": 0.22,
+      "role": "peripheral"
+    },
+    {
+      "id": "hash5",
+      "community_id": "c2",
+      "centrality": 0.9,
+      "role": "hub"
+    },
+    {
+      "id": "hash6",
+      "community_id": "c2",
+      "centrality": 0.68,
+      "role": "bridge"
+    },
+    {
+      "id": "hash7",
+      "community_id": "c2",
+      "centrality": 0.35,
+      "role": "peripheral"
+    },
+    {
+      "id": "b7c8089dea83168d",
+      "community_id": "c3",
+      "centrality": 0.4,
+      "role": "seed"
+    },
+    {
+      "id": "6c38abcc9c349099",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "ed8491e6b86df5bb",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "05b34b08e14932cd",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "0ead305317fe83ff",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "23f314f6ef13d903",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "25672311a59a4e15",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "87b0bead63963cdf",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "69a9d3bfdbddb71b",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "a6b64d2c2240f98a",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "d97b14c70b081e25",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "d10fd0156a68ccc4",
+      "community_id": "c3",
+      "centrality": 0.16,
+      "role": "amplifier"
+    },
+    {
+      "id": "9ee8ed64ecf8f7b9",
+      "community_id": "c3",
+      "centrality": 0.15,
+      "role": "amplifier"
+    },
+    {
+      "id": "4ba1607ee69a20df",
+      "community_id": "c3",
+      "centrality": 0.15,
+      "role": "amplifier"
+    },
+    {
+      "id": "b3656cbca16289d4",
+      "community_id": "c3",
+      "centrality": 0.13,
+      "role": "participant"
+    },
+    {
+      "id": "b7670e0317ae6ce2",
+      "community_id": "c3",
+      "centrality": 0.12,
+      "role": "participant"
+    },
+    {
+      "id": "15d4d7aa9e92014e",
+      "community_id": "c3",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "5d68c808b712f4ff",
+      "community_id": "c3",
+      "centrality": 0.02,
+      "role": "participant"
+    },
+    {
+      "id": "dd4070bbd1a7aaa7",
+      "community_id": "c3",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "5e5b9f7a03eec875",
+      "community_id": "c3",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "d640239daea9bae1",
+      "community_id": "c3",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "bcf58c03b695689f",
+      "community_id": "c3",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "1f824505585f178a",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "69bd3b4e08116f09",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "617040606975427b",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "30b5302a10ee8626",
+      "community_id": "c3",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "a24caa89581e1d72",
+      "community_id": "c4",
+      "centrality": 0.4,
+      "role": "seed"
+    },
+    {
+      "id": "8034143cdfde2b05",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "237ad929745da7b3",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "2360c76ab527da8f",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "df0b5acb31a309d0",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "c816d20efc0b6db0",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "679e68d881c7f7dd",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "8460c4367264fd23",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "3b71b9e5abc740b2",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "f1f4b68537a2daf3",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "2ec742baa60b94fd",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "c7b50f297212e526",
+      "community_id": "c4",
+      "centrality": 0.13,
+      "role": "participant"
+    },
+    {
+      "id": "458dc4b9b8c8d606",
+      "community_id": "c4",
+      "centrality": 0.12,
+      "role": "participant"
+    },
+    {
+      "id": "bb3756c5eca7c1de",
+      "community_id": "c4",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "a9fcccebf7fe06f8",
+      "community_id": "c4",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "620ffb0141714888",
+      "community_id": "c4",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "23705c903e950a65",
+      "community_id": "c4",
+      "centrality": 0.09,
+      "role": "participant"
+    },
+    {
+      "id": "dfc9480747065281",
+      "community_id": "c4",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "dad3f0410676cec6",
+      "community_id": "c4",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "67ce8f3a52bc235c",
+      "community_id": "c4",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "fe922cdf4859cff7",
+      "community_id": "c4",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "47a54d0324bc2c11",
+      "community_id": "c4",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "fa88b21b1f8941ad",
+      "community_id": "c4",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "ae1f753c266824ee",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "ca8e9744938c73b5",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "b665549a6bc83c1f",
+      "community_id": "c4",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "cf847a5c228edf99",
+      "community_id": "c5",
+      "centrality": 0.4,
+      "role": "seed"
+    },
+    {
+      "id": "3918bb043c33ca54",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "d105c2fd433927fd",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "a07ae8d0f01af8ef",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "f8dd67e550629f5a",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "382473c802e714be",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "0398fc5c1d6a8238",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "da096a8153719944",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "e5cbdf8bc9f9076f",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "248087173f347e8c",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "0b77331a98eeba4d",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "87a96a539516f1aa",
+      "community_id": "c5",
+      "centrality": 0.22,
+      "role": "amplifier"
+    },
+    {
+      "id": "f9c34b2a739254f1",
+      "community_id": "c5",
+      "centrality": 0.14,
+      "role": "participant"
+    },
+    {
+      "id": "27b41d8d877aef8f",
+      "community_id": "c5",
+      "centrality": 0.13,
+      "role": "participant"
+    },
+    {
+      "id": "9cb982d830ccf9cd",
+      "community_id": "c5",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "41811857f43af1bf",
+      "community_id": "c5",
+      "centrality": 0.09,
+      "role": "participant"
+    },
+    {
+      "id": "37cb991e86c22a99",
+      "community_id": "c5",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "18233feb42758f87",
+      "community_id": "c5",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "e757a2bff05276de",
+      "community_id": "c5",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "3e740c1c52c01a8d",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "69675558fb766109",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "3afe33134902ee6f",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "2a431839595cdfad",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "51d443850157149f",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "448c5bc320a078b6",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "628b458bc20bcf5b",
+      "community_id": "c5",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "9a4e9c9e69d6a45a",
+      "community_id": "c6",
+      "centrality": 0.98,
+      "role": "seed"
+    },
+    {
+      "id": "cfda1f5f8eb62c18",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "c03a53a73dc7cf2f",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "08dd2888badbc160",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "c3976a7181f52ba9",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "4ec7c99d29777c61",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "6eb0c051219df81f",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "ae9a48c97cf3756b",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "ad9a93eccf784549",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "15e31a51273834cf",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "e74fe3fb692b1217",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "63ea4e315161641a",
+      "community_id": "c6",
+      "centrality": 0.16,
+      "role": "amplifier"
+    },
+    {
+      "id": "bc55e7e4a6d4aa46",
+      "community_id": "c6",
+      "centrality": 0.14,
+      "role": "amplifier"
+    },
+    {
+      "id": "1c3b710b82cbf121",
+      "community_id": "c6",
+      "centrality": 0.14,
+      "role": "participant"
+    },
+    {
+      "id": "9fc8e3691f2cd760",
+      "community_id": "c6",
+      "centrality": 0.12,
+      "role": "participant"
+    },
+    {
+      "id": "a6cf7700be199482",
+      "community_id": "c6",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "1d07f2a01070501a",
+      "community_id": "c6",
+      "centrality": 0.1,
+      "role": "participant"
+    },
+    {
+      "id": "247d782625b718ff",
+      "community_id": "c6",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "5fb44a4bfb8ee3a7",
+      "community_id": "c6",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "472c732e1c52671c",
+      "community_id": "c6",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "435879598709f8fc",
+      "community_id": "c6",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "a6f5c183a7aed08f",
+      "community_id": "c6",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "3d36bce519af0ea0",
+      "community_id": "c6",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "eb6b596ff7b4a362",
+      "community_id": "c6",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "311b0af1991e5280",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "d36fcd29ecfeb297",
+      "community_id": "c6",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "1c307d44605655eb",
+      "community_id": "c7",
+      "centrality": 0.4,
+      "role": "seed"
+    },
+    {
+      "id": "e618cfdd07c6811b",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "f9b07a60558ec3b5",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "cfcf10e5d992c359",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "aa663ed44d705473",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "a909e003de35245d",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "f6881cea88f1ccf3",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "302310ff80c46eea",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "00c30f7fc9749847",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "40f44af465688223",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "2286e0abee803b56",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "4eae9a1bf8018169",
+      "community_id": "c7",
+      "centrality": 0.15,
+      "role": "amplifier"
+    },
+    {
+      "id": "f4c8341304cec7e9",
+      "community_id": "c7",
+      "centrality": 0.14,
+      "role": "participant"
+    },
+    {
+      "id": "22d71d43c1aaaeb8",
+      "community_id": "c7",
+      "centrality": 0.13,
+      "role": "participant"
+    },
+    {
+      "id": "1d42360185f7dc1a",
+      "community_id": "c7",
+      "centrality": 0.13,
+      "role": "participant"
+    },
+    {
+      "id": "64a931519f811191",
+      "community_id": "c7",
+      "centrality": 0.13,
+      "role": "participant"
+    },
+    {
+      "id": "5956c630f64b6b74",
+      "community_id": "c7",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "fc461c8628dc7bb2",
+      "community_id": "c7",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "dd5739c102ba97b1",
+      "community_id": "c7",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "2aa301637fb469f7",
+      "community_id": "c7",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "4c670c55ce315713",
+      "community_id": "c7",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "a4fa81cac7e2f8c2",
+      "community_id": "c7",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "8f94edb43620d044",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "94ecd21526caaf62",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "1ccdc3c5cf8be475",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "85e31b2d7e575fb2",
+      "community_id": "c7",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "c4f1e030f4295852",
+      "community_id": "c8",
+      "centrality": 0.4,
+      "role": "seed"
+    },
+    {
+      "id": "9f8a9021da9deb7a",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "de7a8483926d4a08",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "a2ffeb13e603c6e1",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "79087366f963a809",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "70a56ff18da572a7",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "2d6d3ea5176dec54",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "487bd48d8a7afbab",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "a6e9de48645eb745",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "31a701136906ba85",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "276eb06b2926be28",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "68c240edd1f6689d",
+      "community_id": "c8",
+      "centrality": 0.17,
+      "role": "amplifier"
+    },
+    {
+      "id": "638334e46b8342c1",
+      "community_id": "c8",
+      "centrality": 0.16,
+      "role": "amplifier"
+    },
+    {
+      "id": "e7ab378e1c6a1a76",
+      "community_id": "c8",
+      "centrality": 0.15,
+      "role": "amplifier"
+    },
+    {
+      "id": "7e4b7c3a89fecce8",
+      "community_id": "c8",
+      "centrality": 0.14,
+      "role": "amplifier"
+    },
+    {
+      "id": "d97a3da2ee003861",
+      "community_id": "c8",
+      "centrality": 0.14,
+      "role": "participant"
+    },
+    {
+      "id": "1559b77cc361a14d",
+      "community_id": "c8",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "8a8ed60fe36e2aa1",
+      "community_id": "c8",
+      "centrality": 0.02,
+      "role": "participant"
+    },
+    {
+      "id": "a69edeb04f742e77",
+      "community_id": "c8",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "7d3b2efd82b8bee2",
+      "community_id": "c8",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "2e47f9012b048848",
+      "community_id": "c8",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "d3fa3b58bd1e5b86",
+      "community_id": "c8",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "8acc70442c8ac01a",
+      "community_id": "c8",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "758250718463deb2",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "5e0f06f9286e8869",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "949ac706e543c18a",
+      "community_id": "c8",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "cbaccc979b2e5490",
+      "community_id": "c9",
+      "centrality": 0.4,
+      "role": "seed"
+    },
+    {
+      "id": "ccfc060bf2b4670e",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "b0f43355e386c4b0",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "0a3bfe4466010ef4",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "e1f80537d1ecad44",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "a6db7d3b58e3a406",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "5dec4ae5ac340597",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "a7e5d8126fde69a9",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "91f673fa07e52d06",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "136ce84b4b91f58a",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "6d4e438cd5a32aed",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "747ef18fd59bc95b",
+      "community_id": "c9",
+      "centrality": 0.16,
+      "role": "amplifier"
+    },
+    {
+      "id": "c37c8a371ec49a1c",
+      "community_id": "c9",
+      "centrality": 0.15,
+      "role": "amplifier"
+    },
+    {
+      "id": "bf65f62e1da3b761",
+      "community_id": "c9",
+      "centrality": 0.14,
+      "role": "participant"
+    },
+    {
+      "id": "fc3ef1326d1197f3",
+      "community_id": "c9",
+      "centrality": 0.13,
+      "role": "participant"
+    },
+    {
+      "id": "3fd07094b5d41bb2",
+      "community_id": "c9",
+      "centrality": 0.09,
+      "role": "participant"
+    },
+    {
+      "id": "4489d6f36b284fb5",
+      "community_id": "c9",
+      "centrality": 0.09,
+      "role": "participant"
+    },
+    {
+      "id": "509105d9f879e855",
+      "community_id": "c9",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "0bebf87a88515d5a",
+      "community_id": "c9",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "18a9e4c49254979b",
+      "community_id": "c9",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "5b68ab3d20a2404a",
+      "community_id": "c9",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "8f21340c948840f3",
+      "community_id": "c9",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "ed03a7a703652dc1",
+      "community_id": "c9",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "4b314bb6fff8f8e5",
+      "community_id": "c9",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "687558021bcca60c",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "afe0b1eb1fb0cc13",
+      "community_id": "c9",
+      "centrality": 0.0,
+      "role": "participant"
+    },
+    {
+      "id": "f89cab3fbd49ed96",
+      "community_id": "c10",
+      "centrality": 0.4,
+      "role": "seed"
+    },
+    {
+      "id": "7c390ff1f118a041",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "0d5fe6226e947a51",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "e69e8e309116caf9",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "5390696432a6d8b9",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "1b4ec3c47893c59d",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "5e286196714f8dd8",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "9fc5b8b676b8e8f1",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "d21932897716362b",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "4901bfc1b561b042",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "eee9399dad4c786c",
+      "community_id": "c10",
+      "centrality": 0.0,
+      "role": "automated"
+    },
+    {
+      "id": "659a95c6a7cb9bf6",
+      "community_id": "c10",
+      "centrality": 0.15,
+      "role": "amplifier"
+    },
+    {
+      "id": "7c36f1e919a25112",
+      "community_id": "c10",
+      "centrality": 0.12,
+      "role": "participant"
+    },
+    {
+      "id": "b7a06e7ea0da77e9",
+      "community_id": "c10",
+      "centrality": 0.12,
+      "role": "participant"
+    },
+    {
+      "id": "a4aeacabebc0ec5d",
+      "community_id": "c10",
+      "centrality": 0.12,
+      "role": "participant"
+    },
+    {
+      "id": "9c5050ad04e6a2ea",
+      "community_id": "c10",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "2418ed6fcf16a4a4",
+      "community_id": "c10",
+      "centrality": 0.11,
+      "role": "participant"
+    },
+    {
+      "id": "f535640cd6b5aa52",
+      "community_id": "c10",
+      "centrality": 0.02,
+      "role": "participant"
+    },
+    {
+      "id": "f5aa1cbe4cb06b9f",
+      "community_id": "c10",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "ce0ec5aaa7912f6b",
+      "community_id": "c10",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "01a9a4412ae1eeb5",
+      "community_id": "c10",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "c5146ea6d942b3e9",
+      "community_id": "c10",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "97bc8b7fefe5fffd",
+      "community_id": "c10",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "a141e1ab864ec97b",
+      "community_id": "c10",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "d1a7b2c93a502352",
+      "community_id": "c10",
+      "centrality": 0.01,
+      "role": "participant"
+    },
+    {
+      "id": "2ed28d0244d35c2d",
+      "community_id": "c10",
+      "centrality": 0.01,
+      "role": "participant"
+    }
+  ],
+  "edges": [
+    {
+      "source": "hash1",
+      "target": "hash2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "hash2",
+      "target": "hash3",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "hash1",
+      "target": "hash4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "hash5",
+      "target": "hash6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "hash6",
+      "target": "hash5",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "hash5",
+      "target": "hash7",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5fb44a4bfb8ee3a7",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 4,
+      "type": "reply"
+    },
+    {
+      "source": "1c3b710b82cbf121",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "311b0af1991e5280",
+      "target": "1c3b710b82cbf121",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "63ea4e315161641a",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "472c732e1c52671c",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bc55e7e4a6d4aa46",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "311b0af1991e5280",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "435879598709f8fc",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "311b0af1991e5280",
+      "target": "435879598709f8fc",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d36fcd29ecfeb297",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "247d782625b718ff",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a6cf7700be199482",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1d07f2a01070501a",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "1c3b710b82cbf121",
+      "target": "1d07f2a01070501a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a6f5c183a7aed08f",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "247d782625b718ff",
+      "target": "a6f5c183a7aed08f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "cfda1f5f8eb62c18",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c03a53a73dc7cf2f",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "08dd2888badbc160",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c3976a7181f52ba9",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "4ec7c99d29777c61",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "6eb0c051219df81f",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ae9a48c97cf3756b",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ad9a93eccf784549",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "15e31a51273834cf",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e74fe3fb692b1217",
+      "target": "9a4e9c9e69d6a45a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "311b0af1991e5280",
+      "target": "63ea4e315161641a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "247d782625b718ff",
+      "target": "63ea4e315161641a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "9fc8e3691f2cd760",
+      "target": "63ea4e315161641a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a6cf7700be199482",
+      "target": "63ea4e315161641a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "eb6b596ff7b4a362",
+      "target": "63ea4e315161641a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "1d07f2a01070501a",
+      "target": "63ea4e315161641a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a6f5c183a7aed08f",
+      "target": "63ea4e315161641a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1c3b710b82cbf121",
+      "target": "63ea4e315161641a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "472c732e1c52671c",
+      "target": "eb6b596ff7b4a362",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d36fcd29ecfeb297",
+      "target": "63ea4e315161641a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d36fcd29ecfeb297",
+      "target": "9fc8e3691f2cd760",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bc55e7e4a6d4aa46",
+      "target": "9fc8e3691f2cd760",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "63ea4e315161641a",
+      "target": "9fc8e3691f2cd760",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "435879598709f8fc",
+      "target": "9fc8e3691f2cd760",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a6f5c183a7aed08f",
+      "target": "9fc8e3691f2cd760",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "eb6b596ff7b4a362",
+      "target": "a6cf7700be199482",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "435879598709f8fc",
+      "target": "eb6b596ff7b4a362",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1d07f2a01070501a",
+      "target": "a6cf7700be199482",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a6f5c183a7aed08f",
+      "target": "a6cf7700be199482",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "bc55e7e4a6d4aa46",
+      "target": "a6cf7700be199482",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1c3b710b82cbf121",
+      "target": "a6cf7700be199482",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "247d782625b718ff",
+      "target": "a6cf7700be199482",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "9fc8e3691f2cd760",
+      "target": "a6cf7700be199482",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "5fb44a4bfb8ee3a7",
+      "target": "a6cf7700be199482",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "63ea4e315161641a",
+      "target": "a6cf7700be199482",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1d07f2a01070501a",
+      "target": "a6f5c183a7aed08f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "472c732e1c52671c",
+      "target": "1d07f2a01070501a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "435879598709f8fc",
+      "target": "1d07f2a01070501a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d36fcd29ecfeb297",
+      "target": "1d07f2a01070501a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bc55e7e4a6d4aa46",
+      "target": "1d07f2a01070501a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5fb44a4bfb8ee3a7",
+      "target": "1d07f2a01070501a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a6cf7700be199482",
+      "target": "1c3b710b82cbf121",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5fb44a4bfb8ee3a7",
+      "target": "1c3b710b82cbf121",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "3d36bce519af0ea0",
+      "target": "1c3b710b82cbf121",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a6f5c183a7aed08f",
+      "target": "3d36bce519af0ea0",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d36fcd29ecfeb297",
+      "target": "1c3b710b82cbf121",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "bc55e7e4a6d4aa46",
+      "target": "1c3b710b82cbf121",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "247d782625b718ff",
+      "target": "1c3b710b82cbf121",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "472c732e1c52671c",
+      "target": "1c3b710b82cbf121",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d36fcd29ecfeb297",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "5fb44a4bfb8ee3a7",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "472c732e1c52671c",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "311b0af1991e5280",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "63ea4e315161641a",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "3d36bce519af0ea0",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "9fc8e3691f2cd760",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "435879598709f8fc",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a6f5c183a7aed08f",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1c3b710b82cbf121",
+      "target": "bc55e7e4a6d4aa46",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ca8e9744938c73b5",
+      "target": "a24caa89581e1d72",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "bb3756c5eca7c1de",
+      "target": "a24caa89581e1d72",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "dad3f0410676cec6",
+      "target": "a24caa89581e1d72",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "b665549a6bc83c1f",
+      "target": "a24caa89581e1d72",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "67ce8f3a52bc235c",
+      "target": "b665549a6bc83c1f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "67ce8f3a52bc235c",
+      "target": "a24caa89581e1d72",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "458dc4b9b8c8d606",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a9fcccebf7fe06f8",
+      "target": "a24caa89581e1d72",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "ae1f753c266824ee",
+      "target": "a24caa89581e1d72",
+      "weight": 5,
+      "type": "reply"
+    },
+    {
+      "source": "47a54d0324bc2c11",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fa88b21b1f8941ad",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c7b50f297212e526",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fe922cdf4859cff7",
+      "target": "a24caa89581e1d72",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "dfc9480747065281",
+      "target": "a24caa89581e1d72",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "8034143cdfde2b05",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "237ad929745da7b3",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2360c76ab527da8f",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "df0b5acb31a309d0",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c816d20efc0b6db0",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "679e68d881c7f7dd",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8460c4367264fd23",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "3b71b9e5abc740b2",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f1f4b68537a2daf3",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2ec742baa60b94fd",
+      "target": "a24caa89581e1d72",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dfc9480747065281",
+      "target": "c7b50f297212e526",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a9fcccebf7fe06f8",
+      "target": "c7b50f297212e526",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ca8e9744938c73b5",
+      "target": "c7b50f297212e526",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "458dc4b9b8c8d606",
+      "target": "c7b50f297212e526",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "67ce8f3a52bc235c",
+      "target": "c7b50f297212e526",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "620ffb0141714888",
+      "target": "c7b50f297212e526",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fe922cdf4859cff7",
+      "target": "c7b50f297212e526",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "23705c903e950a65",
+      "target": "a9fcccebf7fe06f8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dad3f0410676cec6",
+      "target": "a9fcccebf7fe06f8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dfc9480747065281",
+      "target": "a9fcccebf7fe06f8",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "47a54d0324bc2c11",
+      "target": "a9fcccebf7fe06f8",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "bb3756c5eca7c1de",
+      "target": "47a54d0324bc2c11",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b665549a6bc83c1f",
+      "target": "a9fcccebf7fe06f8",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "67ce8f3a52bc235c",
+      "target": "a9fcccebf7fe06f8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dad3f0410676cec6",
+      "target": "bb3756c5eca7c1de",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "fe922cdf4859cff7",
+      "target": "bb3756c5eca7c1de",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ca8e9744938c73b5",
+      "target": "bb3756c5eca7c1de",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bb3756c5eca7c1de",
+      "target": "ca8e9744938c73b5",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "23705c903e950a65",
+      "target": "bb3756c5eca7c1de",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dfc9480747065281",
+      "target": "bb3756c5eca7c1de",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ae1f753c266824ee",
+      "target": "23705c903e950a65",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "ca8e9744938c73b5",
+      "target": "23705c903e950a65",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fa88b21b1f8941ad",
+      "target": "23705c903e950a65",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "458dc4b9b8c8d606",
+      "target": "23705c903e950a65",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dad3f0410676cec6",
+      "target": "458dc4b9b8c8d606",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "ca8e9744938c73b5",
+      "target": "458dc4b9b8c8d606",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "67ce8f3a52bc235c",
+      "target": "dad3f0410676cec6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "47a54d0324bc2c11",
+      "target": "620ffb0141714888",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fa88b21b1f8941ad",
+      "target": "620ffb0141714888",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c7b50f297212e526",
+      "target": "620ffb0141714888",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a9fcccebf7fe06f8",
+      "target": "620ffb0141714888",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "458dc4b9b8c8d606",
+      "target": "620ffb0141714888",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "fe922cdf4859cff7",
+      "target": "620ffb0141714888",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "67ce8f3a52bc235c",
+      "target": "620ffb0141714888",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bb3756c5eca7c1de",
+      "target": "620ffb0141714888",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "01a9a4412ae1eeb5",
+      "target": "f89cab3fbd49ed96",
+      "weight": 4,
+      "type": "reply"
+    },
+    {
+      "source": "2418ed6fcf16a4a4",
+      "target": "f89cab3fbd49ed96",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a4aeacabebc0ec5d",
+      "target": "2418ed6fcf16a4a4",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "f535640cd6b5aa52",
+      "target": "f89cab3fbd49ed96",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a141e1ab864ec97b",
+      "target": "f89cab3fbd49ed96",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "c5146ea6d942b3e9",
+      "target": "a141e1ab864ec97b",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f5aa1cbe4cb06b9f",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ce0ec5aaa7912f6b",
+      "target": "f89cab3fbd49ed96",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "a4aeacabebc0ec5d",
+      "target": "f535640cd6b5aa52",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d1a7b2c93a502352",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "7c390ff1f118a041",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0d5fe6226e947a51",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e69e8e309116caf9",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5390696432a6d8b9",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1b4ec3c47893c59d",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5e286196714f8dd8",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "9fc5b8b676b8e8f1",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d21932897716362b",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "4901bfc1b561b042",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "eee9399dad4c786c",
+      "target": "f89cab3fbd49ed96",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "97bc8b7fefe5fffd",
+      "target": "2418ed6fcf16a4a4",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "7c36f1e919a25112",
+      "target": "2418ed6fcf16a4a4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ce0ec5aaa7912f6b",
+      "target": "2418ed6fcf16a4a4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c5146ea6d942b3e9",
+      "target": "2418ed6fcf16a4a4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "659a95c6a7cb9bf6",
+      "target": "2418ed6fcf16a4a4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d1a7b2c93a502352",
+      "target": "2418ed6fcf16a4a4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "97bc8b7fefe5fffd",
+      "target": "d1a7b2c93a502352",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f535640cd6b5aa52",
+      "target": "659a95c6a7cb9bf6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a141e1ab864ec97b",
+      "target": "659a95c6a7cb9bf6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b7a06e7ea0da77e9",
+      "target": "659a95c6a7cb9bf6",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "01a9a4412ae1eeb5",
+      "target": "659a95c6a7cb9bf6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "9c5050ad04e6a2ea",
+      "target": "659a95c6a7cb9bf6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2418ed6fcf16a4a4",
+      "target": "659a95c6a7cb9bf6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c5146ea6d942b3e9",
+      "target": "659a95c6a7cb9bf6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "97bc8b7fefe5fffd",
+      "target": "659a95c6a7cb9bf6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ce0ec5aaa7912f6b",
+      "target": "b7a06e7ea0da77e9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c5146ea6d942b3e9",
+      "target": "b7a06e7ea0da77e9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f5aa1cbe4cb06b9f",
+      "target": "b7a06e7ea0da77e9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a4aeacabebc0ec5d",
+      "target": "b7a06e7ea0da77e9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "7c36f1e919a25112",
+      "target": "b7a06e7ea0da77e9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f535640cd6b5aa52",
+      "target": "9c5050ad04e6a2ea",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2418ed6fcf16a4a4",
+      "target": "9c5050ad04e6a2ea",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2ed28d0244d35c2d",
+      "target": "9c5050ad04e6a2ea",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "97bc8b7fefe5fffd",
+      "target": "9c5050ad04e6a2ea",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ce0ec5aaa7912f6b",
+      "target": "9c5050ad04e6a2ea",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "f5aa1cbe4cb06b9f",
+      "target": "9c5050ad04e6a2ea",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "659a95c6a7cb9bf6",
+      "target": "7c36f1e919a25112",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "f535640cd6b5aa52",
+      "target": "7c36f1e919a25112",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "97bc8b7fefe5fffd",
+      "target": "7c36f1e919a25112",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2418ed6fcf16a4a4",
+      "target": "7c36f1e919a25112",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2ed28d0244d35c2d",
+      "target": "7c36f1e919a25112",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "01a9a4412ae1eeb5",
+      "target": "7c36f1e919a25112",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2418ed6fcf16a4a4",
+      "target": "a4aeacabebc0ec5d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c5146ea6d942b3e9",
+      "target": "a4aeacabebc0ec5d",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a141e1ab864ec97b",
+      "target": "a4aeacabebc0ec5d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d1a7b2c93a502352",
+      "target": "a4aeacabebc0ec5d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f5aa1cbe4cb06b9f",
+      "target": "a4aeacabebc0ec5d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ce0ec5aaa7912f6b",
+      "target": "f5aa1cbe4cb06b9f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "9cb982d830ccf9cd",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "3afe33134902ee6f",
+      "target": "9cb982d830ccf9cd",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "87a96a539516f1aa",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e757a2bff05276de",
+      "target": "cf847a5c228edf99",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "2a431839595cdfad",
+      "target": "cf847a5c228edf99",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "448c5bc320a078b6",
+      "target": "cf847a5c228edf99",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "41811857f43af1bf",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "18233feb42758f87",
+      "target": "cf847a5c228edf99",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "37cb991e86c22a99",
+      "target": "cf847a5c228edf99",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "51d443850157149f",
+      "target": "37cb991e86c22a99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "51d443850157149f",
+      "target": "cf847a5c228edf99",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "448c5bc320a078b6",
+      "target": "37cb991e86c22a99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "27b41d8d877aef8f",
+      "target": "cf847a5c228edf99",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "448c5bc320a078b6",
+      "target": "27b41d8d877aef8f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "3e740c1c52c01a8d",
+      "target": "cf847a5c228edf99",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "628b458bc20bcf5b",
+      "target": "cf847a5c228edf99",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "3918bb043c33ca54",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d105c2fd433927fd",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a07ae8d0f01af8ef",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f8dd67e550629f5a",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "382473c802e714be",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0398fc5c1d6a8238",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "da096a8153719944",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e5cbdf8bc9f9076f",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "248087173f347e8c",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0b77331a98eeba4d",
+      "target": "cf847a5c228edf99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f9c34b2a739254f1",
+      "target": "87a96a539516f1aa",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "41811857f43af1bf",
+      "target": "87a96a539516f1aa",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "3afe33134902ee6f",
+      "target": "87a96a539516f1aa",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "69675558fb766109",
+      "target": "87a96a539516f1aa",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "51d443850157149f",
+      "target": "87a96a539516f1aa",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "18233feb42758f87",
+      "target": "87a96a539516f1aa",
+      "weight": 4,
+      "type": "reply"
+    },
+    {
+      "source": "3e740c1c52c01a8d",
+      "target": "9cb982d830ccf9cd",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "37cb991e86c22a99",
+      "target": "9cb982d830ccf9cd",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "9cb982d830ccf9cd",
+      "target": "37cb991e86c22a99",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "628b458bc20bcf5b",
+      "target": "9cb982d830ccf9cd",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "69675558fb766109",
+      "target": "9cb982d830ccf9cd",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2a431839595cdfad",
+      "target": "41811857f43af1bf",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "3e740c1c52c01a8d",
+      "target": "41811857f43af1bf",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "69675558fb766109",
+      "target": "41811857f43af1bf",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "69675558fb766109",
+      "target": "27b41d8d877aef8f",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "37cb991e86c22a99",
+      "target": "27b41d8d877aef8f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "51d443850157149f",
+      "target": "27b41d8d877aef8f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e757a2bff05276de",
+      "target": "27b41d8d877aef8f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "3e740c1c52c01a8d",
+      "target": "27b41d8d877aef8f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "41811857f43af1bf",
+      "target": "27b41d8d877aef8f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "3e740c1c52c01a8d",
+      "target": "87a96a539516f1aa",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "628b458bc20bcf5b",
+      "target": "87a96a539516f1aa",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "448c5bc320a078b6",
+      "target": "f9c34b2a739254f1",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "3afe33134902ee6f",
+      "target": "448c5bc320a078b6",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "69675558fb766109",
+      "target": "f9c34b2a739254f1",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "51d443850157149f",
+      "target": "f9c34b2a739254f1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "41811857f43af1bf",
+      "target": "f9c34b2a739254f1",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "2a431839595cdfad",
+      "target": "f9c34b2a739254f1",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "37cb991e86c22a99",
+      "target": "f9c34b2a739254f1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "628b458bc20bcf5b",
+      "target": "f9c34b2a739254f1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8a8ed60fe36e2aa1",
+      "target": "c4f1e030f4295852",
+      "weight": 5,
+      "type": "reply"
+    },
+    {
+      "source": "7d3b2efd82b8bee2",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5e0f06f9286e8869",
+      "target": "c4f1e030f4295852",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "2e47f9012b048848",
+      "target": "c4f1e030f4295852",
+      "weight": 4,
+      "type": "reply"
+    },
+    {
+      "source": "758250718463deb2",
+      "target": "c4f1e030f4295852",
+      "weight": 7,
+      "type": "reply"
+    },
+    {
+      "source": "d3fa3b58bd1e5b86",
+      "target": "c4f1e030f4295852",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "1559b77cc361a14d",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "68c240edd1f6689d",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "949ac706e543c18a",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "638334e46b8342c1",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d97a3da2ee003861",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a69edeb04f742e77",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "9f8a9021da9deb7a",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "de7a8483926d4a08",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a2ffeb13e603c6e1",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "79087366f963a809",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "70a56ff18da572a7",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2d6d3ea5176dec54",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "487bd48d8a7afbab",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a6e9de48645eb745",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "31a701136906ba85",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "276eb06b2926be28",
+      "target": "c4f1e030f4295852",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d3fa3b58bd1e5b86",
+      "target": "7e4b7c3a89fecce8",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "7d3b2efd82b8bee2",
+      "target": "7e4b7c3a89fecce8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "758250718463deb2",
+      "target": "7e4b7c3a89fecce8",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "949ac706e543c18a",
+      "target": "758250718463deb2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "949ac706e543c18a",
+      "target": "7e4b7c3a89fecce8",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "8a8ed60fe36e2aa1",
+      "target": "7e4b7c3a89fecce8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d97a3da2ee003861",
+      "target": "8a8ed60fe36e2aa1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8acc70442c8ac01a",
+      "target": "7e4b7c3a89fecce8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5e0f06f9286e8869",
+      "target": "8acc70442c8ac01a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5e0f06f9286e8869",
+      "target": "7e4b7c3a89fecce8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a69edeb04f742e77",
+      "target": "5e0f06f9286e8869",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "68c240edd1f6689d",
+      "target": "1559b77cc361a14d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "7e4b7c3a89fecce8",
+      "target": "1559b77cc361a14d",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a69edeb04f742e77",
+      "target": "1559b77cc361a14d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5e0f06f9286e8869",
+      "target": "1559b77cc361a14d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e7ab378e1c6a1a76",
+      "target": "1559b77cc361a14d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "758250718463deb2",
+      "target": "d97a3da2ee003861",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5e0f06f9286e8869",
+      "target": "d97a3da2ee003861",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "68c240edd1f6689d",
+      "target": "d97a3da2ee003861",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "2e47f9012b048848",
+      "target": "d97a3da2ee003861",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a69edeb04f742e77",
+      "target": "d97a3da2ee003861",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1559b77cc361a14d",
+      "target": "d97a3da2ee003861",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a69edeb04f742e77",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "5e0f06f9286e8869",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d97a3da2ee003861",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "949ac706e543c18a",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "758250718463deb2",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "7e4b7c3a89fecce8",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "638334e46b8342c1",
+      "target": "a69edeb04f742e77",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "638334e46b8342c1",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8acc70442c8ac01a",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "68c240edd1f6689d",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1559b77cc361a14d",
+      "target": "68c240edd1f6689d",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "1559b77cc361a14d",
+      "target": "e7ab378e1c6a1a76",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8acc70442c8ac01a",
+      "target": "638334e46b8342c1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "7d3b2efd82b8bee2",
+      "target": "638334e46b8342c1",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "8a8ed60fe36e2aa1",
+      "target": "638334e46b8342c1",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "949ac706e543c18a",
+      "target": "8a8ed60fe36e2aa1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e7ab378e1c6a1a76",
+      "target": "7d3b2efd82b8bee2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a69edeb04f742e77",
+      "target": "638334e46b8342c1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d97a3da2ee003861",
+      "target": "638334e46b8342c1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d3fa3b58bd1e5b86",
+      "target": "638334e46b8342c1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8a8ed60fe36e2aa1",
+      "target": "d3fa3b58bd1e5b86",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "949ac706e543c18a",
+      "target": "638334e46b8342c1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "68c240edd1f6689d",
+      "target": "638334e46b8342c1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "7e4b7c3a89fecce8",
+      "target": "638334e46b8342c1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "949ac706e543c18a",
+      "target": "68c240edd1f6689d",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "7d3b2efd82b8bee2",
+      "target": "68c240edd1f6689d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "638334e46b8342c1",
+      "target": "7d3b2efd82b8bee2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2e47f9012b048848",
+      "target": "68c240edd1f6689d",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "8a8ed60fe36e2aa1",
+      "target": "68c240edd1f6689d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d3fa3b58bd1e5b86",
+      "target": "68c240edd1f6689d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e7ab378e1c6a1a76",
+      "target": "d3fa3b58bd1e5b86",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a69edeb04f742e77",
+      "target": "68c240edd1f6689d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "687558021bcca60c",
+      "target": "cbaccc979b2e5490",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "c37c8a371ec49a1c",
+      "target": "cbaccc979b2e5490",
+      "weight": 5,
+      "type": "reply"
+    },
+    {
+      "source": "509105d9f879e855",
+      "target": "cbaccc979b2e5490",
+      "weight": 4,
+      "type": "reply"
+    },
+    {
+      "source": "afe0b1eb1fb0cc13",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8f21340c948840f3",
+      "target": "afe0b1eb1fb0cc13",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0bebf87a88515d5a",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "4489d6f36b284fb5",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "3fd07094b5d41bb2",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "4b314bb6fff8f8e5",
+      "target": "cbaccc979b2e5490",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "ed03a7a703652dc1",
+      "target": "cbaccc979b2e5490",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "fc3ef1326d1197f3",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8f21340c948840f3",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "18a9e4c49254979b",
+      "target": "cbaccc979b2e5490",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "0bebf87a88515d5a",
+      "target": "18a9e4c49254979b",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5b68ab3d20a2404a",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ccfc060bf2b4670e",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b0f43355e386c4b0",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0a3bfe4466010ef4",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e1f80537d1ecad44",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a6db7d3b58e3a406",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5dec4ae5ac340597",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a7e5d8126fde69a9",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "91f673fa07e52d06",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "136ce84b4b91f58a",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "6d4e438cd5a32aed",
+      "target": "cbaccc979b2e5490",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0bebf87a88515d5a",
+      "target": "4489d6f36b284fb5",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "18a9e4c49254979b",
+      "target": "4489d6f36b284fb5",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "687558021bcca60c",
+      "target": "4489d6f36b284fb5",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fc3ef1326d1197f3",
+      "target": "4489d6f36b284fb5",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bf65f62e1da3b761",
+      "target": "4489d6f36b284fb5",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "afe0b1eb1fb0cc13",
+      "target": "4489d6f36b284fb5",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0bebf87a88515d5a",
+      "target": "bf65f62e1da3b761",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "509105d9f879e855",
+      "target": "bf65f62e1da3b761",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "afe0b1eb1fb0cc13",
+      "target": "bf65f62e1da3b761",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c37c8a371ec49a1c",
+      "target": "bf65f62e1da3b761",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "687558021bcca60c",
+      "target": "bf65f62e1da3b761",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "18a9e4c49254979b",
+      "target": "bf65f62e1da3b761",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ed03a7a703652dc1",
+      "target": "bf65f62e1da3b761",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0bebf87a88515d5a",
+      "target": "ed03a7a703652dc1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "4489d6f36b284fb5",
+      "target": "747ef18fd59bc95b",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "5b68ab3d20a2404a",
+      "target": "747ef18fd59bc95b",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "509105d9f879e855",
+      "target": "747ef18fd59bc95b",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "3fd07094b5d41bb2",
+      "target": "747ef18fd59bc95b",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "687558021bcca60c",
+      "target": "747ef18fd59bc95b",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fc3ef1326d1197f3",
+      "target": "747ef18fd59bc95b",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bf65f62e1da3b761",
+      "target": "747ef18fd59bc95b",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "18a9e4c49254979b",
+      "target": "747ef18fd59bc95b",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c37c8a371ec49a1c",
+      "target": "747ef18fd59bc95b",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bf65f62e1da3b761",
+      "target": "fc3ef1326d1197f3",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "687558021bcca60c",
+      "target": "fc3ef1326d1197f3",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "18a9e4c49254979b",
+      "target": "fc3ef1326d1197f3",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "afe0b1eb1fb0cc13",
+      "target": "fc3ef1326d1197f3",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "509105d9f879e855",
+      "target": "fc3ef1326d1197f3",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "747ef18fd59bc95b",
+      "target": "fc3ef1326d1197f3",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "afe0b1eb1fb0cc13",
+      "target": "c37c8a371ec49a1c",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "509105d9f879e855",
+      "target": "c37c8a371ec49a1c",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "687558021bcca60c",
+      "target": "c37c8a371ec49a1c",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "747ef18fd59bc95b",
+      "target": "c37c8a371ec49a1c",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fc3ef1326d1197f3",
+      "target": "c37c8a371ec49a1c",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8f21340c948840f3",
+      "target": "c37c8a371ec49a1c",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "5b68ab3d20a2404a",
+      "target": "c37c8a371ec49a1c",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "c37c8a371ec49a1c",
+      "target": "5b68ab3d20a2404a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0bebf87a88515d5a",
+      "target": "8f21340c948840f3",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "687558021bcca60c",
+      "target": "3fd07094b5d41bb2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ed03a7a703652dc1",
+      "target": "3fd07094b5d41bb2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0bebf87a88515d5a",
+      "target": "3fd07094b5d41bb2",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "c37c8a371ec49a1c",
+      "target": "3fd07094b5d41bb2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "18a9e4c49254979b",
+      "target": "3fd07094b5d41bb2",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "3fd07094b5d41bb2",
+      "target": "0bebf87a88515d5a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "747ef18fd59bc95b",
+      "target": "3fd07094b5d41bb2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dd4070bbd1a7aaa7",
+      "target": "b7c8089dea83168d",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "d640239daea9bae1",
+      "target": "b7c8089dea83168d",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "69bd3b4e08116f09",
+      "target": "b7c8089dea83168d",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "617040606975427b",
+      "target": "b7c8089dea83168d",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "4ba1607ee69a20df",
+      "target": "b7c8089dea83168d",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "9ee8ed64ecf8f7b9",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b3656cbca16289d4",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1f824505585f178a",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5e5b9f7a03eec875",
+      "target": "b7c8089dea83168d",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "5d68c808b712f4ff",
+      "target": "b7c8089dea83168d",
+      "weight": 4,
+      "type": "reply"
+    },
+    {
+      "source": "b7670e0317ae6ce2",
+      "target": "b7c8089dea83168d",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "bcf58c03b695689f",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "30b5302a10ee8626",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bcf58c03b695689f",
+      "target": "69bd3b4e08116f09",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "15d4d7aa9e92014e",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "6c38abcc9c349099",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "ed8491e6b86df5bb",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "05b34b08e14932cd",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "0ead305317fe83ff",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "23f314f6ef13d903",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "25672311a59a4e15",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "87b0bead63963cdf",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "69a9d3bfdbddb71b",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a6b64d2c2240f98a",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d97b14c70b081e25",
+      "target": "b7c8089dea83168d",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d640239daea9bae1",
+      "target": "9ee8ed64ecf8f7b9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1f824505585f178a",
+      "target": "9ee8ed64ecf8f7b9",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "bcf58c03b695689f",
+      "target": "9ee8ed64ecf8f7b9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b7670e0317ae6ce2",
+      "target": "9ee8ed64ecf8f7b9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "4ba1607ee69a20df",
+      "target": "9ee8ed64ecf8f7b9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dd4070bbd1a7aaa7",
+      "target": "9ee8ed64ecf8f7b9",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "5e5b9f7a03eec875",
+      "target": "9ee8ed64ecf8f7b9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b3656cbca16289d4",
+      "target": "9ee8ed64ecf8f7b9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d10fd0156a68ccc4",
+      "target": "9ee8ed64ecf8f7b9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b7670e0317ae6ce2",
+      "target": "d10fd0156a68ccc4",
+      "weight": 4,
+      "type": "reply"
+    },
+    {
+      "source": "b3656cbca16289d4",
+      "target": "15d4d7aa9e92014e",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "5e5b9f7a03eec875",
+      "target": "15d4d7aa9e92014e",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dd4070bbd1a7aaa7",
+      "target": "15d4d7aa9e92014e",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "30b5302a10ee8626",
+      "target": "15d4d7aa9e92014e",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "4ba1607ee69a20df",
+      "target": "15d4d7aa9e92014e",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b7670e0317ae6ce2",
+      "target": "15d4d7aa9e92014e",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d640239daea9bae1",
+      "target": "4ba1607ee69a20df",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "9ee8ed64ecf8f7b9",
+      "target": "d640239daea9bae1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5e5b9f7a03eec875",
+      "target": "4ba1607ee69a20df",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "1f824505585f178a",
+      "target": "4ba1607ee69a20df",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b3656cbca16289d4",
+      "target": "4ba1607ee69a20df",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "5d68c808b712f4ff",
+      "target": "4ba1607ee69a20df",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dd4070bbd1a7aaa7",
+      "target": "4ba1607ee69a20df",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "69bd3b4e08116f09",
+      "target": "4ba1607ee69a20df",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "617040606975427b",
+      "target": "4ba1607ee69a20df",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "bcf58c03b695689f",
+      "target": "b3656cbca16289d4",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "30b5302a10ee8626",
+      "target": "4ba1607ee69a20df",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b7670e0317ae6ce2",
+      "target": "4ba1607ee69a20df",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "617040606975427b",
+      "target": "d10fd0156a68ccc4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "30b5302a10ee8626",
+      "target": "d10fd0156a68ccc4",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "dd4070bbd1a7aaa7",
+      "target": "d10fd0156a68ccc4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b7670e0317ae6ce2",
+      "target": "dd4070bbd1a7aaa7",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "d640239daea9bae1",
+      "target": "d10fd0156a68ccc4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1f824505585f178a",
+      "target": "d10fd0156a68ccc4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5d68c808b712f4ff",
+      "target": "1f824505585f178a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5e5b9f7a03eec875",
+      "target": "d10fd0156a68ccc4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "9ee8ed64ecf8f7b9",
+      "target": "5e5b9f7a03eec875",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "bcf58c03b695689f",
+      "target": "d10fd0156a68ccc4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1f824505585f178a",
+      "target": "b3656cbca16289d4",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "69bd3b4e08116f09",
+      "target": "b3656cbca16289d4",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "d10fd0156a68ccc4",
+      "target": "b3656cbca16289d4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5d68c808b712f4ff",
+      "target": "b3656cbca16289d4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "617040606975427b",
+      "target": "b3656cbca16289d4",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "b7670e0317ae6ce2",
+      "target": "bcf58c03b695689f",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5d68c808b712f4ff",
+      "target": "b7670e0317ae6ce2",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "d10fd0156a68ccc4",
+      "target": "b7670e0317ae6ce2",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "1f824505585f178a",
+      "target": "b7670e0317ae6ce2",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "4ba1607ee69a20df",
+      "target": "b7670e0317ae6ce2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "30b5302a10ee8626",
+      "target": "b7670e0317ae6ce2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dd4070bbd1a7aaa7",
+      "target": "b7670e0317ae6ce2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1ccdc3c5cf8be475",
+      "target": "1c307d44605655eb",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "fc461c8628dc7bb2",
+      "target": "1c307d44605655eb",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "f4c8341304cec7e9",
+      "target": "fc461c8628dc7bb2",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "2aa301637fb469f7",
+      "target": "1c307d44605655eb",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "4c670c55ce315713",
+      "target": "1c307d44605655eb",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "f4c8341304cec7e9",
+      "target": "4c670c55ce315713",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "85e31b2d7e575fb2",
+      "target": "1c307d44605655eb",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "a4fa81cac7e2f8c2",
+      "target": "1c307d44605655eb",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "94ecd21526caaf62",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8f94edb43620d044",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1d42360185f7dc1a",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dd5739c102ba97b1",
+      "target": "1c307d44605655eb",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "22d71d43c1aaaeb8",
+      "target": "1c307d44605655eb",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "8f94edb43620d044",
+      "target": "dd5739c102ba97b1",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "94ecd21526caaf62",
+      "target": "85e31b2d7e575fb2",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5956c630f64b6b74",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f4c8341304cec7e9",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "e618cfdd07c6811b",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f9b07a60558ec3b5",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "cfcf10e5d992c359",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "aa663ed44d705473",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a909e003de35245d",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "f6881cea88f1ccf3",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "302310ff80c46eea",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "00c30f7fc9749847",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "40f44af465688223",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2286e0abee803b56",
+      "target": "1c307d44605655eb",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dd5739c102ba97b1",
+      "target": "1d42360185f7dc1a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "4eae9a1bf8018169",
+      "target": "1d42360185f7dc1a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "a4fa81cac7e2f8c2",
+      "target": "1d42360185f7dc1a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "22d71d43c1aaaeb8",
+      "target": "1d42360185f7dc1a",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "4c670c55ce315713",
+      "target": "1d42360185f7dc1a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8f94edb43620d044",
+      "target": "1d42360185f7dc1a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "85e31b2d7e575fb2",
+      "target": "1d42360185f7dc1a",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8f94edb43620d044",
+      "target": "5956c630f64b6b74",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "fc461c8628dc7bb2",
+      "target": "5956c630f64b6b74",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dd5739c102ba97b1",
+      "target": "5956c630f64b6b74",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1d42360185f7dc1a",
+      "target": "5956c630f64b6b74",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "94ecd21526caaf62",
+      "target": "22d71d43c1aaaeb8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1ccdc3c5cf8be475",
+      "target": "22d71d43c1aaaeb8",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "85e31b2d7e575fb2",
+      "target": "22d71d43c1aaaeb8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "4c670c55ce315713",
+      "target": "22d71d43c1aaaeb8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "2aa301637fb469f7",
+      "target": "22d71d43c1aaaeb8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fc461c8628dc7bb2",
+      "target": "22d71d43c1aaaeb8",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "64a931519f811191",
+      "target": "4eae9a1bf8018169",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "5956c630f64b6b74",
+      "target": "4eae9a1bf8018169",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "2aa301637fb469f7",
+      "target": "4eae9a1bf8018169",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "94ecd21526caaf62",
+      "target": "4eae9a1bf8018169",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "fc461c8628dc7bb2",
+      "target": "4eae9a1bf8018169",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "dd5739c102ba97b1",
+      "target": "64a931519f811191",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "85e31b2d7e575fb2",
+      "target": "64a931519f811191",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8f94edb43620d044",
+      "target": "64a931519f811191",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5956c630f64b6b74",
+      "target": "64a931519f811191",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "1ccdc3c5cf8be475",
+      "target": "64a931519f811191",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "2aa301637fb469f7",
+      "target": "f4c8341304cec7e9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "8f94edb43620d044",
+      "target": "f4c8341304cec7e9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "64a931519f811191",
+      "target": "f4c8341304cec7e9",
+      "weight": 2,
+      "type": "reply"
+    },
+    {
+      "source": "94ecd21526caaf62",
+      "target": "f4c8341304cec7e9",
+      "weight": 3,
+      "type": "reply"
+    },
+    {
+      "source": "fc461c8628dc7bb2",
+      "target": "f4c8341304cec7e9",
+      "weight": 1,
+      "type": "reply"
+    },
+    {
+      "source": "5956c630f64b6b74",
+      "target": "f4c8341304cec7e9",
+      "weight": 2,
+      "type": "reply"
+    }
+  ]
+}

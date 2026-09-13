@@ -1,0 +1,2397 @@
+[
+  {
+    "topic_id": "topic-001",
+    "name": "Zero-knowledge proof scaling breakthrough",
+    "window": {
+      "start": "2026-09-11T00:00:00Z",
+      "end": "2026-09-11T23:59:59Z"
+    },
+    "metrics": {
+      "volume": 6,
+      "unique_authors": 4,
+      "engagement": 2350,
+      "trend_score": 0.74,
+      "novelty": 0.58,
+      "cross_community_spread": 0.46
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-11T06:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 172,
+        "avg_sentiment": 0.83
+      },
+      {
+        "bucket_start": "2026-09-11T07:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 493,
+        "avg_sentiment": 0.88
+      },
+      {
+        "bucket_start": "2026-09-11T08:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 308,
+        "avg_sentiment": 0.79
+      },
+      {
+        "bucket_start": "2026-09-11T10:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 1445,
+        "avg_sentiment": 0.91
+      },
+      {
+        "bucket_start": "2026-09-11T11:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 128,
+        "avg_sentiment": -0.69
+      },
+      {
+        "bucket_start": "2026-09-11T12:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 776,
+        "avg_sentiment": 0.86
+      }
+    ],
+    "audience": {
+      "categories": {
+        "developer": 0.42,
+        "investor": 0.31,
+        "general_public": 0.14
+      },
+      "unknown_share": 0.13,
+      "sample_size": 4,
+      "confidence": 0.52
+    },
+    "evidence_event_ids": [
+      "e4b11f32-8a90-4c12-b21a-29831aef0101",
+      "9c011a88-12ee-4f99-882b-92311bc40102",
+      "a1b22c33-44dd-55ee-66ff-77788aaa0103",
+      "b2c33d44-55ee-66ff-77aa-88899bbb0104",
+      "c3d44e55-66ff-77aa-88bb-99900ccc0105",
+      "d4e55f66-77aa-88bb-99cc-aaa011dd0106"
+    ]
+  },
+  {
+    "topic_id": "topic-002",
+    "name": "Cross-chain bridge X exploit",
+    "window": {
+      "start": "2026-09-11T00:00:00Z",
+      "end": "2026-09-11T23:59:59Z"
+    },
+    "metrics": {
+      "volume": 4,
+      "unique_authors": 3,
+      "engagement": 5520,
+      "trend_score": 0.93,
+      "novelty": 0.81,
+      "cross_community_spread": 0.72
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-11T09:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 3040,
+        "avg_sentiment": -0.91
+      },
+      {
+        "bucket_start": "2026-09-11T10:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 980,
+        "avg_sentiment": -0.89
+      },
+      {
+        "bucket_start": "2026-09-11T11:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 1500,
+        "avg_sentiment": -0.1
+      }
+    ],
+    "audience": {
+      "categories": {
+        "developer": 0.28,
+        "investor": 0.46,
+        "general_public": 0.11
+      },
+      "unknown_share": 0.15,
+      "sample_size": 3,
+      "confidence": 0.41
+    },
+    "evidence_event_ids": [
+      "f5a66b77-88cc-99dd-aaee-bbb122ee0201",
+      "a6b77c88-99dd-aaee-bbff-ccc233ff0202",
+      "b7c88d99-aaee-bbff-ccaa-ddd344aa0203",
+      "c8d99eaa-bbff-ccaa-ddbb-eee455bb0204"
+    ]
+  },
+  {
+    "topic_id": "topic-003",
+    "name": "AI regulation debate",
+    "window": {
+      "start": "2026-09-08T08:27:00Z",
+      "end": "2026-09-09T18:40:00Z"
+    },
+    "metrics": {
+      "volume": 288,
+      "unique_authors": 62,
+      "engagement": 18541,
+      "trend_score": 0.41,
+      "novelty": 0.42,
+      "cross_community_spread": 0.5
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-08T08:00:00Z",
+        "volume": 14,
+        "unique_authors": 14,
+        "engagement": 5223,
+        "avg_sentiment": -0.14
+      },
+      {
+        "bucket_start": "2026-09-08T09:00:00Z",
+        "volume": 12,
+        "unique_authors": 12,
+        "engagement": 440,
+        "avg_sentiment": 0.17
+      },
+      {
+        "bucket_start": "2026-09-08T10:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 248,
+        "avg_sentiment": 0.2
+      },
+      {
+        "bucket_start": "2026-09-08T11:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 385,
+        "avg_sentiment": 0.22
+      },
+      {
+        "bucket_start": "2026-09-08T12:00:00Z",
+        "volume": 9,
+        "unique_authors": 9,
+        "engagement": 622,
+        "avg_sentiment": 0.22
+      },
+      {
+        "bucket_start": "2026-09-08T13:00:00Z",
+        "volume": 8,
+        "unique_authors": 7,
+        "engagement": 365,
+        "avg_sentiment": 0.12
+      },
+      {
+        "bucket_start": "2026-09-08T14:00:00Z",
+        "volume": 17,
+        "unique_authors": 14,
+        "engagement": 620,
+        "avg_sentiment": -0.06
+      },
+      {
+        "bucket_start": "2026-09-08T15:00:00Z",
+        "volume": 10,
+        "unique_authors": 10,
+        "engagement": 336,
+        "avg_sentiment": -0.1
+      },
+      {
+        "bucket_start": "2026-09-08T16:00:00Z",
+        "volume": 11,
+        "unique_authors": 9,
+        "engagement": 729,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-08T17:00:00Z",
+        "volume": 20,
+        "unique_authors": 16,
+        "engagement": 836,
+        "avg_sentiment": -0.25
+      },
+      {
+        "bucket_start": "2026-09-08T18:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 392,
+        "avg_sentiment": 0.1
+      },
+      {
+        "bucket_start": "2026-09-08T19:00:00Z",
+        "volume": 9,
+        "unique_authors": 9,
+        "engagement": 344,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-08T20:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 358,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-08T21:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 244,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-08T22:00:00Z",
+        "volume": 5,
+        "unique_authors": 4,
+        "engagement": 261,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-08T23:00:00Z",
+        "volume": 8,
+        "unique_authors": 7,
+        "engagement": 295,
+        "avg_sentiment": 0.25
+      },
+      {
+        "bucket_start": "2026-09-09T00:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 497,
+        "avg_sentiment": -0.12
+      },
+      {
+        "bucket_start": "2026-09-09T01:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 439,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-09T02:00:00Z",
+        "volume": 7,
+        "unique_authors": 5,
+        "engagement": 284,
+        "avg_sentiment": -0.29
+      },
+      {
+        "bucket_start": "2026-09-09T03:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 240,
+        "avg_sentiment": 0.12
+      },
+      {
+        "bucket_start": "2026-09-09T04:00:00Z",
+        "volume": 12,
+        "unique_authors": 11,
+        "engagement": 858,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-09T05:00:00Z",
+        "volume": 13,
+        "unique_authors": 12,
+        "engagement": 412,
+        "avg_sentiment": 0.08
+      },
+      {
+        "bucket_start": "2026-09-09T06:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 297,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-09T07:00:00Z",
+        "volume": 11,
+        "unique_authors": 10,
+        "engagement": 417,
+        "avg_sentiment": 0.18
+      },
+      {
+        "bucket_start": "2026-09-09T08:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 435,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-09T09:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 171,
+        "avg_sentiment": -0.5
+      },
+      {
+        "bucket_start": "2026-09-09T10:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 146,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-09T11:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 309,
+        "avg_sentiment": -0.29
+      },
+      {
+        "bucket_start": "2026-09-09T12:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 256,
+        "avg_sentiment": 0.25
+      },
+      {
+        "bucket_start": "2026-09-09T13:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 458,
+        "avg_sentiment": 0.22
+      },
+      {
+        "bucket_start": "2026-09-09T14:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 103,
+        "avg_sentiment": 0.5
+      },
+      {
+        "bucket_start": "2026-09-09T15:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 136,
+        "avg_sentiment": 0.5
+      },
+      {
+        "bucket_start": "2026-09-09T16:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 196,
+        "avg_sentiment": 0.2
+      },
+      {
+        "bucket_start": "2026-09-09T17:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 185,
+        "avg_sentiment": -0.67
+      },
+      {
+        "bucket_start": "2026-09-09T18:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 152,
+        "avg_sentiment": 0.0
+      }
+    ],
+    "audience": {
+      "categories": {
+        "organic_user": 0.82,
+        "automated_account": 0.16,
+        "amplifier_account": 0.02
+      },
+      "unknown_share": 0.0,
+      "sample_size": 62,
+      "confidence": 0.6
+    },
+    "evidence_event_ids": [
+      "a38cd2f0-81b7-55ca-acf7-eec6f602b10a",
+      "abe80076-722b-51c3-b2a8-8a5d4cecf983",
+      "ee539855-ad34-5e76-bf07-6cd69dd3f967",
+      "605fed9b-5013-5923-a43f-e1b3f0079a2a",
+      "03907696-c553-5236-945a-19451c436bba",
+      "afcf923a-a131-56ce-9e79-35580e14d225"
+    ]
+  },
+  {
+    "topic_id": "topic-004",
+    "name": "Climate action backlash",
+    "window": {
+      "start": "2026-09-03T08:00:00Z",
+      "end": "2026-09-04T20:45:00Z"
+    },
+    "metrics": {
+      "volume": 252,
+      "unique_authors": 61,
+      "engagement": 17538,
+      "trend_score": 0.51,
+      "novelty": 0.44,
+      "cross_community_spread": 0.52
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-03T08:00:00Z",
+        "volume": 21,
+        "unique_authors": 19,
+        "engagement": 5625,
+        "avg_sentiment": -0.14
+      },
+      {
+        "bucket_start": "2026-09-03T09:00:00Z",
+        "volume": 11,
+        "unique_authors": 7,
+        "engagement": 504,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T10:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 165,
+        "avg_sentiment": 0.2
+      },
+      {
+        "bucket_start": "2026-09-03T11:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 165,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T12:00:00Z",
+        "volume": 13,
+        "unique_authors": 9,
+        "engagement": 504,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T13:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 134,
+        "avg_sentiment": 0.33
+      },
+      {
+        "bucket_start": "2026-09-03T14:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 328,
+        "avg_sentiment": -0.29
+      },
+      {
+        "bucket_start": "2026-09-03T15:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 389,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T16:00:00Z",
+        "volume": 18,
+        "unique_authors": 16,
+        "engagement": 783,
+        "avg_sentiment": -0.06
+      },
+      {
+        "bucket_start": "2026-09-03T17:00:00Z",
+        "volume": 18,
+        "unique_authors": 17,
+        "engagement": 745,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T18:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 190,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T19:00:00Z",
+        "volume": 8,
+        "unique_authors": 7,
+        "engagement": 336,
+        "avg_sentiment": 0.25
+      },
+      {
+        "bucket_start": "2026-09-03T20:00:00Z",
+        "volume": 13,
+        "unique_authors": 12,
+        "engagement": 897,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T21:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 263,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-03T22:00:00Z",
+        "volume": 11,
+        "unique_authors": 11,
+        "engagement": 476,
+        "avg_sentiment": -0.09
+      },
+      {
+        "bucket_start": "2026-09-03T23:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 222,
+        "avg_sentiment": -1.0
+      },
+      {
+        "bucket_start": "2026-09-04T00:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 599,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-04T01:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 484,
+        "avg_sentiment": -0.25
+      },
+      {
+        "bucket_start": "2026-09-04T02:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 467,
+        "avg_sentiment": 0.14
+      },
+      {
+        "bucket_start": "2026-09-04T03:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 16,
+        "avg_sentiment": 0.5
+      },
+      {
+        "bucket_start": "2026-09-04T04:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 296,
+        "avg_sentiment": -0.25
+      },
+      {
+        "bucket_start": "2026-09-04T05:00:00Z",
+        "volume": 11,
+        "unique_authors": 9,
+        "engagement": 391,
+        "avg_sentiment": -0.27
+      },
+      {
+        "bucket_start": "2026-09-04T06:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 274,
+        "avg_sentiment": 0.14
+      },
+      {
+        "bucket_start": "2026-09-04T07:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 236,
+        "avg_sentiment": 0.29
+      },
+      {
+        "bucket_start": "2026-09-04T08:00:00Z",
+        "volume": 10,
+        "unique_authors": 10,
+        "engagement": 557,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-04T09:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 446,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-04T10:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 66,
+        "avg_sentiment": 0.5
+      },
+      {
+        "bucket_start": "2026-09-04T11:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 156,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-04T12:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 151,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-04T13:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 149,
+        "avg_sentiment": 0.5
+      },
+      {
+        "bucket_start": "2026-09-04T14:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 39,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-04T15:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 163,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-04T16:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 256,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-04T17:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 265,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-04T18:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 45,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-04T19:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 7,
+        "avg_sentiment": -1.0
+      },
+      {
+        "bucket_start": "2026-09-04T20:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 14,
+        "avg_sentiment": 1.0
+      }
+    ],
+    "audience": {
+      "categories": {
+        "organic_user": 0.82,
+        "automated_account": 0.16,
+        "amplifier_account": 0.02
+      },
+      "unknown_share": 0.0,
+      "sample_size": 61,
+      "confidence": 0.6
+    },
+    "evidence_event_ids": [
+      "cad36503-6d43-564c-805c-c7890e0a8a20",
+      "0895d34c-f7d5-5d1d-9809-e7df1b413391",
+      "4608ff57-ffed-5b68-b544-e19446464cbb",
+      "7ca26a79-53bf-515f-a782-05b326687cd7",
+      "97aeaafa-d4c0-5c9e-b6e9-e9f1b5efc2e8",
+      "ebd12514-47bd-59fc-8c18-1704d0decd3c"
+    ]
+  },
+  {
+    "topic_id": "topic-005",
+    "name": "World Cup 2026 chatter",
+    "window": {
+      "start": "2026-09-05T08:27:00Z",
+      "end": "2026-09-06T17:49:00Z"
+    },
+    "metrics": {
+      "volume": 257,
+      "unique_authors": 61,
+      "engagement": 17591,
+      "trend_score": 0.29,
+      "novelty": 0.44,
+      "cross_community_spread": 0.36
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-05T08:00:00Z",
+        "volume": 12,
+        "unique_authors": 12,
+        "engagement": 4755,
+        "avg_sentiment": -0.08
+      },
+      {
+        "bucket_start": "2026-09-05T09:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 388,
+        "avg_sentiment": 0.44
+      },
+      {
+        "bucket_start": "2026-09-05T10:00:00Z",
+        "volume": 11,
+        "unique_authors": 9,
+        "engagement": 539,
+        "avg_sentiment": -0.18
+      },
+      {
+        "bucket_start": "2026-09-05T11:00:00Z",
+        "volume": 9,
+        "unique_authors": 9,
+        "engagement": 427,
+        "avg_sentiment": 0.11
+      },
+      {
+        "bucket_start": "2026-09-05T12:00:00Z",
+        "volume": 9,
+        "unique_authors": 9,
+        "engagement": 463,
+        "avg_sentiment": -0.11
+      },
+      {
+        "bucket_start": "2026-09-05T13:00:00Z",
+        "volume": 13,
+        "unique_authors": 12,
+        "engagement": 434,
+        "avg_sentiment": -0.15
+      },
+      {
+        "bucket_start": "2026-09-05T14:00:00Z",
+        "volume": 8,
+        "unique_authors": 6,
+        "engagement": 371,
+        "avg_sentiment": -0.25
+      },
+      {
+        "bucket_start": "2026-09-05T15:00:00Z",
+        "volume": 13,
+        "unique_authors": 11,
+        "engagement": 608,
+        "avg_sentiment": -0.31
+      },
+      {
+        "bucket_start": "2026-09-05T16:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 385,
+        "avg_sentiment": -0.5
+      },
+      {
+        "bucket_start": "2026-09-05T17:00:00Z",
+        "volume": 10,
+        "unique_authors": 10,
+        "engagement": 337,
+        "avg_sentiment": 0.3
+      },
+      {
+        "bucket_start": "2026-09-05T18:00:00Z",
+        "volume": 12,
+        "unique_authors": 11,
+        "engagement": 679,
+        "avg_sentiment": -0.42
+      },
+      {
+        "bucket_start": "2026-09-05T19:00:00Z",
+        "volume": 5,
+        "unique_authors": 4,
+        "engagement": 210,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-05T20:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 550,
+        "avg_sentiment": 0.38
+      },
+      {
+        "bucket_start": "2026-09-05T21:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 427,
+        "avg_sentiment": 0.14
+      },
+      {
+        "bucket_start": "2026-09-05T22:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 488,
+        "avg_sentiment": -0.22
+      },
+      {
+        "bucket_start": "2026-09-05T23:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 285,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T00:00:00Z",
+        "volume": 5,
+        "unique_authors": 4,
+        "engagement": 603,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-06T01:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 119,
+        "avg_sentiment": -1.0
+      },
+      {
+        "bucket_start": "2026-09-06T02:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 223,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T03:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 154,
+        "avg_sentiment": -0.25
+      },
+      {
+        "bucket_start": "2026-09-06T04:00:00Z",
+        "volume": 11,
+        "unique_authors": 10,
+        "engagement": 776,
+        "avg_sentiment": 0.09
+      },
+      {
+        "bucket_start": "2026-09-06T05:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 233,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T06:00:00Z",
+        "volume": 11,
+        "unique_authors": 11,
+        "engagement": 497,
+        "avg_sentiment": -0.18
+      },
+      {
+        "bucket_start": "2026-09-06T07:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 206,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T08:00:00Z",
+        "volume": 13,
+        "unique_authors": 13,
+        "engagement": 745,
+        "avg_sentiment": 0.23
+      },
+      {
+        "bucket_start": "2026-09-06T09:00:00Z",
+        "volume": 4,
+        "unique_authors": 3,
+        "engagement": 152,
+        "avg_sentiment": -0.5
+      },
+      {
+        "bucket_start": "2026-09-06T10:00:00Z",
+        "volume": 6,
+        "unique_authors": 5,
+        "engagement": 337,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T11:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 400,
+        "avg_sentiment": -0.67
+      },
+      {
+        "bucket_start": "2026-09-06T12:00:00Z",
+        "volume": 6,
+        "unique_authors": 5,
+        "engagement": 124,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T13:00:00Z",
+        "volume": 8,
+        "unique_authors": 7,
+        "engagement": 335,
+        "avg_sentiment": -0.12
+      },
+      {
+        "bucket_start": "2026-09-06T14:00:00Z",
+        "volume": 4,
+        "unique_authors": 3,
+        "engagement": 114,
+        "avg_sentiment": -0.25
+      },
+      {
+        "bucket_start": "2026-09-06T15:00:00Z",
+        "volume": 4,
+        "unique_authors": 3,
+        "engagement": 223,
+        "avg_sentiment": 0.5
+      },
+      {
+        "bucket_start": "2026-09-06T16:00:00Z",
+        "volume": 5,
+        "unique_authors": 4,
+        "engagement": 130,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-06T17:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 153,
+        "avg_sentiment": 0.0
+      }
+    ],
+    "audience": {
+      "categories": {
+        "organic_user": 0.82,
+        "automated_account": 0.16,
+        "amplifier_account": 0.02
+      },
+      "unknown_share": 0.0,
+      "sample_size": 61,
+      "confidence": 0.6
+    },
+    "evidence_event_ids": [
+      "3fda6d0d-09f2-59ab-a4db-1dce0b9e1119",
+      "8c7610c2-817f-51cf-aaad-bc69eb15a77d",
+      "c6d3a564-7b2d-5aec-90af-445224af850a",
+      "96ebcc58-3014-5da4-a38e-9cc9e5a33842",
+      "7435f795-1486-5518-b816-d4a2f74aa421",
+      "b17415df-4d39-5874-81c8-6524c2a68b8c"
+    ]
+  },
+  {
+    "topic_id": "topic-006",
+    "name": "Election integrity claims",
+    "window": {
+      "start": "2026-09-02T08:15:00Z",
+      "end": "2026-09-03T18:17:00Z"
+    },
+    "metrics": {
+      "volume": 400,
+      "unique_authors": 182,
+      "engagement": 362020,
+      "trend_score": 0.99,
+      "novelty": 0.66,
+      "cross_community_spread": 0.59
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-02T08:00:00Z",
+        "volume": 137,
+        "unique_authors": 137,
+        "engagement": 346959,
+        "avg_sentiment": -0.09
+      },
+      {
+        "bucket_start": "2026-09-02T09:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 376,
+        "avg_sentiment": -0.25
+      },
+      {
+        "bucket_start": "2026-09-02T10:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 217,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-02T11:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 329,
+        "avg_sentiment": -0.29
+      },
+      {
+        "bucket_start": "2026-09-02T12:00:00Z",
+        "volume": 11,
+        "unique_authors": 8,
+        "engagement": 585,
+        "avg_sentiment": 0.27
+      },
+      {
+        "bucket_start": "2026-09-02T13:00:00Z",
+        "volume": 17,
+        "unique_authors": 17,
+        "engagement": 795,
+        "avg_sentiment": 0.06
+      },
+      {
+        "bucket_start": "2026-09-02T14:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 231,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-02T15:00:00Z",
+        "volume": 11,
+        "unique_authors": 11,
+        "engagement": 571,
+        "avg_sentiment": -0.18
+      },
+      {
+        "bucket_start": "2026-09-02T16:00:00Z",
+        "volume": 18,
+        "unique_authors": 15,
+        "engagement": 1014,
+        "avg_sentiment": -0.39
+      },
+      {
+        "bucket_start": "2026-09-02T17:00:00Z",
+        "volume": 17,
+        "unique_authors": 15,
+        "engagement": 908,
+        "avg_sentiment": -0.24
+      },
+      {
+        "bucket_start": "2026-09-02T18:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 406,
+        "avg_sentiment": 0.1
+      },
+      {
+        "bucket_start": "2026-09-02T19:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 380,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-02T20:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 389,
+        "avg_sentiment": 0.43
+      },
+      {
+        "bucket_start": "2026-09-02T21:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 134,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-02T22:00:00Z",
+        "volume": 9,
+        "unique_authors": 9,
+        "engagement": 412,
+        "avg_sentiment": -0.11
+      },
+      {
+        "bucket_start": "2026-09-02T23:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 143,
+        "avg_sentiment": -0.29
+      },
+      {
+        "bucket_start": "2026-09-03T00:00:00Z",
+        "volume": 11,
+        "unique_authors": 10,
+        "engagement": 896,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T01:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 358,
+        "avg_sentiment": -0.22
+      },
+      {
+        "bucket_start": "2026-09-03T02:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 180,
+        "avg_sentiment": -0.6
+      },
+      {
+        "bucket_start": "2026-09-03T03:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 127,
+        "avg_sentiment": 0.33
+      },
+      {
+        "bucket_start": "2026-09-03T04:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 610,
+        "avg_sentiment": 0.2
+      },
+      {
+        "bucket_start": "2026-09-03T05:00:00Z",
+        "volume": 11,
+        "unique_authors": 9,
+        "engagement": 475,
+        "avg_sentiment": 0.27
+      },
+      {
+        "bucket_start": "2026-09-03T06:00:00Z",
+        "volume": 14,
+        "unique_authors": 12,
+        "engagement": 631,
+        "avg_sentiment": -0.07
+      },
+      {
+        "bucket_start": "2026-09-03T07:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 18,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T08:00:00Z",
+        "volume": 6,
+        "unique_authors": 5,
+        "engagement": 542,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T09:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 121,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T10:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 383,
+        "avg_sentiment": -0.29
+      },
+      {
+        "bucket_start": "2026-09-03T11:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 154,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-03T12:00:00Z",
+        "volume": 11,
+        "unique_authors": 10,
+        "engagement": 337,
+        "avg_sentiment": 0.09
+      },
+      {
+        "bucket_start": "2026-09-03T13:00:00Z",
+        "volume": 10,
+        "unique_authors": 8,
+        "engagement": 480,
+        "avg_sentiment": -0.3
+      },
+      {
+        "bucket_start": "2026-09-03T14:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 316,
+        "avg_sentiment": -0.14
+      },
+      {
+        "bucket_start": "2026-09-03T15:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 183,
+        "avg_sentiment": 0.14
+      },
+      {
+        "bucket_start": "2026-09-03T16:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 104,
+        "avg_sentiment": -0.5
+      },
+      {
+        "bucket_start": "2026-09-03T17:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 32,
+        "avg_sentiment": 1.0
+      },
+      {
+        "bucket_start": "2026-09-03T18:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 10,
+        "avg_sentiment": 1.0
+      }
+    ],
+    "audience": {
+      "categories": {
+        "organic_user": 0.94,
+        "automated_account": 0.05,
+        "amplifier_account": 0.01
+      },
+      "unknown_share": 0.0,
+      "sample_size": 182,
+      "confidence": 0.91
+    },
+    "evidence_event_ids": [
+      "c63506a4-e845-5fe5-8ff4-bde09a4e6830",
+      "514ac5e2-1ed4-54a2-a29c-8836adc9e16e",
+      "d3138449-b4c8-56ba-8524-0cdd925cf4f7",
+      "bc6ec5c0-d1b6-5388-86dc-50592dd4520f",
+      "a1177b3a-6c4d-5e0a-b223-cc83cd5f376c",
+      "efc3b118-c545-5921-b43c-44e7026cd2c7"
+    ]
+  },
+  {
+    "topic_id": "topic-007",
+    "name": "Farmer protest coverage",
+    "window": {
+      "start": "2026-09-09T08:05:00Z",
+      "end": "2026-09-10T18:13:00Z"
+    },
+    "metrics": {
+      "volume": 278,
+      "unique_authors": 61,
+      "engagement": 19776,
+      "trend_score": 0.47,
+      "novelty": 0.42,
+      "cross_community_spread": 0.64
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-09T08:00:00Z",
+        "volume": 23,
+        "unique_authors": 23,
+        "engagement": 6753,
+        "avg_sentiment": -0.04
+      },
+      {
+        "bucket_start": "2026-09-09T09:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 303,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-09T10:00:00Z",
+        "volume": 10,
+        "unique_authors": 10,
+        "engagement": 536,
+        "avg_sentiment": 0.3
+      },
+      {
+        "bucket_start": "2026-09-09T11:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 215,
+        "avg_sentiment": 0.25
+      },
+      {
+        "bucket_start": "2026-09-09T12:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 535,
+        "avg_sentiment": -0.17
+      },
+      {
+        "bucket_start": "2026-09-09T13:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 471,
+        "avg_sentiment": 0.1
+      },
+      {
+        "bucket_start": "2026-09-09T14:00:00Z",
+        "volume": 16,
+        "unique_authors": 13,
+        "engagement": 810,
+        "avg_sentiment": 0.06
+      },
+      {
+        "bucket_start": "2026-09-09T15:00:00Z",
+        "volume": 9,
+        "unique_authors": 7,
+        "engagement": 487,
+        "avg_sentiment": -0.22
+      },
+      {
+        "bucket_start": "2026-09-09T16:00:00Z",
+        "volume": 17,
+        "unique_authors": 15,
+        "engagement": 834,
+        "avg_sentiment": 0.12
+      },
+      {
+        "bucket_start": "2026-09-09T17:00:00Z",
+        "volume": 16,
+        "unique_authors": 15,
+        "engagement": 607,
+        "avg_sentiment": 0.12
+      },
+      {
+        "bucket_start": "2026-09-09T18:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 229,
+        "avg_sentiment": 0.29
+      },
+      {
+        "bucket_start": "2026-09-09T19:00:00Z",
+        "volume": 8,
+        "unique_authors": 7,
+        "engagement": 354,
+        "avg_sentiment": 0.25
+      },
+      {
+        "bucket_start": "2026-09-09T20:00:00Z",
+        "volume": 11,
+        "unique_authors": 10,
+        "engagement": 744,
+        "avg_sentiment": 0.09
+      },
+      {
+        "bucket_start": "2026-09-09T21:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 380,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-09T22:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 198,
+        "avg_sentiment": -0.75
+      },
+      {
+        "bucket_start": "2026-09-09T23:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 331,
+        "avg_sentiment": -0.17
+      },
+      {
+        "bucket_start": "2026-09-10T00:00:00Z",
+        "volume": 10,
+        "unique_authors": 8,
+        "engagement": 561,
+        "avg_sentiment": -0.3
+      },
+      {
+        "bucket_start": "2026-09-10T01:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 263,
+        "avg_sentiment": -0.14
+      },
+      {
+        "bucket_start": "2026-09-10T02:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 168,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-10T03:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 204,
+        "avg_sentiment": 0.4
+      },
+      {
+        "bucket_start": "2026-09-10T04:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 395,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-10T05:00:00Z",
+        "volume": 13,
+        "unique_authors": 11,
+        "engagement": 522,
+        "avg_sentiment": -0.08
+      },
+      {
+        "bucket_start": "2026-09-10T06:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 236,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-10T07:00:00Z",
+        "volume": 13,
+        "unique_authors": 10,
+        "engagement": 481,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-10T08:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 532,
+        "avg_sentiment": -0.14
+      },
+      {
+        "bucket_start": "2026-09-10T09:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 366,
+        "avg_sentiment": -0.1
+      },
+      {
+        "bucket_start": "2026-09-10T10:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 226,
+        "avg_sentiment": -0.17
+      },
+      {
+        "bucket_start": "2026-09-10T11:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 117,
+        "avg_sentiment": -0.17
+      },
+      {
+        "bucket_start": "2026-09-10T12:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 80,
+        "avg_sentiment": -0.5
+      },
+      {
+        "bucket_start": "2026-09-10T13:00:00Z",
+        "volume": 11,
+        "unique_authors": 11,
+        "engagement": 595,
+        "avg_sentiment": -0.27
+      },
+      {
+        "bucket_start": "2026-09-10T14:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 30,
+        "avg_sentiment": -1.0
+      },
+      {
+        "bucket_start": "2026-09-10T15:00:00Z",
+        "volume": 3,
+        "unique_authors": 2,
+        "engagement": 124,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-10T16:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 81,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-10T18:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 215,
+        "avg_sentiment": 0.0
+      }
+    ],
+    "audience": {
+      "categories": {
+        "organic_user": 0.82,
+        "automated_account": 0.16,
+        "amplifier_account": 0.02
+      },
+      "unknown_share": 0.0,
+      "sample_size": 61,
+      "confidence": 0.6
+    },
+    "evidence_event_ids": [
+      "e5a3be55-1e32-544a-b491-1aadc3047ef3",
+      "72de4978-5a58-5b90-afaf-bc9843dcf621",
+      "680a3006-19cd-5772-84d0-6fa07db1c53b",
+      "1a890a09-8c03-5cd6-8915-adf8cdfef82e",
+      "1f1e5d33-d384-5211-b392-eefcc0cc0f1b",
+      "352f0fcc-695f-5827-b6a6-8d8da3759d79"
+    ]
+  },
+  {
+    "topic_id": "topic-008",
+    "name": "Public health guidance dispute",
+    "window": {
+      "start": "2026-09-06T08:29:00Z",
+      "end": "2026-09-07T19:05:00Z"
+    },
+    "metrics": {
+      "volume": 306,
+      "unique_authors": 62,
+      "engagement": 18716,
+      "trend_score": 0.39,
+      "novelty": 0.4,
+      "cross_community_spread": 0.75
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-06T08:00:00Z",
+        "volume": 11,
+        "unique_authors": 11,
+        "engagement": 3905,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T09:00:00Z",
+        "volume": 14,
+        "unique_authors": 14,
+        "engagement": 395,
+        "avg_sentiment": -0.07
+      },
+      {
+        "bucket_start": "2026-09-06T10:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 179,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-06T11:00:00Z",
+        "volume": 9,
+        "unique_authors": 9,
+        "engagement": 370,
+        "avg_sentiment": -0.67
+      },
+      {
+        "bucket_start": "2026-09-06T12:00:00Z",
+        "volume": 8,
+        "unique_authors": 6,
+        "engagement": 459,
+        "avg_sentiment": 0.12
+      },
+      {
+        "bucket_start": "2026-09-06T13:00:00Z",
+        "volume": 12,
+        "unique_authors": 10,
+        "engagement": 694,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-06T14:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 446,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T15:00:00Z",
+        "volume": 11,
+        "unique_authors": 10,
+        "engagement": 569,
+        "avg_sentiment": -0.36
+      },
+      {
+        "bucket_start": "2026-09-06T16:00:00Z",
+        "volume": 20,
+        "unique_authors": 15,
+        "engagement": 1129,
+        "avg_sentiment": -0.3
+      },
+      {
+        "bucket_start": "2026-09-06T17:00:00Z",
+        "volume": 8,
+        "unique_authors": 7,
+        "engagement": 236,
+        "avg_sentiment": 0.12
+      },
+      {
+        "bucket_start": "2026-09-06T18:00:00Z",
+        "volume": 13,
+        "unique_authors": 13,
+        "engagement": 609,
+        "avg_sentiment": 0.38
+      },
+      {
+        "bucket_start": "2026-09-06T19:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 137,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T20:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 634,
+        "avg_sentiment": -0.29
+      },
+      {
+        "bucket_start": "2026-09-06T21:00:00Z",
+        "volume": 11,
+        "unique_authors": 9,
+        "engagement": 500,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-06T22:00:00Z",
+        "volume": 12,
+        "unique_authors": 10,
+        "engagement": 645,
+        "avg_sentiment": 0.08
+      },
+      {
+        "bucket_start": "2026-09-06T23:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 413,
+        "avg_sentiment": 0.12
+      },
+      {
+        "bucket_start": "2026-09-07T00:00:00Z",
+        "volume": 5,
+        "unique_authors": 4,
+        "engagement": 319,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-07T01:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 500,
+        "avg_sentiment": 0.14
+      },
+      {
+        "bucket_start": "2026-09-07T02:00:00Z",
+        "volume": 12,
+        "unique_authors": 10,
+        "engagement": 477,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-07T03:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 568,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-07T04:00:00Z",
+        "volume": 10,
+        "unique_authors": 10,
+        "engagement": 714,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-07T05:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 283,
+        "avg_sentiment": 0.29
+      },
+      {
+        "bucket_start": "2026-09-07T06:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 267,
+        "avg_sentiment": 0.22
+      },
+      {
+        "bucket_start": "2026-09-07T07:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 325,
+        "avg_sentiment": 0.14
+      },
+      {
+        "bucket_start": "2026-09-07T08:00:00Z",
+        "volume": 14,
+        "unique_authors": 12,
+        "engagement": 707,
+        "avg_sentiment": 0.21
+      },
+      {
+        "bucket_start": "2026-09-07T09:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 380,
+        "avg_sentiment": -0.3
+      },
+      {
+        "bucket_start": "2026-09-07T10:00:00Z",
+        "volume": 11,
+        "unique_authors": 9,
+        "engagement": 418,
+        "avg_sentiment": -0.36
+      },
+      {
+        "bucket_start": "2026-09-07T11:00:00Z",
+        "volume": 10,
+        "unique_authors": 10,
+        "engagement": 385,
+        "avg_sentiment": 0.2
+      },
+      {
+        "bucket_start": "2026-09-07T12:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 134,
+        "avg_sentiment": 0.14
+      },
+      {
+        "bucket_start": "2026-09-07T13:00:00Z",
+        "volume": 4,
+        "unique_authors": 3,
+        "engagement": 156,
+        "avg_sentiment": -0.5
+      },
+      {
+        "bucket_start": "2026-09-07T14:00:00Z",
+        "volume": 8,
+        "unique_authors": 6,
+        "engagement": 353,
+        "avg_sentiment": 0.25
+      },
+      {
+        "bucket_start": "2026-09-07T15:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 67,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-07T16:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 296,
+        "avg_sentiment": 0.6
+      },
+      {
+        "bucket_start": "2026-09-07T17:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 105,
+        "avg_sentiment": 0.25
+      },
+      {
+        "bucket_start": "2026-09-07T18:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 55,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-07T19:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 3,
+        "avg_sentiment": 0.0
+      }
+    ],
+    "audience": {
+      "categories": {
+        "organic_user": 0.82,
+        "automated_account": 0.16,
+        "amplifier_account": 0.02
+      },
+      "unknown_share": 0.0,
+      "sample_size": 62,
+      "confidence": 0.6
+    },
+    "evidence_event_ids": [
+      "1255259d-f1a0-5a98-8046-6ec8c73ab27c",
+      "3298623f-7789-5d1e-814e-b67c73b78e8a",
+      "cb452952-71fe-56bb-8505-257f97bf3358",
+      "5ae6c7bf-55e1-5b72-a830-ac74df2e4248",
+      "e6f00637-154e-512a-91bb-27b983243e89",
+      "82617baa-92af-5ed9-9d3c-8a6fbc82b369"
+    ]
+  },
+  {
+    "topic_id": "topic-009",
+    "name": "Market crash speculation",
+    "window": {
+      "start": "2026-09-07T08:09:00Z",
+      "end": "2026-09-08T18:34:00Z"
+    },
+    "metrics": {
+      "volume": 267,
+      "unique_authors": 61,
+      "engagement": 18960,
+      "trend_score": 0.42,
+      "novelty": 0.43,
+      "cross_community_spread": 0.73
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-07T08:00:00Z",
+        "volume": 19,
+        "unique_authors": 19,
+        "engagement": 6539,
+        "avg_sentiment": -0.11
+      },
+      {
+        "bucket_start": "2026-09-07T09:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 245,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-07T10:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 398,
+        "avg_sentiment": -0.14
+      },
+      {
+        "bucket_start": "2026-09-07T11:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 368,
+        "avg_sentiment": 0.71
+      },
+      {
+        "bucket_start": "2026-09-07T12:00:00Z",
+        "volume": 8,
+        "unique_authors": 7,
+        "engagement": 558,
+        "avg_sentiment": -0.62
+      },
+      {
+        "bucket_start": "2026-09-07T13:00:00Z",
+        "volume": 10,
+        "unique_authors": 8,
+        "engagement": 513,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-07T14:00:00Z",
+        "volume": 9,
+        "unique_authors": 6,
+        "engagement": 473,
+        "avg_sentiment": -0.11
+      },
+      {
+        "bucket_start": "2026-09-07T15:00:00Z",
+        "volume": 11,
+        "unique_authors": 10,
+        "engagement": 517,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-07T16:00:00Z",
+        "volume": 16,
+        "unique_authors": 13,
+        "engagement": 722,
+        "avg_sentiment": -0.44
+      },
+      {
+        "bucket_start": "2026-09-07T17:00:00Z",
+        "volume": 13,
+        "unique_authors": 13,
+        "engagement": 440,
+        "avg_sentiment": -0.08
+      },
+      {
+        "bucket_start": "2026-09-07T18:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 256,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-07T19:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 34,
+        "avg_sentiment": 0.33
+      },
+      {
+        "bucket_start": "2026-09-07T20:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 384,
+        "avg_sentiment": 0.5
+      },
+      {
+        "bucket_start": "2026-09-07T21:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 244,
+        "avg_sentiment": -0.12
+      },
+      {
+        "bucket_start": "2026-09-07T22:00:00Z",
+        "volume": 10,
+        "unique_authors": 10,
+        "engagement": 402,
+        "avg_sentiment": -0.3
+      },
+      {
+        "bucket_start": "2026-09-07T23:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 241,
+        "avg_sentiment": 0.25
+      },
+      {
+        "bucket_start": "2026-09-08T00:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 394,
+        "avg_sentiment": -0.5
+      },
+      {
+        "bucket_start": "2026-09-08T01:00:00Z",
+        "volume": 10,
+        "unique_authors": 9,
+        "engagement": 388,
+        "avg_sentiment": 0.1
+      },
+      {
+        "bucket_start": "2026-09-08T02:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 275,
+        "avg_sentiment": -0.4
+      },
+      {
+        "bucket_start": "2026-09-08T03:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 220,
+        "avg_sentiment": 0.4
+      },
+      {
+        "bucket_start": "2026-09-08T04:00:00Z",
+        "volume": 13,
+        "unique_authors": 11,
+        "engagement": 847,
+        "avg_sentiment": 0.15
+      },
+      {
+        "bucket_start": "2026-09-08T05:00:00Z",
+        "volume": 12,
+        "unique_authors": 12,
+        "engagement": 547,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-08T06:00:00Z",
+        "volume": 14,
+        "unique_authors": 12,
+        "engagement": 546,
+        "avg_sentiment": -0.36
+      },
+      {
+        "bucket_start": "2026-09-08T07:00:00Z",
+        "volume": 6,
+        "unique_authors": 5,
+        "engagement": 274,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-08T08:00:00Z",
+        "volume": 7,
+        "unique_authors": 7,
+        "engagement": 595,
+        "avg_sentiment": -0.57
+      },
+      {
+        "bucket_start": "2026-09-08T09:00:00Z",
+        "volume": 11,
+        "unique_authors": 11,
+        "engagement": 508,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-08T10:00:00Z",
+        "volume": 9,
+        "unique_authors": 9,
+        "engagement": 321,
+        "avg_sentiment": -0.44
+      },
+      {
+        "bucket_start": "2026-09-08T11:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 87,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-08T12:00:00Z",
+        "volume": 5,
+        "unique_authors": 4,
+        "engagement": 304,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-08T13:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 102,
+        "avg_sentiment": -0.5
+      },
+      {
+        "bucket_start": "2026-09-08T14:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 112,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-08T15:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 83,
+        "avg_sentiment": -0.67
+      },
+      {
+        "bucket_start": "2026-09-08T16:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 123,
+        "avg_sentiment": -0.5
+      },
+      {
+        "bucket_start": "2026-09-08T17:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 148,
+        "avg_sentiment": 0.4
+      },
+      {
+        "bucket_start": "2026-09-08T18:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 3,
+        "avg_sentiment": -1.0
+      }
+    ],
+    "audience": {
+      "categories": {
+        "organic_user": 0.82,
+        "automated_account": 0.16,
+        "amplifier_account": 0.02
+      },
+      "unknown_share": 0.0,
+      "sample_size": 61,
+      "confidence": 0.6
+    },
+    "evidence_event_ids": [
+      "5bdea1fd-3096-5b32-a526-72e9e48979af",
+      "1e15dc28-14e9-521f-8c5c-85bdfd7cd36f",
+      "9c9dbc4f-b0b0-5e5e-9744-99c8f0cdc9ba",
+      "06b3dfa0-5b86-591a-818f-a573db7334a8",
+      "346dda47-69e3-5d73-aeb9-e12857c75aec",
+      "8966eddd-dc2e-5503-b634-700800d5a9b1"
+    ]
+  },
+  {
+    "topic_id": "topic-010",
+    "name": "Tech layoffs narrative",
+    "window": {
+      "start": "2026-09-04T08:08:00Z",
+      "end": "2026-09-05T19:49:00Z"
+    },
+    "metrics": {
+      "volume": 274,
+      "unique_authors": 62,
+      "engagement": 17762,
+      "trend_score": 0.37,
+      "novelty": 0.43,
+      "cross_community_spread": 0.72
+    },
+    "timeline": [
+      {
+        "bucket_start": "2026-09-04T08:00:00Z",
+        "volume": 17,
+        "unique_authors": 17,
+        "engagement": 4951,
+        "avg_sentiment": 0.18
+      },
+      {
+        "bucket_start": "2026-09-04T09:00:00Z",
+        "volume": 11,
+        "unique_authors": 11,
+        "engagement": 401,
+        "avg_sentiment": 0.09
+      },
+      {
+        "bucket_start": "2026-09-04T10:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 296,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-04T11:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 237,
+        "avg_sentiment": -0.17
+      },
+      {
+        "bucket_start": "2026-09-04T12:00:00Z",
+        "volume": 13,
+        "unique_authors": 12,
+        "engagement": 708,
+        "avg_sentiment": 0.15
+      },
+      {
+        "bucket_start": "2026-09-04T13:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 372,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-04T14:00:00Z",
+        "volume": 12,
+        "unique_authors": 9,
+        "engagement": 569,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-04T15:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 323,
+        "avg_sentiment": -0.12
+      },
+      {
+        "bucket_start": "2026-09-04T16:00:00Z",
+        "volume": 14,
+        "unique_authors": 13,
+        "engagement": 990,
+        "avg_sentiment": -0.14
+      },
+      {
+        "bucket_start": "2026-09-04T17:00:00Z",
+        "volume": 13,
+        "unique_authors": 12,
+        "engagement": 558,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-04T18:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 260,
+        "avg_sentiment": -0.43
+      },
+      {
+        "bucket_start": "2026-09-04T19:00:00Z",
+        "volume": 11,
+        "unique_authors": 8,
+        "engagement": 428,
+        "avg_sentiment": 0.18
+      },
+      {
+        "bucket_start": "2026-09-04T20:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 419,
+        "avg_sentiment": 0.2
+      },
+      {
+        "bucket_start": "2026-09-04T21:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 558,
+        "avg_sentiment": -0.22
+      },
+      {
+        "bucket_start": "2026-09-04T22:00:00Z",
+        "volume": 9,
+        "unique_authors": 9,
+        "engagement": 451,
+        "avg_sentiment": -0.11
+      },
+      {
+        "bucket_start": "2026-09-04T23:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 240,
+        "avg_sentiment": 0.5
+      },
+      {
+        "bucket_start": "2026-09-05T00:00:00Z",
+        "volume": 6,
+        "unique_authors": 5,
+        "engagement": 332,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-05T01:00:00Z",
+        "volume": 11,
+        "unique_authors": 7,
+        "engagement": 302,
+        "avg_sentiment": 0.27
+      },
+      {
+        "bucket_start": "2026-09-05T02:00:00Z",
+        "volume": 7,
+        "unique_authors": 6,
+        "engagement": 439,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-05T03:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 170,
+        "avg_sentiment": -0.4
+      },
+      {
+        "bucket_start": "2026-09-05T04:00:00Z",
+        "volume": 9,
+        "unique_authors": 8,
+        "engagement": 755,
+        "avg_sentiment": -0.22
+      },
+      {
+        "bucket_start": "2026-09-05T05:00:00Z",
+        "volume": 11,
+        "unique_authors": 10,
+        "engagement": 401,
+        "avg_sentiment": -0.18
+      },
+      {
+        "bucket_start": "2026-09-05T06:00:00Z",
+        "volume": 10,
+        "unique_authors": 8,
+        "engagement": 385,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-05T07:00:00Z",
+        "volume": 8,
+        "unique_authors": 8,
+        "engagement": 340,
+        "avg_sentiment": 0.12
+      },
+      {
+        "bucket_start": "2026-09-05T08:00:00Z",
+        "volume": 11,
+        "unique_authors": 11,
+        "engagement": 385,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-05T09:00:00Z",
+        "volume": 6,
+        "unique_authors": 6,
+        "engagement": 309,
+        "avg_sentiment": -0.17
+      },
+      {
+        "bucket_start": "2026-09-05T10:00:00Z",
+        "volume": 5,
+        "unique_authors": 4,
+        "engagement": 281,
+        "avg_sentiment": -0.2
+      },
+      {
+        "bucket_start": "2026-09-05T11:00:00Z",
+        "volume": 5,
+        "unique_authors": 4,
+        "engagement": 250,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-05T12:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 43,
+        "avg_sentiment": -1.0
+      },
+      {
+        "bucket_start": "2026-09-05T13:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 129,
+        "avg_sentiment": -0.33
+      },
+      {
+        "bucket_start": "2026-09-05T14:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 170,
+        "avg_sentiment": 0.25
+      },
+      {
+        "bucket_start": "2026-09-05T15:00:00Z",
+        "volume": 3,
+        "unique_authors": 3,
+        "engagement": 114,
+        "avg_sentiment": 0.33
+      },
+      {
+        "bucket_start": "2026-09-05T16:00:00Z",
+        "volume": 4,
+        "unique_authors": 4,
+        "engagement": 114,
+        "avg_sentiment": 0.0
+      },
+      {
+        "bucket_start": "2026-09-05T17:00:00Z",
+        "volume": 5,
+        "unique_authors": 5,
+        "engagement": 220,
+        "avg_sentiment": 0.2
+      },
+      {
+        "bucket_start": "2026-09-05T18:00:00Z",
+        "volume": 1,
+        "unique_authors": 1,
+        "engagement": 74,
+        "avg_sentiment": -1.0
+      },
+      {
+        "bucket_start": "2026-09-05T19:00:00Z",
+        "volume": 2,
+        "unique_authors": 2,
+        "engagement": 23,
+        "avg_sentiment": -1.0
+      }
+    ],
+    "audience": {
+      "categories": {
+        "organic_user": 0.82,
+        "automated_account": 0.16,
+        "amplifier_account": 0.02
+      },
+      "unknown_share": 0.0,
+      "sample_size": 62,
+      "confidence": 0.6
+    },
+    "evidence_event_ids": [
+      "3c15dfb4-eeda-5c68-98b3-74ca6ab86f5f",
+      "46f31b6c-8d79-542f-874b-55abd7d22136",
+      "40b5e484-e564-54a9-9b1b-455b6d0b4e9f",
+      "a8721aba-388c-5907-9d09-68c2d17d20ab",
+      "6d8986b9-cdff-5907-8dcf-5f6fddde0e35",
+      "641201df-9635-5e4d-9391-9ac119567b4e"
+    ]
+  }
+]

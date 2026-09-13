@@ -1,0 +1,118 @@
+{
+  "window": {
+    "start": "2026-09-02T08:15:00Z",
+    "end": "2026-09-11T12:45:00Z"
+  },
+  "graph_metrics": {
+    "nodes": 215,
+    "edges": 535,
+    "density": 0.0116
+  },
+  "communities": [
+    {
+      "community_id": "c1",
+      "size": 4,
+      "central_nodes": [
+        "hash1",
+        "hash2"
+      ]
+    },
+    {
+      "community_id": "c2",
+      "size": 3,
+      "central_nodes": [
+        "hash5",
+        "hash6"
+      ]
+    },
+    {
+      "community_id": "c3",
+      "size": 62,
+      "central_nodes": [
+        "b7c8089dea83168d",
+        "d10fd0156a68ccc4",
+        "9ee8ed64ecf8f7b9"
+      ]
+    },
+    {
+      "community_id": "c4",
+      "size": 61,
+      "central_nodes": [
+        "a24caa89581e1d72",
+        "c7b50f297212e526",
+        "458dc4b9b8c8d606"
+      ]
+    },
+    {
+      "community_id": "c5",
+      "size": 61,
+      "central_nodes": [
+        "cf847a5c228edf99",
+        "87a96a539516f1aa",
+        "f9c34b2a739254f1"
+      ]
+    },
+    {
+      "community_id": "c6",
+      "size": 182,
+      "central_nodes": [
+        "9a4e9c9e69d6a45a",
+        "63ea4e315161641a",
+        "bc55e7e4a6d4aa46"
+      ]
+    },
+    {
+      "community_id": "c7",
+      "size": 61,
+      "central_nodes": [
+        "1c307d44605655eb",
+        "4eae9a1bf8018169",
+        "f4c8341304cec7e9"
+      ]
+    },
+    {
+      "community_id": "c8",
+      "size": 62,
+      "central_nodes": [
+        "c4f1e030f4295852",
+        "68c240edd1f6689d",
+        "638334e46b8342c1"
+      ]
+    },
+    {
+      "community_id": "c9",
+      "size": 61,
+      "central_nodes": [
+        "cbaccc979b2e5490",
+        "747ef18fd59bc95b",
+        "c37c8a371ec49a1c"
+      ]
+    },
+    {
+      "community_id": "c10",
+      "size": 62,
+      "central_nodes": [
+        "f89cab3fbd49ed96",
+        "659a95c6a7cb9bf6",
+        "7c36f1e919a25112"
+      ]
+    }
+  ],
+  "propagation": {
+    "depth": 3,
+    "cross_community_rate": 0.0,
+    "key_nodes": [
+      "9a4e9c9e69d6a45a",
+      "f89cab3fbd49ed96",
+      "c4f1e030f4295852",
+      "b7c8089dea83168d",
+      "a24caa89581e1d72"
+    ]
+  },
+  "evidence_event_ids": [
+    "e4b11f32-8a90-4c12-b21a-29831aef0101",
+    "9c011a88-12ee-4f99-882b-92311bc40102",
+    "f5a66b77-88cc-99dd-aaee-bbb122ee0201",
+    "a6b77c88-99dd-aaee-bbff-ccc233ff0202"
+  ]
+}

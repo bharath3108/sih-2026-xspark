@@ -24,7 +24,15 @@ from backend.services import live_pipeline
 
 logger = logging.getLogger(__name__)
 
-FIXTURES_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "fixtures"
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+
+# Defaults to the team's versioned contract fixtures. FIXTURES_DIR lets a
+# deployment point at a different contract-shaped directory (the hosted demo
+# uses data/fixtures_demo) without touching the fixtures the test suite and
+# every other module are pinned to.
+FIXTURES_DIR = Path(os.getenv("FIXTURES_DIR") or _REPO_ROOT / "data" / "fixtures")
+if not FIXTURES_DIR.is_absolute():
+    FIXTURES_DIR = _REPO_ROOT / FIXTURES_DIR
 
 PERSON1_API_BASE = os.getenv("PERSON1_API_BASE")  # canonical events
 PERSON2_API_BASE = os.getenv("PERSON2_API_BASE")  # NLP outputs
